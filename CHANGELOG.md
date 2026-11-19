@@ -1,5 +1,12 @@
 # Changelog
 
+## Chưa phát hành
+
+- Nhanh hơn: exe không còn là một file tự giải nén mỗi lần chạy. Gói giờ là thư mục `claude-usage.exe` + `_internal`.
+  Hook chặn prompt từ khoảng 0.84s còn khoảng 0.23s mỗi prompt; mở dashboard nhanh hơn một chút.
+  Đường dẫn `claude-usage.exe` giữ nguyên nên autostart và hook đã cài vẫn chạy.
+- Đang chuẩn bị chuyển sang Rust (xem `PORT_PLAN.md`).
+
 ## 1.1.0
 
 - Mới: **tự làm mới token hết hạn**. Trước đây profile nào lâu không mở `claude` (token sống khoảng 8 giờ) sẽ kẹt ở `token hết hạn` cho tới khi bạn chạy `claude` ở đó.

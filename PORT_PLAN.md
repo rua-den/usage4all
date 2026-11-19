@@ -313,8 +313,18 @@ Deserialize từng field từ `Value`, chấp nhận cả int lẫn float, khôn
 5. Tiêu chí chấp nhận hình widget (duyệt bằng mắt từng kiểu).
 6. Phiên bản `2.0.0`; Python để ở `legacy/` hay chỉ giữ trong tag.
 
+### Đã chốt (2026-11-19, người dùng giao cho agent chọn phương án tốt nhất)
+1. **Repair**: build dev/test (`debug_assertions` hoặc feature `e2e`) không bao giờ sửa hook. Bản release chỉ sửa khi exe trong lệnh hook cũ **không còn tồn tại**, và ghi log. Giữ nguyên marker.
+2. **Không làm Phase 0b đầy đủ.** Làm Phase 0 (đo) để có mốc so sánh. Chỉ thêm 1 sửa rẻ, không đụng code: build Python `--onedir` nếu số đo cho thấy giải nén onefile là thủ phạm,
+   để đỡ lag trong lúc port. Không sửa thêm code Python (sẽ bỏ).
+3. **Svelte 5 + TypeScript + Vite.**
+4. **Toast WinRT + AUMID riêng** (`claude-usage`, ghi HKCU lúc daemon khởi động, giống cách đã ghi autostart; test không chạy đường này). WinRT lỗi thì fallback balloon. Luôn ghi `events.log`.
+5. **Hình widget**: trang so sánh Python|Rust do `preview` sinh ra; người dùng duyệt bằng mắt từng kiểu trước khi chuyển bản.
+6. **Phiên bản `2.0.0`.** Python giữ ở gốc repo tới khi chuyển bản xong, sau đó xoá khỏi `main` (vẫn còn ở tag `python-1.1.0`).
+
 ## Trạng thái
 - [x] Git init + tag `python-1.1.0`
 - [x] Plan v1 + review độc lập (mục 8) + sửa plan
-- [ ] Chốt 6 quyết định ở mục 8
-- [ ] Phase 0 … Phase 7
+- [x] Chốt 6 quyết định ở mục 8
+- [x] Phase 0: số đo ở `bench/BASELINE.md`; build Python chuyển sang onedir (hook 840 → 232ms), đang chạy thật
+- [ ] Phase 1 … Phase 7
