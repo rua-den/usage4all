@@ -1,0 +1,3866 @@
+[
+ {
+  "input": {
+   "config_text": null,
+   "layout": {}
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": null,
+   "layout": {
+    "default": true,
+    "profiles_dir": true,
+    "entries": [
+     [
+      "claude-hn",
+      "dir_creds"
+     ],
+     [
+      "claude-da",
+      "dir_creds"
+     ],
+     [
+      "Claude-Zed",
+      "dir_creds"
+     ],
+     [
+      "alpha",
+      "dir_creds"
+     ],
+     [
+      "Beta",
+      "dir_creds"
+     ],
+     [
+      "beta2",
+      "dir_nocreds"
+     ],
+     [
+      "notes.txt",
+      "file"
+     ],
+     [
+      "_under",
+      "dir_creds"
+     ],
+     [
+      "claude-ngoai",
+      "dir_creds"
+     ],
+     [
+      "ÉCLAIR",
+      "dir_creds"
+     ],
+     [
+      "zulu",
+      "dir_creds"
+     ],
+     [
+      "Zulu2",
+      "dir_creds"
+     ],
+     [
+      "10",
+      "dir_creds"
+     ],
+     [
+      "9",
+      "dir_creds"
+     ],
+     [
+      "a b",
+      "dir_creds"
+     ],
+     [
+      "a-b",
+      "dir_creds"
+     ],
+     [
+      "a_b",
+      "dir_creds"
+     ]
+    ]
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    },
+    {
+     "name": "10",
+     "path": "{HOME}\\claude-profiles\\10"
+    },
+    {
+     "name": "9",
+     "path": "{HOME}\\claude-profiles\\9"
+    },
+    {
+     "name": "_under",
+     "path": "{HOME}\\claude-profiles\\_under"
+    },
+    {
+     "name": "a b",
+     "path": "{HOME}\\claude-profiles\\a b"
+    },
+    {
+     "name": "a-b",
+     "path": "{HOME}\\claude-profiles\\a-b"
+    },
+    {
+     "name": "a_b",
+     "path": "{HOME}\\claude-profiles\\a_b"
+    },
+    {
+     "name": "alpha",
+     "path": "{HOME}\\claude-profiles\\alpha"
+    },
+    {
+     "name": "Beta",
+     "path": "{HOME}\\claude-profiles\\Beta"
+    },
+    {
+     "name": "claude-da",
+     "path": "{HOME}\\claude-profiles\\claude-da"
+    },
+    {
+     "name": "claude-hn",
+     "path": "{HOME}\\claude-profiles\\claude-hn"
+    },
+    {
+     "name": "claude-ngoai",
+     "path": "{HOME}\\claude-profiles\\claude-ngoai"
+    },
+    {
+     "name": "Claude-Zed",
+     "path": "{HOME}\\claude-profiles\\Claude-Zed"
+    },
+    {
+     "name": "zulu",
+     "path": "{HOME}\\claude-profiles\\zulu"
+    },
+    {
+     "name": "Zulu2",
+     "path": "{HOME}\\claude-profiles\\Zulu2"
+    },
+    {
+     "name": "ÉCLAIR",
+     "path": "{HOME}\\claude-profiles\\ÉCLAIR"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{}",
+   "layout": {}
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{}",
+   "layout": {
+    "default": true,
+    "profiles_dir": true,
+    "entries": [
+     [
+      "claude-hn",
+      "dir_creds"
+     ],
+     [
+      "claude-da",
+      "dir_creds"
+     ],
+     [
+      "Claude-Zed",
+      "dir_creds"
+     ],
+     [
+      "alpha",
+      "dir_creds"
+     ],
+     [
+      "Beta",
+      "dir_creds"
+     ],
+     [
+      "beta2",
+      "dir_nocreds"
+     ],
+     [
+      "notes.txt",
+      "file"
+     ],
+     [
+      "_under",
+      "dir_creds"
+     ],
+     [
+      "claude-ngoai",
+      "dir_creds"
+     ],
+     [
+      "ÉCLAIR",
+      "dir_creds"
+     ],
+     [
+      "zulu",
+      "dir_creds"
+     ],
+     [
+      "Zulu2",
+      "dir_creds"
+     ],
+     [
+      "10",
+      "dir_creds"
+     ],
+     [
+      "9",
+      "dir_creds"
+     ],
+     [
+      "a b",
+      "dir_creds"
+     ],
+     [
+      "a-b",
+      "dir_creds"
+     ],
+     [
+      "a_b",
+      "dir_creds"
+     ]
+    ]
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    },
+    {
+     "name": "10",
+     "path": "{HOME}\\claude-profiles\\10"
+    },
+    {
+     "name": "9",
+     "path": "{HOME}\\claude-profiles\\9"
+    },
+    {
+     "name": "_under",
+     "path": "{HOME}\\claude-profiles\\_under"
+    },
+    {
+     "name": "a b",
+     "path": "{HOME}\\claude-profiles\\a b"
+    },
+    {
+     "name": "a-b",
+     "path": "{HOME}\\claude-profiles\\a-b"
+    },
+    {
+     "name": "a_b",
+     "path": "{HOME}\\claude-profiles\\a_b"
+    },
+    {
+     "name": "alpha",
+     "path": "{HOME}\\claude-profiles\\alpha"
+    },
+    {
+     "name": "Beta",
+     "path": "{HOME}\\claude-profiles\\Beta"
+    },
+    {
+     "name": "claude-da",
+     "path": "{HOME}\\claude-profiles\\claude-da"
+    },
+    {
+     "name": "claude-hn",
+     "path": "{HOME}\\claude-profiles\\claude-hn"
+    },
+    {
+     "name": "claude-ngoai",
+     "path": "{HOME}\\claude-profiles\\claude-ngoai"
+    },
+    {
+     "name": "Claude-Zed",
+     "path": "{HOME}\\claude-profiles\\Claude-Zed"
+    },
+    {
+     "name": "zulu",
+     "path": "{HOME}\\claude-profiles\\zulu"
+    },
+    {
+     "name": "Zulu2",
+     "path": "{HOME}\\claude-profiles\\Zulu2"
+    },
+    {
+     "name": "ÉCLAIR",
+     "path": "{HOME}\\claude-profiles\\ÉCLAIR"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": " {} ",
+   "layout": {}
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": " {} ",
+   "layout": {
+    "default": true,
+    "profiles_dir": true,
+    "entries": [
+     [
+      "claude-hn",
+      "dir_creds"
+     ],
+     [
+      "claude-da",
+      "dir_creds"
+     ],
+     [
+      "Claude-Zed",
+      "dir_creds"
+     ],
+     [
+      "alpha",
+      "dir_creds"
+     ],
+     [
+      "Beta",
+      "dir_creds"
+     ],
+     [
+      "beta2",
+      "dir_nocreds"
+     ],
+     [
+      "notes.txt",
+      "file"
+     ],
+     [
+      "_under",
+      "dir_creds"
+     ],
+     [
+      "claude-ngoai",
+      "dir_creds"
+     ],
+     [
+      "ÉCLAIR",
+      "dir_creds"
+     ],
+     [
+      "zulu",
+      "dir_creds"
+     ],
+     [
+      "Zulu2",
+      "dir_creds"
+     ],
+     [
+      "10",
+      "dir_creds"
+     ],
+     [
+      "9",
+      "dir_creds"
+     ],
+     [
+      "a b",
+      "dir_creds"
+     ],
+     [
+      "a-b",
+      "dir_creds"
+     ],
+     [
+      "a_b",
+      "dir_creds"
+     ]
+    ]
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    },
+    {
+     "name": "10",
+     "path": "{HOME}\\claude-profiles\\10"
+    },
+    {
+     "name": "9",
+     "path": "{HOME}\\claude-profiles\\9"
+    },
+    {
+     "name": "_under",
+     "path": "{HOME}\\claude-profiles\\_under"
+    },
+    {
+     "name": "a b",
+     "path": "{HOME}\\claude-profiles\\a b"
+    },
+    {
+     "name": "a-b",
+     "path": "{HOME}\\claude-profiles\\a-b"
+    },
+    {
+     "name": "a_b",
+     "path": "{HOME}\\claude-profiles\\a_b"
+    },
+    {
+     "name": "alpha",
+     "path": "{HOME}\\claude-profiles\\alpha"
+    },
+    {
+     "name": "Beta",
+     "path": "{HOME}\\claude-profiles\\Beta"
+    },
+    {
+     "name": "claude-da",
+     "path": "{HOME}\\claude-profiles\\claude-da"
+    },
+    {
+     "name": "claude-hn",
+     "path": "{HOME}\\claude-profiles\\claude-hn"
+    },
+    {
+     "name": "claude-ngoai",
+     "path": "{HOME}\\claude-profiles\\claude-ngoai"
+    },
+    {
+     "name": "Claude-Zed",
+     "path": "{HOME}\\claude-profiles\\Claude-Zed"
+    },
+    {
+     "name": "zulu",
+     "path": "{HOME}\\claude-profiles\\zulu"
+    },
+    {
+     "name": "Zulu2",
+     "path": "{HOME}\\claude-profiles\\Zulu2"
+    },
+    {
+     "name": "ÉCLAIR",
+     "path": "{HOME}\\claude-profiles\\ÉCLAIR"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "   ",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{not json",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"a\": 1,}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "[1, 2]",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "[]",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "null",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "5",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "\"str\"",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "true",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "﻿{\"interval_sec\": 300}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 300, \"warn_pct\": 70, \"block_pct\": 90}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 300,
+   "warn_pct": 70,
+   "block_pct": 90,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"widget_size\": 36.5, \"widget_cx\": 100.25, \"widget_cy\": 5, \"widget_angle\": 15.5, \"dash_rect\": [1.5, 2, 3, 4]}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36.5,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": [
+    1.5,
+    2,
+    3,
+    4
+   ],
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": 100.25,
+   "widget_cy": 5,
+   "widget_angle": 15.5
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"zzz\": 1, \"interval_sec\": 200, \"aaa\": {\"x\": [1, 2], \"y\": null}, \"mmm\": [true, false]}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 200,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0,
+   "zzz": 1,
+   "aaa": {
+    "x": [
+     1,
+     2
+    ],
+    "y": null
+   },
+   "mmm": [
+    true,
+    false
+   ]
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"widget_style\": \"bars\", \"unknown_future_key\": \"keep me\", \"aliases\": {\"claude-da\": \"Đà\"}}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {
+    "claude-da": "Đà"
+   },
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "bars",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0,
+   "unknown_future_key": "keep me"
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 100, \"interval_sec\": 300}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 300,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": []}",
+   "layout": {}
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": []}",
+   "layout": {
+    "default": true,
+    "profiles_dir": true,
+    "entries": [
+     [
+      "claude-hn",
+      "dir_creds"
+     ],
+     [
+      "claude-da",
+      "dir_creds"
+     ],
+     [
+      "Claude-Zed",
+      "dir_creds"
+     ],
+     [
+      "alpha",
+      "dir_creds"
+     ],
+     [
+      "Beta",
+      "dir_creds"
+     ],
+     [
+      "beta2",
+      "dir_nocreds"
+     ],
+     [
+      "notes.txt",
+      "file"
+     ],
+     [
+      "_under",
+      "dir_creds"
+     ],
+     [
+      "claude-ngoai",
+      "dir_creds"
+     ],
+     [
+      "ÉCLAIR",
+      "dir_creds"
+     ],
+     [
+      "zulu",
+      "dir_creds"
+     ],
+     [
+      "Zulu2",
+      "dir_creds"
+     ],
+     [
+      "10",
+      "dir_creds"
+     ],
+     [
+      "9",
+      "dir_creds"
+     ],
+     [
+      "a b",
+      "dir_creds"
+     ],
+     [
+      "a-b",
+      "dir_creds"
+     ],
+     [
+      "a_b",
+      "dir_creds"
+     ]
+    ]
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    },
+    {
+     "name": "10",
+     "path": "{HOME}\\claude-profiles\\10"
+    },
+    {
+     "name": "9",
+     "path": "{HOME}\\claude-profiles\\9"
+    },
+    {
+     "name": "_under",
+     "path": "{HOME}\\claude-profiles\\_under"
+    },
+    {
+     "name": "a b",
+     "path": "{HOME}\\claude-profiles\\a b"
+    },
+    {
+     "name": "a-b",
+     "path": "{HOME}\\claude-profiles\\a-b"
+    },
+    {
+     "name": "a_b",
+     "path": "{HOME}\\claude-profiles\\a_b"
+    },
+    {
+     "name": "alpha",
+     "path": "{HOME}\\claude-profiles\\alpha"
+    },
+    {
+     "name": "Beta",
+     "path": "{HOME}\\claude-profiles\\Beta"
+    },
+    {
+     "name": "claude-da",
+     "path": "{HOME}\\claude-profiles\\claude-da"
+    },
+    {
+     "name": "claude-hn",
+     "path": "{HOME}\\claude-profiles\\claude-hn"
+    },
+    {
+     "name": "claude-ngoai",
+     "path": "{HOME}\\claude-profiles\\claude-ngoai"
+    },
+    {
+     "name": "Claude-Zed",
+     "path": "{HOME}\\claude-profiles\\Claude-Zed"
+    },
+    {
+     "name": "zulu",
+     "path": "{HOME}\\claude-profiles\\zulu"
+    },
+    {
+     "name": "Zulu2",
+     "path": "{HOME}\\claude-profiles\\Zulu2"
+    },
+    {
+     "name": "ÉCLAIR",
+     "path": "{HOME}\\claude-profiles\\ÉCLAIR"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": null}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": false}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": 0}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": \"\"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": {}}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": 0.0}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": [{\"name\": \"x\", \"path\": \"C:\\\\p\"}]}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "x",
+     "path": "C:\\p"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": \"abc\"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": "abc",
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": [1, 2]}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    1,
+    2
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": {\"a\": 1}}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": {
+    "a": 1
+   },
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": true}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": true,
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"profiles\": 7}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": 7,
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": \"300\"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 300,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": \" 250 \"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 250,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 45}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 89}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 90}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 91}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 91,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 300.9}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 300,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 89.9}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": true}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": false}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": null}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": \"abc\"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "raises": "ValueError"
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": []}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": {}}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 1e2}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 100,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 1e3}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 1000,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": -100}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": \"1_0\"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": \"-5\"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 90,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": \"\"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "raises": "ValueError"
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": NaN}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "raises": "ValueError"
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"interval_sec\": 12345678901}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 12345678901,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"widget_angle\": 0, \"widget_cx\": 12, \"widget_cy\": 34.5}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": 12,
+   "widget_cy": 34.5,
+   "widget_angle": 0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"widget_hidden\": [\"claude-da\"], \"widget_label\": \"short\", \"widget_font\": 120.5, \"widget_opacity\": 55}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "short",
+   "widget_font": 120.5,
+   "widget_opacity": 55,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [
+    "claude-da"
+   ],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"block_enabled\": false, \"token_refresh\": 0, \"autostart\": 1}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": false,
+   "autostart": 1,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": 0,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"dash_rect\": null}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"dash_rect\": [10, 20, 800.5, 600]}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": [
+    10,
+    20,
+    800.5,
+    600
+   ],
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"aliases\": null}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": null,
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\"x\": \"é中😀\"}",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 180,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "default (desktop)",
+     "path": "{HOME}\\.claude"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0,
+   "x": "é中😀"
+  }
+ },
+ {
+  "input": {
+   "config_text": "{\n  \"interval_sec\": 120,\n  \"profiles\": [\n    {\"name\": \"claude-da\", \"path\": \"C:\\\\Users\\\\x\\\\claude-profiles\\\\claude-da\"}\n  ]\n}\n",
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": {
+   "interval_sec": 120,
+   "warn_pct": 80,
+   "block_pct": 95,
+   "block_enabled": true,
+   "autostart": false,
+   "profiles": [
+    {
+     "name": "claude-da",
+     "path": "C:\\Users\\x\\claude-profiles\\claude-da"
+    }
+   ],
+   "token_refresh": true,
+   "notify_enabled": true,
+   "notify_warn": true,
+   "notify_block": true,
+   "widget_enabled": true,
+   "widget_size": 36,
+   "widget_reset": true,
+   "widget_anchor": "tray",
+   "widget_offset_x": 0,
+   "widget_offset_y": 0,
+   "aliases": {},
+   "widget_locked": true,
+   "widget_sort": "config",
+   "widget_max_cells": 0,
+   "widget_max_len": 0,
+   "dash_rect": null,
+   "widget_show_label": true,
+   "widget_show_5h": true,
+   "widget_show_7d": true,
+   "widget_show_reset5": true,
+   "widget_show_reset7": true,
+   "widget_tooltip": true,
+   "widget_label": "alias",
+   "widget_font": 100,
+   "widget_opacity": 100,
+   "widget_theme": "auto",
+   "widget_plate": false,
+   "widget_hidden": [],
+   "widget_style": "rings",
+   "widget_layout": "auto",
+   "widget_cx": null,
+   "widget_cy": null,
+   "widget_angle": 0.0
+  }
+ }
+]

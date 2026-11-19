@@ -1,0 +1,7614 @@
+[
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "DA"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "HN"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "TE"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "DA"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "HN"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "TE"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {},
+   "maxlen": 3
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "da"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "hn"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "ngoai"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "team-01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "team-02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "team-10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "alpha"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "alps"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "al"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "a"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "a"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": ""
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "-"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": ""
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "-"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "--x"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "x-y"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "x-y-7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "x-1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "Team-Beta-3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "team"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "é"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "éa"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "日本語"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "日本-02"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "ab-cd"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "  sp ace"
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "claude "
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "myx"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "Claude-Upper"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "9-9"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "a1-b2-c3"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "hà-nội"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "Default"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "claude-x"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "ß-1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": "ngoai-vn-12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "des"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "des"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "da"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "hn"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "ngo"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "tea"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "tea"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "tea"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "alp"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "alp"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "al"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "a"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "a"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": ""
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "-"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": ""
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "-"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "--x"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "x-y"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "x-y"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "x-1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "Tea"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "tea"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "é"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "éa"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "日本語"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "日本-"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "ab-"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "  s"
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "cla"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "myx"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "Cla"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "9-9"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "a1-"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "hà-"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "des"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "Def"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "cla"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "ß-1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 3
+  },
+  "expected": "ngo"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "Đà Nẵng"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "Hà Nội"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "😀x"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "abéècd"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "Đà "
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "Hà "
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "😀x"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "abé"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "xyz"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "hn"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "ngoai"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "team-01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "team-02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "team-10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "alpha"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "alps"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "al"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "a"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "a"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": ""
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "-"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": ""
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "-"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "--x"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "x-y"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "x-y-7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "x-1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "Team-Beta-3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "team"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "é"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "éa"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "日本語"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "日本-02"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "ab-cd"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "  sp ace"
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "claude "
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "myx"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "Claude-Upper"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "9-9"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "a1-b2-c3"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "hà-nội"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "Default"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "claude-x"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "ß-1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "ngoai-vn-12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "des"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "des"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "xyz"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "hn"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "ngo"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "tea"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "tea"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "tea"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "alp"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "alp"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "al"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "a"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "a"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": ""
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "-"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": ""
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "-"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "--x"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "x-y"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "x-y"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "x-1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "Tea"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "tea"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "é"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "éa"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "日本語"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "日本-"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "ab-"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "  s"
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "cla"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "myx"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "Cla"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "9-9"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "a1-"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "hà-"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "des"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "Def"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "cla"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "ß-1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": "short",
+    "aliases": {
+     "claude-da": "xyz",
+     "x-1": "  "
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "ngo"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "DA"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "HN"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "TE"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": null
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "DA"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "HN"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "TE"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": 5,
+    "aliases": null
+   },
+   "maxlen": 3
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "DA"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "HN"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "TE"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": null
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "DA"
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "HN"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "TE"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "widget_label": null,
+    "aliases": {}
+   },
+   "maxlen": 3
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": {
+   "raises": "AttributeError"
+  }
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "HN"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "TE"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": null
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "claude-da",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": {
+   "raises": "AttributeError"
+  }
+ },
+ {
+  "input": {
+   "name": "claude-hn",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "HN"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "NG"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-02",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "T02"
+ },
+ {
+  "input": {
+   "name": "claude-team-10",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "T10"
+ },
+ {
+  "input": {
+   "name": "claude-alpha",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-alps",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-al",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "AL"
+ },
+ {
+  "input": {
+   "name": "claude-a",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "a",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "A"
+ },
+ {
+  "input": {
+   "name": "claude-",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "claude--",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "-",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "?"
+ },
+ {
+  "input": {
+   "name": "--x",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "X"
+ },
+ {
+  "input": {
+   "name": "claude-x-y",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "XY"
+ },
+ {
+  "input": {
+   "name": "claude-x-y-7",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "X7"
+ },
+ {
+  "input": {
+   "name": "x-1",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "X1"
+ },
+ {
+  "input": {
+   "name": "claude-Team-Beta-3",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "T3"
+ },
+ {
+  "input": {
+   "name": "team",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "TE"
+ },
+ {
+  "input": {
+   "name": "claude-é",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "É"
+ },
+ {
+  "input": {
+   "name": "éa",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "ÉA"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-日本-02",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-ab-cd",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "AB"
+ },
+ {
+  "input": {
+   "name": "  claude-sp ace",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "  "
+ },
+ {
+  "input": {
+   "name": "claude claude-",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "myclaude-x",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "MY"
+ },
+ {
+  "input": {
+   "name": "Claude-Upper",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "claude-9",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "9"
+ },
+ {
+  "input": {
+   "name": "9-9",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "99"
+ },
+ {
+  "input": {
+   "name": "claude-a1-b2-c3",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "A1"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "default-2",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "Default",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "DE"
+ },
+ {
+  "input": {
+   "name": "claude-claude-x",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "CL"
+ },
+ {
+  "input": {
+   "name": "ß-1",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "SS1"
+ },
+ {
+  "input": {
+   "name": "claude-ngoai-vn-12",
+   "cfg": {
+    "aliases": {
+     "claude-da": 5
+    }
+   },
+   "maxlen": 3
+  },
+  "expected": "N12"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {},
+   "maxlen": 0
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 0
+  },
+  "expected": "team-01"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 0
+  },
+  "expected": "😀x"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {},
+   "maxlen": 0
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 0
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 0
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {},
+   "maxlen": 0
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 0
+  },
+  "expected": "日本語"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 0
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {},
+   "maxlen": 0
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 0
+  },
+  "expected": "hà-nội"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 0
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {},
+   "maxlen": 1
+  },
+  "expected": "T"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 1
+  },
+  "expected": "t"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 1
+  },
+  "expected": "😀"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {},
+   "maxlen": 1
+  },
+  "expected": "D"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 1
+  },
+  "expected": "d"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 1
+  },
+  "expected": "D"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {},
+   "maxlen": 1
+  },
+  "expected": "日"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 1
+  },
+  "expected": "日"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 1
+  },
+  "expected": "日"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {},
+   "maxlen": 1
+  },
+  "expected": "H"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 1
+  },
+  "expected": "h"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 1
+  },
+  "expected": "H"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {},
+   "maxlen": 2
+  },
+  "expected": "T0"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 2
+  },
+  "expected": "te"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 2
+  },
+  "expected": "😀x"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {},
+   "maxlen": 2
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 2
+  },
+  "expected": "de"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 2
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {},
+   "maxlen": 2
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 2
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 2
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {},
+   "maxlen": 2
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 2
+  },
+  "expected": "hà"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 2
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {},
+   "maxlen": 5
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 5
+  },
+  "expected": "team-"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 5
+  },
+  "expected": "😀x"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {},
+   "maxlen": 5
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 5
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 5
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {},
+   "maxlen": 5
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 5
+  },
+  "expected": "日本語"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 5
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {},
+   "maxlen": 5
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 5
+  },
+  "expected": "hà-nộ"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 5
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {},
+   "maxlen": 100
+  },
+  "expected": "T01"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 100
+  },
+  "expected": "team-01"
+ },
+ {
+  "input": {
+   "name": "claude-team-01",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 100
+  },
+  "expected": "😀x"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {},
+   "maxlen": 100
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 100
+  },
+  "expected": "desk"
+ },
+ {
+  "input": {
+   "name": "default (desktop)",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 100
+  },
+  "expected": "DT"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {},
+   "maxlen": 100
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 100
+  },
+  "expected": "日本語"
+ },
+ {
+  "input": {
+   "name": "日本語",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 100
+  },
+  "expected": "日本"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {},
+   "maxlen": 100
+  },
+  "expected": "HÀ"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 100
+  },
+  "expected": "hà-nội"
+ },
+ {
+  "input": {
+   "name": "claude-hà-nội",
+   "cfg": {
+    "widget_label": "alias",
+    "aliases": {
+     "claude-da": "Đà Nẵng",
+     "claude-hn": "  Hà Nội  ",
+     "default (desktop)": "   ",
+     "claude-ngoai": "",
+     "claude-team-01": "😀x",
+     "team": "abéècd"
+    }
+   },
+   "maxlen": 100
+  },
+  "expected": "HÀ"
+ }
+]

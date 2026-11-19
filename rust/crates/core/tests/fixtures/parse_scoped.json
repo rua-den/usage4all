@@ -1,0 +1,1112 @@
+[
+ {
+  "input": {
+   "limits": null
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": []
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": {}
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": "x"
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": ""
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": 0
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": 5
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "limits": true
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "limits": false
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": 1.5
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "limits": {
+    "a": 1
+   }
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": {
+    "kind": "weekly_scoped"
+   }
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": "weekly_scoped"
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    },
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Opus"
+      }
+     },
+     "percent": 0,
+     "resets_at": null
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   },
+   {
+    "name": "Opus",
+    "pct": 0,
+    "resets_at": null
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "other",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": null,
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "scope": {
+      "model": {
+       "display_name": "X"
+      }
+     }
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": null,
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {},
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": [],
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": "x",
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": 5,
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": null
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": 5
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": "m"
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": []
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {}
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": null
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": ""
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": 5
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": 5,
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": 0
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Đ"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Đ",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": [
+        "a"
+       ]
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": [
+     "a"
+    ],
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "other": 1
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": null,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 0,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 0,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 0,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 0.0,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 0,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": "12",
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": "12",
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 12.5,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 12.5,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": false,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 0,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": true,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": true,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": [],
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 0,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": [
+      1
+     ],
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": [
+     1
+    ],
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "NoPct"
+      }
+     }
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "NoPct",
+    "pct": 0,
+    "resets_at": null
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": null
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": null
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "NoReset"
+      }
+     },
+     "percent": 3
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "NoReset",
+    "pct": 3,
+    "resets_at": null
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": 5
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": 5
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    1,
+    "s",
+    null,
+    [
+     1
+    ],
+    [
+     {
+      "kind": "weekly_scoped",
+      "scope": {
+       "model": {
+        "display_name": "Fable"
+       }
+      },
+      "percent": 21,
+      "resets_at": "2026-11-26T09:00:00+00:00"
+     }
+    ],
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    1,
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    },
+    "x",
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 7,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   },
+   {
+    "name": "Fable",
+    "pct": 7,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    },
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    },
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   },
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   },
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    },
+    5,
+    {
+     "kind": "weekly_scoped",
+     "scope": "bad",
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    },
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Z"
+      }
+     },
+     "percent": 9,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   },
+   {
+    "name": "Z",
+    "pct": 9,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    [
+     {
+      "kind": "weekly_scoped",
+      "scope": {
+       "model": {
+        "display_name": "Fable"
+       }
+      },
+      "percent": 21,
+      "resets_at": "2026-11-26T09:00:00+00:00"
+     }
+    ]
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    null
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    []
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {}
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "scope": null
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00",
+     "extra": "ignored"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "Fable",
+    "pct": 21,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped ",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "WEEKLY_SCOPED",
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": [
+      "weekly_scoped"
+     ],
+     "scope": {
+      "model": {
+       "display_name": "Fable"
+      }
+     },
+     "percent": 21,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "limits": [
+    {
+     "kind": "weekly_scoped",
+     "scope": {
+      "model": {
+       "display_name": "A",
+       "id": 1
+      },
+      "x": 2
+     },
+     "percent": 99.5,
+     "resets_at": "2026-11-26T09:00:00+00:00"
+    }
+   ]
+  },
+  "expected": [
+   {
+    "name": "A",
+    "pct": 99.5,
+    "resets_at": "2026-11-26T09:00:00+00:00"
+   }
+  ]
+ }
+]

@@ -1,0 +1,7187 @@
+[
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 90,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 89,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 60,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 0,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": -5,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 300,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 300
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 3600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 3600
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "300",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 300
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": " 300 ",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 300
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "+200",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 200
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "-7",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "1_000",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 1000
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "1__0",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "_1",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "1_",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "1e3",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "abc",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": " ",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "0x10",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "3.5",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 300.9,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 300
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": -1.5,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 1000.0,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 1000
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 89.99,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 1000000.0,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 1000000
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": true,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": false,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 90
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": null,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": [
+     1
+    ],
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": [],
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": {
+     "a": 1
+    },
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": {},
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {}
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": []
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": []
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": []
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     }
+    ]
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     }
+    ]
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     }
+    ]
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     }
+    ]
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     }
+    ]
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     }
+    ]
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     }
+    ]
+   }
+  },
+  "expected": 200
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     }
+    ]
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     }
+    ]
+   }
+  },
+  "expected": 200
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     },
+     {
+      "name": "p40",
+      "path": "C:\\p40"
+     },
+     {
+      "name": "p41",
+      "path": "C:\\p41"
+     },
+     {
+      "name": "p42",
+      "path": "C:\\p42"
+     },
+     {
+      "name": "p43",
+      "path": "C:\\p43"
+     },
+     {
+      "name": "p44",
+      "path": "C:\\p44"
+     },
+     {
+      "name": "p45",
+      "path": "C:\\p45"
+     },
+     {
+      "name": "p46",
+      "path": "C:\\p46"
+     },
+     {
+      "name": "p47",
+      "path": "C:\\p47"
+     },
+     {
+      "name": "p48",
+      "path": "C:\\p48"
+     },
+     {
+      "name": "p49",
+      "path": "C:\\p49"
+     },
+     {
+      "name": "p50",
+      "path": "C:\\p50"
+     },
+     {
+      "name": "p51",
+      "path": "C:\\p51"
+     },
+     {
+      "name": "p52",
+      "path": "C:\\p52"
+     },
+     {
+      "name": "p53",
+      "path": "C:\\p53"
+     },
+     {
+      "name": "p54",
+      "path": "C:\\p54"
+     },
+     {
+      "name": "p55",
+      "path": "C:\\p55"
+     },
+     {
+      "name": "p56",
+      "path": "C:\\p56"
+     },
+     {
+      "name": "p57",
+      "path": "C:\\p57"
+     },
+     {
+      "name": "p58",
+      "path": "C:\\p58"
+     },
+     {
+      "name": "p59",
+      "path": "C:\\p59"
+     },
+     {
+      "name": "p60",
+      "path": "C:\\p60"
+     },
+     {
+      "name": "p61",
+      "path": "C:\\p61"
+     },
+     {
+      "name": "p62",
+      "path": "C:\\p62"
+     },
+     {
+      "name": "p63",
+      "path": "C:\\p63"
+     },
+     {
+      "name": "p64",
+      "path": "C:\\p64"
+     },
+     {
+      "name": "p65",
+      "path": "C:\\p65"
+     },
+     {
+      "name": "p66",
+      "path": "C:\\p66"
+     },
+     {
+      "name": "p67",
+      "path": "C:\\p67"
+     },
+     {
+      "name": "p68",
+      "path": "C:\\p68"
+     },
+     {
+      "name": "p69",
+      "path": "C:\\p69"
+     },
+     {
+      "name": "p70",
+      "path": "C:\\p70"
+     },
+     {
+      "name": "p71",
+      "path": "C:\\p71"
+     },
+     {
+      "name": "p72",
+      "path": "C:\\p72"
+     },
+     {
+      "name": "p73",
+      "path": "C:\\p73"
+     },
+     {
+      "name": "p74",
+      "path": "C:\\p74"
+     },
+     {
+      "name": "p75",
+      "path": "C:\\p75"
+     },
+     {
+      "name": "p76",
+      "path": "C:\\p76"
+     },
+     {
+      "name": "p77",
+      "path": "C:\\p77"
+     },
+     {
+      "name": "p78",
+      "path": "C:\\p78"
+     },
+     {
+      "name": "p79",
+      "path": "C:\\p79"
+     },
+     {
+      "name": "p80",
+      "path": "C:\\p80"
+     },
+     {
+      "name": "p81",
+      "path": "C:\\p81"
+     },
+     {
+      "name": "p82",
+      "path": "C:\\p82"
+     },
+     {
+      "name": "p83",
+      "path": "C:\\p83"
+     },
+     {
+      "name": "p84",
+      "path": "C:\\p84"
+     },
+     {
+      "name": "p85",
+      "path": "C:\\p85"
+     },
+     {
+      "name": "p86",
+      "path": "C:\\p86"
+     },
+     {
+      "name": "p87",
+      "path": "C:\\p87"
+     },
+     {
+      "name": "p88",
+      "path": "C:\\p88"
+     },
+     {
+      "name": "p89",
+      "path": "C:\\p89"
+     },
+     {
+      "name": "p90",
+      "path": "C:\\p90"
+     },
+     {
+      "name": "p91",
+      "path": "C:\\p91"
+     },
+     {
+      "name": "p92",
+      "path": "C:\\p92"
+     },
+     {
+      "name": "p93",
+      "path": "C:\\p93"
+     },
+     {
+      "name": "p94",
+      "path": "C:\\p94"
+     },
+     {
+      "name": "p95",
+      "path": "C:\\p95"
+     },
+     {
+      "name": "p96",
+      "path": "C:\\p96"
+     },
+     {
+      "name": "p97",
+      "path": "C:\\p97"
+     },
+     {
+      "name": "p98",
+      "path": "C:\\p98"
+     },
+     {
+      "name": "p99",
+      "path": "C:\\p99"
+     }
+    ]
+   }
+  },
+  "expected": 500
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     },
+     {
+      "name": "p40",
+      "path": "C:\\p40"
+     },
+     {
+      "name": "p41",
+      "path": "C:\\p41"
+     },
+     {
+      "name": "p42",
+      "path": "C:\\p42"
+     },
+     {
+      "name": "p43",
+      "path": "C:\\p43"
+     },
+     {
+      "name": "p44",
+      "path": "C:\\p44"
+     },
+     {
+      "name": "p45",
+      "path": "C:\\p45"
+     },
+     {
+      "name": "p46",
+      "path": "C:\\p46"
+     },
+     {
+      "name": "p47",
+      "path": "C:\\p47"
+     },
+     {
+      "name": "p48",
+      "path": "C:\\p48"
+     },
+     {
+      "name": "p49",
+      "path": "C:\\p49"
+     },
+     {
+      "name": "p50",
+      "path": "C:\\p50"
+     },
+     {
+      "name": "p51",
+      "path": "C:\\p51"
+     },
+     {
+      "name": "p52",
+      "path": "C:\\p52"
+     },
+     {
+      "name": "p53",
+      "path": "C:\\p53"
+     },
+     {
+      "name": "p54",
+      "path": "C:\\p54"
+     },
+     {
+      "name": "p55",
+      "path": "C:\\p55"
+     },
+     {
+      "name": "p56",
+      "path": "C:\\p56"
+     },
+     {
+      "name": "p57",
+      "path": "C:\\p57"
+     },
+     {
+      "name": "p58",
+      "path": "C:\\p58"
+     },
+     {
+      "name": "p59",
+      "path": "C:\\p59"
+     },
+     {
+      "name": "p60",
+      "path": "C:\\p60"
+     },
+     {
+      "name": "p61",
+      "path": "C:\\p61"
+     },
+     {
+      "name": "p62",
+      "path": "C:\\p62"
+     },
+     {
+      "name": "p63",
+      "path": "C:\\p63"
+     },
+     {
+      "name": "p64",
+      "path": "C:\\p64"
+     },
+     {
+      "name": "p65",
+      "path": "C:\\p65"
+     },
+     {
+      "name": "p66",
+      "path": "C:\\p66"
+     },
+     {
+      "name": "p67",
+      "path": "C:\\p67"
+     },
+     {
+      "name": "p68",
+      "path": "C:\\p68"
+     },
+     {
+      "name": "p69",
+      "path": "C:\\p69"
+     },
+     {
+      "name": "p70",
+      "path": "C:\\p70"
+     },
+     {
+      "name": "p71",
+      "path": "C:\\p71"
+     },
+     {
+      "name": "p72",
+      "path": "C:\\p72"
+     },
+     {
+      "name": "p73",
+      "path": "C:\\p73"
+     },
+     {
+      "name": "p74",
+      "path": "C:\\p74"
+     },
+     {
+      "name": "p75",
+      "path": "C:\\p75"
+     },
+     {
+      "name": "p76",
+      "path": "C:\\p76"
+     },
+     {
+      "name": "p77",
+      "path": "C:\\p77"
+     },
+     {
+      "name": "p78",
+      "path": "C:\\p78"
+     },
+     {
+      "name": "p79",
+      "path": "C:\\p79"
+     },
+     {
+      "name": "p80",
+      "path": "C:\\p80"
+     },
+     {
+      "name": "p81",
+      "path": "C:\\p81"
+     },
+     {
+      "name": "p82",
+      "path": "C:\\p82"
+     },
+     {
+      "name": "p83",
+      "path": "C:\\p83"
+     },
+     {
+      "name": "p84",
+      "path": "C:\\p84"
+     },
+     {
+      "name": "p85",
+      "path": "C:\\p85"
+     },
+     {
+      "name": "p86",
+      "path": "C:\\p86"
+     },
+     {
+      "name": "p87",
+      "path": "C:\\p87"
+     },
+     {
+      "name": "p88",
+      "path": "C:\\p88"
+     },
+     {
+      "name": "p89",
+      "path": "C:\\p89"
+     },
+     {
+      "name": "p90",
+      "path": "C:\\p90"
+     },
+     {
+      "name": "p91",
+      "path": "C:\\p91"
+     },
+     {
+      "name": "p92",
+      "path": "C:\\p92"
+     },
+     {
+      "name": "p93",
+      "path": "C:\\p93"
+     },
+     {
+      "name": "p94",
+      "path": "C:\\p94"
+     },
+     {
+      "name": "p95",
+      "path": "C:\\p95"
+     },
+     {
+      "name": "p96",
+      "path": "C:\\p96"
+     },
+     {
+      "name": "p97",
+      "path": "C:\\p97"
+     },
+     {
+      "name": "p98",
+      "path": "C:\\p98"
+     },
+     {
+      "name": "p99",
+      "path": "C:\\p99"
+     }
+    ]
+   }
+  },
+  "expected": 600
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     },
+     {
+      "name": "p40",
+      "path": "C:\\p40"
+     },
+     {
+      "name": "p41",
+      "path": "C:\\p41"
+     },
+     {
+      "name": "p42",
+      "path": "C:\\p42"
+     },
+     {
+      "name": "p43",
+      "path": "C:\\p43"
+     },
+     {
+      "name": "p44",
+      "path": "C:\\p44"
+     },
+     {
+      "name": "p45",
+      "path": "C:\\p45"
+     },
+     {
+      "name": "p46",
+      "path": "C:\\p46"
+     },
+     {
+      "name": "p47",
+      "path": "C:\\p47"
+     },
+     {
+      "name": "p48",
+      "path": "C:\\p48"
+     },
+     {
+      "name": "p49",
+      "path": "C:\\p49"
+     },
+     {
+      "name": "p50",
+      "path": "C:\\p50"
+     },
+     {
+      "name": "p51",
+      "path": "C:\\p51"
+     },
+     {
+      "name": "p52",
+      "path": "C:\\p52"
+     },
+     {
+      "name": "p53",
+      "path": "C:\\p53"
+     },
+     {
+      "name": "p54",
+      "path": "C:\\p54"
+     },
+     {
+      "name": "p55",
+      "path": "C:\\p55"
+     },
+     {
+      "name": "p56",
+      "path": "C:\\p56"
+     },
+     {
+      "name": "p57",
+      "path": "C:\\p57"
+     },
+     {
+      "name": "p58",
+      "path": "C:\\p58"
+     },
+     {
+      "name": "p59",
+      "path": "C:\\p59"
+     },
+     {
+      "name": "p60",
+      "path": "C:\\p60"
+     },
+     {
+      "name": "p61",
+      "path": "C:\\p61"
+     },
+     {
+      "name": "p62",
+      "path": "C:\\p62"
+     },
+     {
+      "name": "p63",
+      "path": "C:\\p63"
+     },
+     {
+      "name": "p64",
+      "path": "C:\\p64"
+     },
+     {
+      "name": "p65",
+      "path": "C:\\p65"
+     },
+     {
+      "name": "p66",
+      "path": "C:\\p66"
+     },
+     {
+      "name": "p67",
+      "path": "C:\\p67"
+     },
+     {
+      "name": "p68",
+      "path": "C:\\p68"
+     },
+     {
+      "name": "p69",
+      "path": "C:\\p69"
+     },
+     {
+      "name": "p70",
+      "path": "C:\\p70"
+     },
+     {
+      "name": "p71",
+      "path": "C:\\p71"
+     },
+     {
+      "name": "p72",
+      "path": "C:\\p72"
+     },
+     {
+      "name": "p73",
+      "path": "C:\\p73"
+     },
+     {
+      "name": "p74",
+      "path": "C:\\p74"
+     },
+     {
+      "name": "p75",
+      "path": "C:\\p75"
+     },
+     {
+      "name": "p76",
+      "path": "C:\\p76"
+     },
+     {
+      "name": "p77",
+      "path": "C:\\p77"
+     },
+     {
+      "name": "p78",
+      "path": "C:\\p78"
+     },
+     {
+      "name": "p79",
+      "path": "C:\\p79"
+     },
+     {
+      "name": "p80",
+      "path": "C:\\p80"
+     },
+     {
+      "name": "p81",
+      "path": "C:\\p81"
+     },
+     {
+      "name": "p82",
+      "path": "C:\\p82"
+     },
+     {
+      "name": "p83",
+      "path": "C:\\p83"
+     },
+     {
+      "name": "p84",
+      "path": "C:\\p84"
+     },
+     {
+      "name": "p85",
+      "path": "C:\\p85"
+     },
+     {
+      "name": "p86",
+      "path": "C:\\p86"
+     },
+     {
+      "name": "p87",
+      "path": "C:\\p87"
+     },
+     {
+      "name": "p88",
+      "path": "C:\\p88"
+     },
+     {
+      "name": "p89",
+      "path": "C:\\p89"
+     },
+     {
+      "name": "p90",
+      "path": "C:\\p90"
+     },
+     {
+      "name": "p91",
+      "path": "C:\\p91"
+     },
+     {
+      "name": "p92",
+      "path": "C:\\p92"
+     },
+     {
+      "name": "p93",
+      "path": "C:\\p93"
+     },
+     {
+      "name": "p94",
+      "path": "C:\\p94"
+     },
+     {
+      "name": "p95",
+      "path": "C:\\p95"
+     },
+     {
+      "name": "p96",
+      "path": "C:\\p96"
+     },
+     {
+      "name": "p97",
+      "path": "C:\\p97"
+     },
+     {
+      "name": "p98",
+      "path": "C:\\p98"
+     },
+     {
+      "name": "p99",
+      "path": "C:\\p99"
+     }
+    ]
+   }
+  },
+  "expected": 500
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 180,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     },
+     {
+      "name": "p40",
+      "path": "C:\\p40"
+     },
+     {
+      "name": "p41",
+      "path": "C:\\p41"
+     },
+     {
+      "name": "p42",
+      "path": "C:\\p42"
+     },
+     {
+      "name": "p43",
+      "path": "C:\\p43"
+     },
+     {
+      "name": "p44",
+      "path": "C:\\p44"
+     },
+     {
+      "name": "p45",
+      "path": "C:\\p45"
+     },
+     {
+      "name": "p46",
+      "path": "C:\\p46"
+     },
+     {
+      "name": "p47",
+      "path": "C:\\p47"
+     },
+     {
+      "name": "p48",
+      "path": "C:\\p48"
+     },
+     {
+      "name": "p49",
+      "path": "C:\\p49"
+     },
+     {
+      "name": "p50",
+      "path": "C:\\p50"
+     },
+     {
+      "name": "p51",
+      "path": "C:\\p51"
+     },
+     {
+      "name": "p52",
+      "path": "C:\\p52"
+     },
+     {
+      "name": "p53",
+      "path": "C:\\p53"
+     },
+     {
+      "name": "p54",
+      "path": "C:\\p54"
+     },
+     {
+      "name": "p55",
+      "path": "C:\\p55"
+     },
+     {
+      "name": "p56",
+      "path": "C:\\p56"
+     },
+     {
+      "name": "p57",
+      "path": "C:\\p57"
+     },
+     {
+      "name": "p58",
+      "path": "C:\\p58"
+     },
+     {
+      "name": "p59",
+      "path": "C:\\p59"
+     },
+     {
+      "name": "p60",
+      "path": "C:\\p60"
+     },
+     {
+      "name": "p61",
+      "path": "C:\\p61"
+     },
+     {
+      "name": "p62",
+      "path": "C:\\p62"
+     },
+     {
+      "name": "p63",
+      "path": "C:\\p63"
+     },
+     {
+      "name": "p64",
+      "path": "C:\\p64"
+     },
+     {
+      "name": "p65",
+      "path": "C:\\p65"
+     },
+     {
+      "name": "p66",
+      "path": "C:\\p66"
+     },
+     {
+      "name": "p67",
+      "path": "C:\\p67"
+     },
+     {
+      "name": "p68",
+      "path": "C:\\p68"
+     },
+     {
+      "name": "p69",
+      "path": "C:\\p69"
+     },
+     {
+      "name": "p70",
+      "path": "C:\\p70"
+     },
+     {
+      "name": "p71",
+      "path": "C:\\p71"
+     },
+     {
+      "name": "p72",
+      "path": "C:\\p72"
+     },
+     {
+      "name": "p73",
+      "path": "C:\\p73"
+     },
+     {
+      "name": "p74",
+      "path": "C:\\p74"
+     },
+     {
+      "name": "p75",
+      "path": "C:\\p75"
+     },
+     {
+      "name": "p76",
+      "path": "C:\\p76"
+     },
+     {
+      "name": "p77",
+      "path": "C:\\p77"
+     },
+     {
+      "name": "p78",
+      "path": "C:\\p78"
+     },
+     {
+      "name": "p79",
+      "path": "C:\\p79"
+     },
+     {
+      "name": "p80",
+      "path": "C:\\p80"
+     },
+     {
+      "name": "p81",
+      "path": "C:\\p81"
+     },
+     {
+      "name": "p82",
+      "path": "C:\\p82"
+     },
+     {
+      "name": "p83",
+      "path": "C:\\p83"
+     },
+     {
+      "name": "p84",
+      "path": "C:\\p84"
+     },
+     {
+      "name": "p85",
+      "path": "C:\\p85"
+     },
+     {
+      "name": "p86",
+      "path": "C:\\p86"
+     },
+     {
+      "name": "p87",
+      "path": "C:\\p87"
+     },
+     {
+      "name": "p88",
+      "path": "C:\\p88"
+     },
+     {
+      "name": "p89",
+      "path": "C:\\p89"
+     },
+     {
+      "name": "p90",
+      "path": "C:\\p90"
+     },
+     {
+      "name": "p91",
+      "path": "C:\\p91"
+     },
+     {
+      "name": "p92",
+      "path": "C:\\p92"
+     },
+     {
+      "name": "p93",
+      "path": "C:\\p93"
+     },
+     {
+      "name": "p94",
+      "path": "C:\\p94"
+     },
+     {
+      "name": "p95",
+      "path": "C:\\p95"
+     },
+     {
+      "name": "p96",
+      "path": "C:\\p96"
+     },
+     {
+      "name": "p97",
+      "path": "C:\\p97"
+     },
+     {
+      "name": "p98",
+      "path": "C:\\p98"
+     },
+     {
+      "name": "p99",
+      "path": "C:\\p99"
+     },
+     {
+      "name": "p100",
+      "path": "C:\\p100"
+     },
+     {
+      "name": "p101",
+      "path": "C:\\p101"
+     },
+     {
+      "name": "p102",
+      "path": "C:\\p102"
+     },
+     {
+      "name": "p103",
+      "path": "C:\\p103"
+     },
+     {
+      "name": "p104",
+      "path": "C:\\p104"
+     },
+     {
+      "name": "p105",
+      "path": "C:\\p105"
+     },
+     {
+      "name": "p106",
+      "path": "C:\\p106"
+     },
+     {
+      "name": "p107",
+      "path": "C:\\p107"
+     },
+     {
+      "name": "p108",
+      "path": "C:\\p108"
+     },
+     {
+      "name": "p109",
+      "path": "C:\\p109"
+     },
+     {
+      "name": "p110",
+      "path": "C:\\p110"
+     },
+     {
+      "name": "p111",
+      "path": "C:\\p111"
+     },
+     {
+      "name": "p112",
+      "path": "C:\\p112"
+     },
+     {
+      "name": "p113",
+      "path": "C:\\p113"
+     },
+     {
+      "name": "p114",
+      "path": "C:\\p114"
+     },
+     {
+      "name": "p115",
+      "path": "C:\\p115"
+     },
+     {
+      "name": "p116",
+      "path": "C:\\p116"
+     },
+     {
+      "name": "p117",
+      "path": "C:\\p117"
+     },
+     {
+      "name": "p118",
+      "path": "C:\\p118"
+     },
+     {
+      "name": "p119",
+      "path": "C:\\p119"
+     },
+     {
+      "name": "p120",
+      "path": "C:\\p120"
+     },
+     {
+      "name": "p121",
+      "path": "C:\\p121"
+     },
+     {
+      "name": "p122",
+      "path": "C:\\p122"
+     },
+     {
+      "name": "p123",
+      "path": "C:\\p123"
+     },
+     {
+      "name": "p124",
+      "path": "C:\\p124"
+     },
+     {
+      "name": "p125",
+      "path": "C:\\p125"
+     },
+     {
+      "name": "p126",
+      "path": "C:\\p126"
+     },
+     {
+      "name": "p127",
+      "path": "C:\\p127"
+     },
+     {
+      "name": "p128",
+      "path": "C:\\p128"
+     },
+     {
+      "name": "p129",
+      "path": "C:\\p129"
+     },
+     {
+      "name": "p130",
+      "path": "C:\\p130"
+     },
+     {
+      "name": "p131",
+      "path": "C:\\p131"
+     },
+     {
+      "name": "p132",
+      "path": "C:\\p132"
+     },
+     {
+      "name": "p133",
+      "path": "C:\\p133"
+     },
+     {
+      "name": "p134",
+      "path": "C:\\p134"
+     },
+     {
+      "name": "p135",
+      "path": "C:\\p135"
+     },
+     {
+      "name": "p136",
+      "path": "C:\\p136"
+     },
+     {
+      "name": "p137",
+      "path": "C:\\p137"
+     },
+     {
+      "name": "p138",
+      "path": "C:\\p138"
+     },
+     {
+      "name": "p139",
+      "path": "C:\\p139"
+     },
+     {
+      "name": "p140",
+      "path": "C:\\p140"
+     },
+     {
+      "name": "p141",
+      "path": "C:\\p141"
+     },
+     {
+      "name": "p142",
+      "path": "C:\\p142"
+     },
+     {
+      "name": "p143",
+      "path": "C:\\p143"
+     },
+     {
+      "name": "p144",
+      "path": "C:\\p144"
+     },
+     {
+      "name": "p145",
+      "path": "C:\\p145"
+     },
+     {
+      "name": "p146",
+      "path": "C:\\p146"
+     },
+     {
+      "name": "p147",
+      "path": "C:\\p147"
+     },
+     {
+      "name": "p148",
+      "path": "C:\\p148"
+     },
+     {
+      "name": "p149",
+      "path": "C:\\p149"
+     },
+     {
+      "name": "p150",
+      "path": "C:\\p150"
+     },
+     {
+      "name": "p151",
+      "path": "C:\\p151"
+     },
+     {
+      "name": "p152",
+      "path": "C:\\p152"
+     },
+     {
+      "name": "p153",
+      "path": "C:\\p153"
+     },
+     {
+      "name": "p154",
+      "path": "C:\\p154"
+     },
+     {
+      "name": "p155",
+      "path": "C:\\p155"
+     },
+     {
+      "name": "p156",
+      "path": "C:\\p156"
+     },
+     {
+      "name": "p157",
+      "path": "C:\\p157"
+     },
+     {
+      "name": "p158",
+      "path": "C:\\p158"
+     },
+     {
+      "name": "p159",
+      "path": "C:\\p159"
+     },
+     {
+      "name": "p160",
+      "path": "C:\\p160"
+     },
+     {
+      "name": "p161",
+      "path": "C:\\p161"
+     },
+     {
+      "name": "p162",
+      "path": "C:\\p162"
+     },
+     {
+      "name": "p163",
+      "path": "C:\\p163"
+     },
+     {
+      "name": "p164",
+      "path": "C:\\p164"
+     },
+     {
+      "name": "p165",
+      "path": "C:\\p165"
+     },
+     {
+      "name": "p166",
+      "path": "C:\\p166"
+     },
+     {
+      "name": "p167",
+      "path": "C:\\p167"
+     },
+     {
+      "name": "p168",
+      "path": "C:\\p168"
+     },
+     {
+      "name": "p169",
+      "path": "C:\\p169"
+     },
+     {
+      "name": "p170",
+      "path": "C:\\p170"
+     },
+     {
+      "name": "p171",
+      "path": "C:\\p171"
+     },
+     {
+      "name": "p172",
+      "path": "C:\\p172"
+     },
+     {
+      "name": "p173",
+      "path": "C:\\p173"
+     },
+     {
+      "name": "p174",
+      "path": "C:\\p174"
+     },
+     {
+      "name": "p175",
+      "path": "C:\\p175"
+     },
+     {
+      "name": "p176",
+      "path": "C:\\p176"
+     },
+     {
+      "name": "p177",
+      "path": "C:\\p177"
+     },
+     {
+      "name": "p178",
+      "path": "C:\\p178"
+     },
+     {
+      "name": "p179",
+      "path": "C:\\p179"
+     },
+     {
+      "name": "p180",
+      "path": "C:\\p180"
+     },
+     {
+      "name": "p181",
+      "path": "C:\\p181"
+     },
+     {
+      "name": "p182",
+      "path": "C:\\p182"
+     },
+     {
+      "name": "p183",
+      "path": "C:\\p183"
+     },
+     {
+      "name": "p184",
+      "path": "C:\\p184"
+     },
+     {
+      "name": "p185",
+      "path": "C:\\p185"
+     },
+     {
+      "name": "p186",
+      "path": "C:\\p186"
+     },
+     {
+      "name": "p187",
+      "path": "C:\\p187"
+     },
+     {
+      "name": "p188",
+      "path": "C:\\p188"
+     },
+     {
+      "name": "p189",
+      "path": "C:\\p189"
+     },
+     {
+      "name": "p190",
+      "path": "C:\\p190"
+     },
+     {
+      "name": "p191",
+      "path": "C:\\p191"
+     },
+     {
+      "name": "p192",
+      "path": "C:\\p192"
+     },
+     {
+      "name": "p193",
+      "path": "C:\\p193"
+     },
+     {
+      "name": "p194",
+      "path": "C:\\p194"
+     },
+     {
+      "name": "p195",
+      "path": "C:\\p195"
+     },
+     {
+      "name": "p196",
+      "path": "C:\\p196"
+     },
+     {
+      "name": "p197",
+      "path": "C:\\p197"
+     },
+     {
+      "name": "p198",
+      "path": "C:\\p198"
+     },
+     {
+      "name": "p199",
+      "path": "C:\\p199"
+     },
+     {
+      "name": "p200",
+      "path": "C:\\p200"
+     },
+     {
+      "name": "p201",
+      "path": "C:\\p201"
+     },
+     {
+      "name": "p202",
+      "path": "C:\\p202"
+     },
+     {
+      "name": "p203",
+      "path": "C:\\p203"
+     },
+     {
+      "name": "p204",
+      "path": "C:\\p204"
+     },
+     {
+      "name": "p205",
+      "path": "C:\\p205"
+     },
+     {
+      "name": "p206",
+      "path": "C:\\p206"
+     },
+     {
+      "name": "p207",
+      "path": "C:\\p207"
+     },
+     {
+      "name": "p208",
+      "path": "C:\\p208"
+     },
+     {
+      "name": "p209",
+      "path": "C:\\p209"
+     },
+     {
+      "name": "p210",
+      "path": "C:\\p210"
+     },
+     {
+      "name": "p211",
+      "path": "C:\\p211"
+     },
+     {
+      "name": "p212",
+      "path": "C:\\p212"
+     },
+     {
+      "name": "p213",
+      "path": "C:\\p213"
+     },
+     {
+      "name": "p214",
+      "path": "C:\\p214"
+     },
+     {
+      "name": "p215",
+      "path": "C:\\p215"
+     },
+     {
+      "name": "p216",
+      "path": "C:\\p216"
+     },
+     {
+      "name": "p217",
+      "path": "C:\\p217"
+     },
+     {
+      "name": "p218",
+      "path": "C:\\p218"
+     },
+     {
+      "name": "p219",
+      "path": "C:\\p219"
+     },
+     {
+      "name": "p220",
+      "path": "C:\\p220"
+     },
+     {
+      "name": "p221",
+      "path": "C:\\p221"
+     },
+     {
+      "name": "p222",
+      "path": "C:\\p222"
+     },
+     {
+      "name": "p223",
+      "path": "C:\\p223"
+     },
+     {
+      "name": "p224",
+      "path": "C:\\p224"
+     },
+     {
+      "name": "p225",
+      "path": "C:\\p225"
+     },
+     {
+      "name": "p226",
+      "path": "C:\\p226"
+     },
+     {
+      "name": "p227",
+      "path": "C:\\p227"
+     },
+     {
+      "name": "p228",
+      "path": "C:\\p228"
+     },
+     {
+      "name": "p229",
+      "path": "C:\\p229"
+     },
+     {
+      "name": "p230",
+      "path": "C:\\p230"
+     },
+     {
+      "name": "p231",
+      "path": "C:\\p231"
+     },
+     {
+      "name": "p232",
+      "path": "C:\\p232"
+     },
+     {
+      "name": "p233",
+      "path": "C:\\p233"
+     },
+     {
+      "name": "p234",
+      "path": "C:\\p234"
+     },
+     {
+      "name": "p235",
+      "path": "C:\\p235"
+     },
+     {
+      "name": "p236",
+      "path": "C:\\p236"
+     },
+     {
+      "name": "p237",
+      "path": "C:\\p237"
+     },
+     {
+      "name": "p238",
+      "path": "C:\\p238"
+     },
+     {
+      "name": "p239",
+      "path": "C:\\p239"
+     },
+     {
+      "name": "p240",
+      "path": "C:\\p240"
+     },
+     {
+      "name": "p241",
+      "path": "C:\\p241"
+     },
+     {
+      "name": "p242",
+      "path": "C:\\p242"
+     },
+     {
+      "name": "p243",
+      "path": "C:\\p243"
+     },
+     {
+      "name": "p244",
+      "path": "C:\\p244"
+     },
+     {
+      "name": "p245",
+      "path": "C:\\p245"
+     },
+     {
+      "name": "p246",
+      "path": "C:\\p246"
+     },
+     {
+      "name": "p247",
+      "path": "C:\\p247"
+     },
+     {
+      "name": "p248",
+      "path": "C:\\p248"
+     },
+     {
+      "name": "p249",
+      "path": "C:\\p249"
+     }
+    ]
+   }
+  },
+  "expected": 1250
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 600,
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     },
+     {
+      "name": "p40",
+      "path": "C:\\p40"
+     },
+     {
+      "name": "p41",
+      "path": "C:\\p41"
+     },
+     {
+      "name": "p42",
+      "path": "C:\\p42"
+     },
+     {
+      "name": "p43",
+      "path": "C:\\p43"
+     },
+     {
+      "name": "p44",
+      "path": "C:\\p44"
+     },
+     {
+      "name": "p45",
+      "path": "C:\\p45"
+     },
+     {
+      "name": "p46",
+      "path": "C:\\p46"
+     },
+     {
+      "name": "p47",
+      "path": "C:\\p47"
+     },
+     {
+      "name": "p48",
+      "path": "C:\\p48"
+     },
+     {
+      "name": "p49",
+      "path": "C:\\p49"
+     },
+     {
+      "name": "p50",
+      "path": "C:\\p50"
+     },
+     {
+      "name": "p51",
+      "path": "C:\\p51"
+     },
+     {
+      "name": "p52",
+      "path": "C:\\p52"
+     },
+     {
+      "name": "p53",
+      "path": "C:\\p53"
+     },
+     {
+      "name": "p54",
+      "path": "C:\\p54"
+     },
+     {
+      "name": "p55",
+      "path": "C:\\p55"
+     },
+     {
+      "name": "p56",
+      "path": "C:\\p56"
+     },
+     {
+      "name": "p57",
+      "path": "C:\\p57"
+     },
+     {
+      "name": "p58",
+      "path": "C:\\p58"
+     },
+     {
+      "name": "p59",
+      "path": "C:\\p59"
+     },
+     {
+      "name": "p60",
+      "path": "C:\\p60"
+     },
+     {
+      "name": "p61",
+      "path": "C:\\p61"
+     },
+     {
+      "name": "p62",
+      "path": "C:\\p62"
+     },
+     {
+      "name": "p63",
+      "path": "C:\\p63"
+     },
+     {
+      "name": "p64",
+      "path": "C:\\p64"
+     },
+     {
+      "name": "p65",
+      "path": "C:\\p65"
+     },
+     {
+      "name": "p66",
+      "path": "C:\\p66"
+     },
+     {
+      "name": "p67",
+      "path": "C:\\p67"
+     },
+     {
+      "name": "p68",
+      "path": "C:\\p68"
+     },
+     {
+      "name": "p69",
+      "path": "C:\\p69"
+     },
+     {
+      "name": "p70",
+      "path": "C:\\p70"
+     },
+     {
+      "name": "p71",
+      "path": "C:\\p71"
+     },
+     {
+      "name": "p72",
+      "path": "C:\\p72"
+     },
+     {
+      "name": "p73",
+      "path": "C:\\p73"
+     },
+     {
+      "name": "p74",
+      "path": "C:\\p74"
+     },
+     {
+      "name": "p75",
+      "path": "C:\\p75"
+     },
+     {
+      "name": "p76",
+      "path": "C:\\p76"
+     },
+     {
+      "name": "p77",
+      "path": "C:\\p77"
+     },
+     {
+      "name": "p78",
+      "path": "C:\\p78"
+     },
+     {
+      "name": "p79",
+      "path": "C:\\p79"
+     },
+     {
+      "name": "p80",
+      "path": "C:\\p80"
+     },
+     {
+      "name": "p81",
+      "path": "C:\\p81"
+     },
+     {
+      "name": "p82",
+      "path": "C:\\p82"
+     },
+     {
+      "name": "p83",
+      "path": "C:\\p83"
+     },
+     {
+      "name": "p84",
+      "path": "C:\\p84"
+     },
+     {
+      "name": "p85",
+      "path": "C:\\p85"
+     },
+     {
+      "name": "p86",
+      "path": "C:\\p86"
+     },
+     {
+      "name": "p87",
+      "path": "C:\\p87"
+     },
+     {
+      "name": "p88",
+      "path": "C:\\p88"
+     },
+     {
+      "name": "p89",
+      "path": "C:\\p89"
+     },
+     {
+      "name": "p90",
+      "path": "C:\\p90"
+     },
+     {
+      "name": "p91",
+      "path": "C:\\p91"
+     },
+     {
+      "name": "p92",
+      "path": "C:\\p92"
+     },
+     {
+      "name": "p93",
+      "path": "C:\\p93"
+     },
+     {
+      "name": "p94",
+      "path": "C:\\p94"
+     },
+     {
+      "name": "p95",
+      "path": "C:\\p95"
+     },
+     {
+      "name": "p96",
+      "path": "C:\\p96"
+     },
+     {
+      "name": "p97",
+      "path": "C:\\p97"
+     },
+     {
+      "name": "p98",
+      "path": "C:\\p98"
+     },
+     {
+      "name": "p99",
+      "path": "C:\\p99"
+     },
+     {
+      "name": "p100",
+      "path": "C:\\p100"
+     },
+     {
+      "name": "p101",
+      "path": "C:\\p101"
+     },
+     {
+      "name": "p102",
+      "path": "C:\\p102"
+     },
+     {
+      "name": "p103",
+      "path": "C:\\p103"
+     },
+     {
+      "name": "p104",
+      "path": "C:\\p104"
+     },
+     {
+      "name": "p105",
+      "path": "C:\\p105"
+     },
+     {
+      "name": "p106",
+      "path": "C:\\p106"
+     },
+     {
+      "name": "p107",
+      "path": "C:\\p107"
+     },
+     {
+      "name": "p108",
+      "path": "C:\\p108"
+     },
+     {
+      "name": "p109",
+      "path": "C:\\p109"
+     },
+     {
+      "name": "p110",
+      "path": "C:\\p110"
+     },
+     {
+      "name": "p111",
+      "path": "C:\\p111"
+     },
+     {
+      "name": "p112",
+      "path": "C:\\p112"
+     },
+     {
+      "name": "p113",
+      "path": "C:\\p113"
+     },
+     {
+      "name": "p114",
+      "path": "C:\\p114"
+     },
+     {
+      "name": "p115",
+      "path": "C:\\p115"
+     },
+     {
+      "name": "p116",
+      "path": "C:\\p116"
+     },
+     {
+      "name": "p117",
+      "path": "C:\\p117"
+     },
+     {
+      "name": "p118",
+      "path": "C:\\p118"
+     },
+     {
+      "name": "p119",
+      "path": "C:\\p119"
+     },
+     {
+      "name": "p120",
+      "path": "C:\\p120"
+     },
+     {
+      "name": "p121",
+      "path": "C:\\p121"
+     },
+     {
+      "name": "p122",
+      "path": "C:\\p122"
+     },
+     {
+      "name": "p123",
+      "path": "C:\\p123"
+     },
+     {
+      "name": "p124",
+      "path": "C:\\p124"
+     },
+     {
+      "name": "p125",
+      "path": "C:\\p125"
+     },
+     {
+      "name": "p126",
+      "path": "C:\\p126"
+     },
+     {
+      "name": "p127",
+      "path": "C:\\p127"
+     },
+     {
+      "name": "p128",
+      "path": "C:\\p128"
+     },
+     {
+      "name": "p129",
+      "path": "C:\\p129"
+     },
+     {
+      "name": "p130",
+      "path": "C:\\p130"
+     },
+     {
+      "name": "p131",
+      "path": "C:\\p131"
+     },
+     {
+      "name": "p132",
+      "path": "C:\\p132"
+     },
+     {
+      "name": "p133",
+      "path": "C:\\p133"
+     },
+     {
+      "name": "p134",
+      "path": "C:\\p134"
+     },
+     {
+      "name": "p135",
+      "path": "C:\\p135"
+     },
+     {
+      "name": "p136",
+      "path": "C:\\p136"
+     },
+     {
+      "name": "p137",
+      "path": "C:\\p137"
+     },
+     {
+      "name": "p138",
+      "path": "C:\\p138"
+     },
+     {
+      "name": "p139",
+      "path": "C:\\p139"
+     },
+     {
+      "name": "p140",
+      "path": "C:\\p140"
+     },
+     {
+      "name": "p141",
+      "path": "C:\\p141"
+     },
+     {
+      "name": "p142",
+      "path": "C:\\p142"
+     },
+     {
+      "name": "p143",
+      "path": "C:\\p143"
+     },
+     {
+      "name": "p144",
+      "path": "C:\\p144"
+     },
+     {
+      "name": "p145",
+      "path": "C:\\p145"
+     },
+     {
+      "name": "p146",
+      "path": "C:\\p146"
+     },
+     {
+      "name": "p147",
+      "path": "C:\\p147"
+     },
+     {
+      "name": "p148",
+      "path": "C:\\p148"
+     },
+     {
+      "name": "p149",
+      "path": "C:\\p149"
+     },
+     {
+      "name": "p150",
+      "path": "C:\\p150"
+     },
+     {
+      "name": "p151",
+      "path": "C:\\p151"
+     },
+     {
+      "name": "p152",
+      "path": "C:\\p152"
+     },
+     {
+      "name": "p153",
+      "path": "C:\\p153"
+     },
+     {
+      "name": "p154",
+      "path": "C:\\p154"
+     },
+     {
+      "name": "p155",
+      "path": "C:\\p155"
+     },
+     {
+      "name": "p156",
+      "path": "C:\\p156"
+     },
+     {
+      "name": "p157",
+      "path": "C:\\p157"
+     },
+     {
+      "name": "p158",
+      "path": "C:\\p158"
+     },
+     {
+      "name": "p159",
+      "path": "C:\\p159"
+     },
+     {
+      "name": "p160",
+      "path": "C:\\p160"
+     },
+     {
+      "name": "p161",
+      "path": "C:\\p161"
+     },
+     {
+      "name": "p162",
+      "path": "C:\\p162"
+     },
+     {
+      "name": "p163",
+      "path": "C:\\p163"
+     },
+     {
+      "name": "p164",
+      "path": "C:\\p164"
+     },
+     {
+      "name": "p165",
+      "path": "C:\\p165"
+     },
+     {
+      "name": "p166",
+      "path": "C:\\p166"
+     },
+     {
+      "name": "p167",
+      "path": "C:\\p167"
+     },
+     {
+      "name": "p168",
+      "path": "C:\\p168"
+     },
+     {
+      "name": "p169",
+      "path": "C:\\p169"
+     },
+     {
+      "name": "p170",
+      "path": "C:\\p170"
+     },
+     {
+      "name": "p171",
+      "path": "C:\\p171"
+     },
+     {
+      "name": "p172",
+      "path": "C:\\p172"
+     },
+     {
+      "name": "p173",
+      "path": "C:\\p173"
+     },
+     {
+      "name": "p174",
+      "path": "C:\\p174"
+     },
+     {
+      "name": "p175",
+      "path": "C:\\p175"
+     },
+     {
+      "name": "p176",
+      "path": "C:\\p176"
+     },
+     {
+      "name": "p177",
+      "path": "C:\\p177"
+     },
+     {
+      "name": "p178",
+      "path": "C:\\p178"
+     },
+     {
+      "name": "p179",
+      "path": "C:\\p179"
+     },
+     {
+      "name": "p180",
+      "path": "C:\\p180"
+     },
+     {
+      "name": "p181",
+      "path": "C:\\p181"
+     },
+     {
+      "name": "p182",
+      "path": "C:\\p182"
+     },
+     {
+      "name": "p183",
+      "path": "C:\\p183"
+     },
+     {
+      "name": "p184",
+      "path": "C:\\p184"
+     },
+     {
+      "name": "p185",
+      "path": "C:\\p185"
+     },
+     {
+      "name": "p186",
+      "path": "C:\\p186"
+     },
+     {
+      "name": "p187",
+      "path": "C:\\p187"
+     },
+     {
+      "name": "p188",
+      "path": "C:\\p188"
+     },
+     {
+      "name": "p189",
+      "path": "C:\\p189"
+     },
+     {
+      "name": "p190",
+      "path": "C:\\p190"
+     },
+     {
+      "name": "p191",
+      "path": "C:\\p191"
+     },
+     {
+      "name": "p192",
+      "path": "C:\\p192"
+     },
+     {
+      "name": "p193",
+      "path": "C:\\p193"
+     },
+     {
+      "name": "p194",
+      "path": "C:\\p194"
+     },
+     {
+      "name": "p195",
+      "path": "C:\\p195"
+     },
+     {
+      "name": "p196",
+      "path": "C:\\p196"
+     },
+     {
+      "name": "p197",
+      "path": "C:\\p197"
+     },
+     {
+      "name": "p198",
+      "path": "C:\\p198"
+     },
+     {
+      "name": "p199",
+      "path": "C:\\p199"
+     },
+     {
+      "name": "p200",
+      "path": "C:\\p200"
+     },
+     {
+      "name": "p201",
+      "path": "C:\\p201"
+     },
+     {
+      "name": "p202",
+      "path": "C:\\p202"
+     },
+     {
+      "name": "p203",
+      "path": "C:\\p203"
+     },
+     {
+      "name": "p204",
+      "path": "C:\\p204"
+     },
+     {
+      "name": "p205",
+      "path": "C:\\p205"
+     },
+     {
+      "name": "p206",
+      "path": "C:\\p206"
+     },
+     {
+      "name": "p207",
+      "path": "C:\\p207"
+     },
+     {
+      "name": "p208",
+      "path": "C:\\p208"
+     },
+     {
+      "name": "p209",
+      "path": "C:\\p209"
+     },
+     {
+      "name": "p210",
+      "path": "C:\\p210"
+     },
+     {
+      "name": "p211",
+      "path": "C:\\p211"
+     },
+     {
+      "name": "p212",
+      "path": "C:\\p212"
+     },
+     {
+      "name": "p213",
+      "path": "C:\\p213"
+     },
+     {
+      "name": "p214",
+      "path": "C:\\p214"
+     },
+     {
+      "name": "p215",
+      "path": "C:\\p215"
+     },
+     {
+      "name": "p216",
+      "path": "C:\\p216"
+     },
+     {
+      "name": "p217",
+      "path": "C:\\p217"
+     },
+     {
+      "name": "p218",
+      "path": "C:\\p218"
+     },
+     {
+      "name": "p219",
+      "path": "C:\\p219"
+     },
+     {
+      "name": "p220",
+      "path": "C:\\p220"
+     },
+     {
+      "name": "p221",
+      "path": "C:\\p221"
+     },
+     {
+      "name": "p222",
+      "path": "C:\\p222"
+     },
+     {
+      "name": "p223",
+      "path": "C:\\p223"
+     },
+     {
+      "name": "p224",
+      "path": "C:\\p224"
+     },
+     {
+      "name": "p225",
+      "path": "C:\\p225"
+     },
+     {
+      "name": "p226",
+      "path": "C:\\p226"
+     },
+     {
+      "name": "p227",
+      "path": "C:\\p227"
+     },
+     {
+      "name": "p228",
+      "path": "C:\\p228"
+     },
+     {
+      "name": "p229",
+      "path": "C:\\p229"
+     },
+     {
+      "name": "p230",
+      "path": "C:\\p230"
+     },
+     {
+      "name": "p231",
+      "path": "C:\\p231"
+     },
+     {
+      "name": "p232",
+      "path": "C:\\p232"
+     },
+     {
+      "name": "p233",
+      "path": "C:\\p233"
+     },
+     {
+      "name": "p234",
+      "path": "C:\\p234"
+     },
+     {
+      "name": "p235",
+      "path": "C:\\p235"
+     },
+     {
+      "name": "p236",
+      "path": "C:\\p236"
+     },
+     {
+      "name": "p237",
+      "path": "C:\\p237"
+     },
+     {
+      "name": "p238",
+      "path": "C:\\p238"
+     },
+     {
+      "name": "p239",
+      "path": "C:\\p239"
+     },
+     {
+      "name": "p240",
+      "path": "C:\\p240"
+     },
+     {
+      "name": "p241",
+      "path": "C:\\p241"
+     },
+     {
+      "name": "p242",
+      "path": "C:\\p242"
+     },
+     {
+      "name": "p243",
+      "path": "C:\\p243"
+     },
+     {
+      "name": "p244",
+      "path": "C:\\p244"
+     },
+     {
+      "name": "p245",
+      "path": "C:\\p245"
+     },
+     {
+      "name": "p246",
+      "path": "C:\\p246"
+     },
+     {
+      "name": "p247",
+      "path": "C:\\p247"
+     },
+     {
+      "name": "p248",
+      "path": "C:\\p248"
+     },
+     {
+      "name": "p249",
+      "path": "C:\\p249"
+     }
+    ]
+   }
+  },
+  "expected": 1250
+ },
+ {
+  "input": {
+   "cfg": {
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     },
+     {
+      "name": "p30",
+      "path": "C:\\p30"
+     },
+     {
+      "name": "p31",
+      "path": "C:\\p31"
+     },
+     {
+      "name": "p32",
+      "path": "C:\\p32"
+     },
+     {
+      "name": "p33",
+      "path": "C:\\p33"
+     },
+     {
+      "name": "p34",
+      "path": "C:\\p34"
+     },
+     {
+      "name": "p35",
+      "path": "C:\\p35"
+     },
+     {
+      "name": "p36",
+      "path": "C:\\p36"
+     },
+     {
+      "name": "p37",
+      "path": "C:\\p37"
+     },
+     {
+      "name": "p38",
+      "path": "C:\\p38"
+     },
+     {
+      "name": "p39",
+      "path": "C:\\p39"
+     },
+     {
+      "name": "p40",
+      "path": "C:\\p40"
+     },
+     {
+      "name": "p41",
+      "path": "C:\\p41"
+     },
+     {
+      "name": "p42",
+      "path": "C:\\p42"
+     },
+     {
+      "name": "p43",
+      "path": "C:\\p43"
+     },
+     {
+      "name": "p44",
+      "path": "C:\\p44"
+     },
+     {
+      "name": "p45",
+      "path": "C:\\p45"
+     },
+     {
+      "name": "p46",
+      "path": "C:\\p46"
+     },
+     {
+      "name": "p47",
+      "path": "C:\\p47"
+     },
+     {
+      "name": "p48",
+      "path": "C:\\p48"
+     },
+     {
+      "name": "p49",
+      "path": "C:\\p49"
+     },
+     {
+      "name": "p50",
+      "path": "C:\\p50"
+     },
+     {
+      "name": "p51",
+      "path": "C:\\p51"
+     },
+     {
+      "name": "p52",
+      "path": "C:\\p52"
+     },
+     {
+      "name": "p53",
+      "path": "C:\\p53"
+     },
+     {
+      "name": "p54",
+      "path": "C:\\p54"
+     },
+     {
+      "name": "p55",
+      "path": "C:\\p55"
+     },
+     {
+      "name": "p56",
+      "path": "C:\\p56"
+     },
+     {
+      "name": "p57",
+      "path": "C:\\p57"
+     },
+     {
+      "name": "p58",
+      "path": "C:\\p58"
+     },
+     {
+      "name": "p59",
+      "path": "C:\\p59"
+     },
+     {
+      "name": "p60",
+      "path": "C:\\p60"
+     },
+     {
+      "name": "p61",
+      "path": "C:\\p61"
+     },
+     {
+      "name": "p62",
+      "path": "C:\\p62"
+     },
+     {
+      "name": "p63",
+      "path": "C:\\p63"
+     },
+     {
+      "name": "p64",
+      "path": "C:\\p64"
+     },
+     {
+      "name": "p65",
+      "path": "C:\\p65"
+     },
+     {
+      "name": "p66",
+      "path": "C:\\p66"
+     },
+     {
+      "name": "p67",
+      "path": "C:\\p67"
+     },
+     {
+      "name": "p68",
+      "path": "C:\\p68"
+     },
+     {
+      "name": "p69",
+      "path": "C:\\p69"
+     },
+     {
+      "name": "p70",
+      "path": "C:\\p70"
+     },
+     {
+      "name": "p71",
+      "path": "C:\\p71"
+     },
+     {
+      "name": "p72",
+      "path": "C:\\p72"
+     },
+     {
+      "name": "p73",
+      "path": "C:\\p73"
+     },
+     {
+      "name": "p74",
+      "path": "C:\\p74"
+     },
+     {
+      "name": "p75",
+      "path": "C:\\p75"
+     },
+     {
+      "name": "p76",
+      "path": "C:\\p76"
+     },
+     {
+      "name": "p77",
+      "path": "C:\\p77"
+     },
+     {
+      "name": "p78",
+      "path": "C:\\p78"
+     },
+     {
+      "name": "p79",
+      "path": "C:\\p79"
+     },
+     {
+      "name": "p80",
+      "path": "C:\\p80"
+     },
+     {
+      "name": "p81",
+      "path": "C:\\p81"
+     },
+     {
+      "name": "p82",
+      "path": "C:\\p82"
+     },
+     {
+      "name": "p83",
+      "path": "C:\\p83"
+     },
+     {
+      "name": "p84",
+      "path": "C:\\p84"
+     },
+     {
+      "name": "p85",
+      "path": "C:\\p85"
+     },
+     {
+      "name": "p86",
+      "path": "C:\\p86"
+     },
+     {
+      "name": "p87",
+      "path": "C:\\p87"
+     },
+     {
+      "name": "p88",
+      "path": "C:\\p88"
+     },
+     {
+      "name": "p89",
+      "path": "C:\\p89"
+     },
+     {
+      "name": "p90",
+      "path": "C:\\p90"
+     },
+     {
+      "name": "p91",
+      "path": "C:\\p91"
+     },
+     {
+      "name": "p92",
+      "path": "C:\\p92"
+     },
+     {
+      "name": "p93",
+      "path": "C:\\p93"
+     },
+     {
+      "name": "p94",
+      "path": "C:\\p94"
+     },
+     {
+      "name": "p95",
+      "path": "C:\\p95"
+     },
+     {
+      "name": "p96",
+      "path": "C:\\p96"
+     },
+     {
+      "name": "p97",
+      "path": "C:\\p97"
+     },
+     {
+      "name": "p98",
+      "path": "C:\\p98"
+     },
+     {
+      "name": "p99",
+      "path": "C:\\p99"
+     },
+     {
+      "name": "p100",
+      "path": "C:\\p100"
+     },
+     {
+      "name": "p101",
+      "path": "C:\\p101"
+     },
+     {
+      "name": "p102",
+      "path": "C:\\p102"
+     },
+     {
+      "name": "p103",
+      "path": "C:\\p103"
+     },
+     {
+      "name": "p104",
+      "path": "C:\\p104"
+     },
+     {
+      "name": "p105",
+      "path": "C:\\p105"
+     },
+     {
+      "name": "p106",
+      "path": "C:\\p106"
+     },
+     {
+      "name": "p107",
+      "path": "C:\\p107"
+     },
+     {
+      "name": "p108",
+      "path": "C:\\p108"
+     },
+     {
+      "name": "p109",
+      "path": "C:\\p109"
+     },
+     {
+      "name": "p110",
+      "path": "C:\\p110"
+     },
+     {
+      "name": "p111",
+      "path": "C:\\p111"
+     },
+     {
+      "name": "p112",
+      "path": "C:\\p112"
+     },
+     {
+      "name": "p113",
+      "path": "C:\\p113"
+     },
+     {
+      "name": "p114",
+      "path": "C:\\p114"
+     },
+     {
+      "name": "p115",
+      "path": "C:\\p115"
+     },
+     {
+      "name": "p116",
+      "path": "C:\\p116"
+     },
+     {
+      "name": "p117",
+      "path": "C:\\p117"
+     },
+     {
+      "name": "p118",
+      "path": "C:\\p118"
+     },
+     {
+      "name": "p119",
+      "path": "C:\\p119"
+     },
+     {
+      "name": "p120",
+      "path": "C:\\p120"
+     },
+     {
+      "name": "p121",
+      "path": "C:\\p121"
+     },
+     {
+      "name": "p122",
+      "path": "C:\\p122"
+     },
+     {
+      "name": "p123",
+      "path": "C:\\p123"
+     },
+     {
+      "name": "p124",
+      "path": "C:\\p124"
+     },
+     {
+      "name": "p125",
+      "path": "C:\\p125"
+     },
+     {
+      "name": "p126",
+      "path": "C:\\p126"
+     },
+     {
+      "name": "p127",
+      "path": "C:\\p127"
+     },
+     {
+      "name": "p128",
+      "path": "C:\\p128"
+     },
+     {
+      "name": "p129",
+      "path": "C:\\p129"
+     },
+     {
+      "name": "p130",
+      "path": "C:\\p130"
+     },
+     {
+      "name": "p131",
+      "path": "C:\\p131"
+     },
+     {
+      "name": "p132",
+      "path": "C:\\p132"
+     },
+     {
+      "name": "p133",
+      "path": "C:\\p133"
+     },
+     {
+      "name": "p134",
+      "path": "C:\\p134"
+     },
+     {
+      "name": "p135",
+      "path": "C:\\p135"
+     },
+     {
+      "name": "p136",
+      "path": "C:\\p136"
+     },
+     {
+      "name": "p137",
+      "path": "C:\\p137"
+     },
+     {
+      "name": "p138",
+      "path": "C:\\p138"
+     },
+     {
+      "name": "p139",
+      "path": "C:\\p139"
+     },
+     {
+      "name": "p140",
+      "path": "C:\\p140"
+     },
+     {
+      "name": "p141",
+      "path": "C:\\p141"
+     },
+     {
+      "name": "p142",
+      "path": "C:\\p142"
+     },
+     {
+      "name": "p143",
+      "path": "C:\\p143"
+     },
+     {
+      "name": "p144",
+      "path": "C:\\p144"
+     },
+     {
+      "name": "p145",
+      "path": "C:\\p145"
+     },
+     {
+      "name": "p146",
+      "path": "C:\\p146"
+     },
+     {
+      "name": "p147",
+      "path": "C:\\p147"
+     },
+     {
+      "name": "p148",
+      "path": "C:\\p148"
+     },
+     {
+      "name": "p149",
+      "path": "C:\\p149"
+     },
+     {
+      "name": "p150",
+      "path": "C:\\p150"
+     },
+     {
+      "name": "p151",
+      "path": "C:\\p151"
+     },
+     {
+      "name": "p152",
+      "path": "C:\\p152"
+     },
+     {
+      "name": "p153",
+      "path": "C:\\p153"
+     },
+     {
+      "name": "p154",
+      "path": "C:\\p154"
+     },
+     {
+      "name": "p155",
+      "path": "C:\\p155"
+     },
+     {
+      "name": "p156",
+      "path": "C:\\p156"
+     },
+     {
+      "name": "p157",
+      "path": "C:\\p157"
+     },
+     {
+      "name": "p158",
+      "path": "C:\\p158"
+     },
+     {
+      "name": "p159",
+      "path": "C:\\p159"
+     },
+     {
+      "name": "p160",
+      "path": "C:\\p160"
+     },
+     {
+      "name": "p161",
+      "path": "C:\\p161"
+     },
+     {
+      "name": "p162",
+      "path": "C:\\p162"
+     },
+     {
+      "name": "p163",
+      "path": "C:\\p163"
+     },
+     {
+      "name": "p164",
+      "path": "C:\\p164"
+     },
+     {
+      "name": "p165",
+      "path": "C:\\p165"
+     },
+     {
+      "name": "p166",
+      "path": "C:\\p166"
+     },
+     {
+      "name": "p167",
+      "path": "C:\\p167"
+     },
+     {
+      "name": "p168",
+      "path": "C:\\p168"
+     },
+     {
+      "name": "p169",
+      "path": "C:\\p169"
+     },
+     {
+      "name": "p170",
+      "path": "C:\\p170"
+     },
+     {
+      "name": "p171",
+      "path": "C:\\p171"
+     },
+     {
+      "name": "p172",
+      "path": "C:\\p172"
+     },
+     {
+      "name": "p173",
+      "path": "C:\\p173"
+     },
+     {
+      "name": "p174",
+      "path": "C:\\p174"
+     },
+     {
+      "name": "p175",
+      "path": "C:\\p175"
+     },
+     {
+      "name": "p176",
+      "path": "C:\\p176"
+     },
+     {
+      "name": "p177",
+      "path": "C:\\p177"
+     },
+     {
+      "name": "p178",
+      "path": "C:\\p178"
+     },
+     {
+      "name": "p179",
+      "path": "C:\\p179"
+     },
+     {
+      "name": "p180",
+      "path": "C:\\p180"
+     },
+     {
+      "name": "p181",
+      "path": "C:\\p181"
+     },
+     {
+      "name": "p182",
+      "path": "C:\\p182"
+     },
+     {
+      "name": "p183",
+      "path": "C:\\p183"
+     },
+     {
+      "name": "p184",
+      "path": "C:\\p184"
+     },
+     {
+      "name": "p185",
+      "path": "C:\\p185"
+     },
+     {
+      "name": "p186",
+      "path": "C:\\p186"
+     },
+     {
+      "name": "p187",
+      "path": "C:\\p187"
+     },
+     {
+      "name": "p188",
+      "path": "C:\\p188"
+     },
+     {
+      "name": "p189",
+      "path": "C:\\p189"
+     },
+     {
+      "name": "p190",
+      "path": "C:\\p190"
+     },
+     {
+      "name": "p191",
+      "path": "C:\\p191"
+     },
+     {
+      "name": "p192",
+      "path": "C:\\p192"
+     },
+     {
+      "name": "p193",
+      "path": "C:\\p193"
+     },
+     {
+      "name": "p194",
+      "path": "C:\\p194"
+     },
+     {
+      "name": "p195",
+      "path": "C:\\p195"
+     },
+     {
+      "name": "p196",
+      "path": "C:\\p196"
+     },
+     {
+      "name": "p197",
+      "path": "C:\\p197"
+     },
+     {
+      "name": "p198",
+      "path": "C:\\p198"
+     },
+     {
+      "name": "p199",
+      "path": "C:\\p199"
+     },
+     {
+      "name": "p200",
+      "path": "C:\\p200"
+     },
+     {
+      "name": "p201",
+      "path": "C:\\p201"
+     },
+     {
+      "name": "p202",
+      "path": "C:\\p202"
+     },
+     {
+      "name": "p203",
+      "path": "C:\\p203"
+     },
+     {
+      "name": "p204",
+      "path": "C:\\p204"
+     },
+     {
+      "name": "p205",
+      "path": "C:\\p205"
+     },
+     {
+      "name": "p206",
+      "path": "C:\\p206"
+     },
+     {
+      "name": "p207",
+      "path": "C:\\p207"
+     },
+     {
+      "name": "p208",
+      "path": "C:\\p208"
+     },
+     {
+      "name": "p209",
+      "path": "C:\\p209"
+     },
+     {
+      "name": "p210",
+      "path": "C:\\p210"
+     },
+     {
+      "name": "p211",
+      "path": "C:\\p211"
+     },
+     {
+      "name": "p212",
+      "path": "C:\\p212"
+     },
+     {
+      "name": "p213",
+      "path": "C:\\p213"
+     },
+     {
+      "name": "p214",
+      "path": "C:\\p214"
+     },
+     {
+      "name": "p215",
+      "path": "C:\\p215"
+     },
+     {
+      "name": "p216",
+      "path": "C:\\p216"
+     },
+     {
+      "name": "p217",
+      "path": "C:\\p217"
+     },
+     {
+      "name": "p218",
+      "path": "C:\\p218"
+     },
+     {
+      "name": "p219",
+      "path": "C:\\p219"
+     },
+     {
+      "name": "p220",
+      "path": "C:\\p220"
+     },
+     {
+      "name": "p221",
+      "path": "C:\\p221"
+     },
+     {
+      "name": "p222",
+      "path": "C:\\p222"
+     },
+     {
+      "name": "p223",
+      "path": "C:\\p223"
+     },
+     {
+      "name": "p224",
+      "path": "C:\\p224"
+     },
+     {
+      "name": "p225",
+      "path": "C:\\p225"
+     },
+     {
+      "name": "p226",
+      "path": "C:\\p226"
+     },
+     {
+      "name": "p227",
+      "path": "C:\\p227"
+     },
+     {
+      "name": "p228",
+      "path": "C:\\p228"
+     },
+     {
+      "name": "p229",
+      "path": "C:\\p229"
+     },
+     {
+      "name": "p230",
+      "path": "C:\\p230"
+     },
+     {
+      "name": "p231",
+      "path": "C:\\p231"
+     },
+     {
+      "name": "p232",
+      "path": "C:\\p232"
+     },
+     {
+      "name": "p233",
+      "path": "C:\\p233"
+     },
+     {
+      "name": "p234",
+      "path": "C:\\p234"
+     },
+     {
+      "name": "p235",
+      "path": "C:\\p235"
+     },
+     {
+      "name": "p236",
+      "path": "C:\\p236"
+     },
+     {
+      "name": "p237",
+      "path": "C:\\p237"
+     },
+     {
+      "name": "p238",
+      "path": "C:\\p238"
+     },
+     {
+      "name": "p239",
+      "path": "C:\\p239"
+     },
+     {
+      "name": "p240",
+      "path": "C:\\p240"
+     },
+     {
+      "name": "p241",
+      "path": "C:\\p241"
+     },
+     {
+      "name": "p242",
+      "path": "C:\\p242"
+     },
+     {
+      "name": "p243",
+      "path": "C:\\p243"
+     },
+     {
+      "name": "p244",
+      "path": "C:\\p244"
+     },
+     {
+      "name": "p245",
+      "path": "C:\\p245"
+     },
+     {
+      "name": "p246",
+      "path": "C:\\p246"
+     },
+     {
+      "name": "p247",
+      "path": "C:\\p247"
+     },
+     {
+      "name": "p248",
+      "path": "C:\\p248"
+     },
+     {
+      "name": "p249",
+      "path": "C:\\p249"
+     }
+    ]
+   }
+  },
+  "expected": 1250
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": null
+   }
+  },
+  "expected": 100
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": false
+   }
+  },
+  "expected": 100
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": 0
+   }
+  },
+  "expected": 100
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": ""
+   }
+  },
+  "expected": 100
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": {}
+   }
+  },
+  "expected": 100
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": []
+   }
+  },
+  "expected": 100
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": "abcdef"
+   }
+  },
+  "expected": 100
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+   }
+  },
+  "expected": 200
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": {
+     "a": 1,
+     "b": 2
+    }
+   }
+  },
+  "expected": 100
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": 5
+   }
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": true
+   }
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": 100,
+    "profiles": 1.5
+   }
+  },
+  "expected": {
+   "raises": "TypeError"
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "interval_sec": "x",
+    "profiles": [
+     {
+      "name": "p0",
+      "path": "C:\\p0"
+     },
+     {
+      "name": "p1",
+      "path": "C:\\p1"
+     },
+     {
+      "name": "p2",
+      "path": "C:\\p2"
+     },
+     {
+      "name": "p3",
+      "path": "C:\\p3"
+     },
+     {
+      "name": "p4",
+      "path": "C:\\p4"
+     },
+     {
+      "name": "p5",
+      "path": "C:\\p5"
+     },
+     {
+      "name": "p6",
+      "path": "C:\\p6"
+     },
+     {
+      "name": "p7",
+      "path": "C:\\p7"
+     },
+     {
+      "name": "p8",
+      "path": "C:\\p8"
+     },
+     {
+      "name": "p9",
+      "path": "C:\\p9"
+     },
+     {
+      "name": "p10",
+      "path": "C:\\p10"
+     },
+     {
+      "name": "p11",
+      "path": "C:\\p11"
+     },
+     {
+      "name": "p12",
+      "path": "C:\\p12"
+     },
+     {
+      "name": "p13",
+      "path": "C:\\p13"
+     },
+     {
+      "name": "p14",
+      "path": "C:\\p14"
+     },
+     {
+      "name": "p15",
+      "path": "C:\\p15"
+     },
+     {
+      "name": "p16",
+      "path": "C:\\p16"
+     },
+     {
+      "name": "p17",
+      "path": "C:\\p17"
+     },
+     {
+      "name": "p18",
+      "path": "C:\\p18"
+     },
+     {
+      "name": "p19",
+      "path": "C:\\p19"
+     },
+     {
+      "name": "p20",
+      "path": "C:\\p20"
+     },
+     {
+      "name": "p21",
+      "path": "C:\\p21"
+     },
+     {
+      "name": "p22",
+      "path": "C:\\p22"
+     },
+     {
+      "name": "p23",
+      "path": "C:\\p23"
+     },
+     {
+      "name": "p24",
+      "path": "C:\\p24"
+     },
+     {
+      "name": "p25",
+      "path": "C:\\p25"
+     },
+     {
+      "name": "p26",
+      "path": "C:\\p26"
+     },
+     {
+      "name": "p27",
+      "path": "C:\\p27"
+     },
+     {
+      "name": "p28",
+      "path": "C:\\p28"
+     },
+     {
+      "name": "p29",
+      "path": "C:\\p29"
+     }
+    ]
+   }
+  },
+  "expected": 180
+ }
+]

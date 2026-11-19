@@ -1,0 +1,23 @@
+{
+ "generator": "tools/gen_fixtures.py",
+ "python": "3.14.3",
+ "tz_name": "SE Asia Standard Time/SE Asia Daylight Time",
+ "utc_offset_now": "7:00:00",
+ "note": "Cases with tz_dependent=true (fmt_when, naive iso_ts) were generated with this machine's local time zone; the Rust parity test must run in the same zone.",
+ "placeholder": "{HOME} in load_config/detect_profiles expectations = the fake home dir of the test",
+ "counts": {
+  "alias": 634,
+  "aliases": 160,
+  "iso_ts": 157,
+  "fmt_reset": 143,
+  "fmt_when": 245,
+  "ago_text": 65,
+  "money": 186,
+  "effective_interval": 79,
+  "parse_extra": 113,
+  "parse_scoped": 62,
+  "detect_profiles": 6,
+  "load_config": 67,
+  "write_cache": 11
+ }
+}
