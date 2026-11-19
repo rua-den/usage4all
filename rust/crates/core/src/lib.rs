@@ -8,6 +8,7 @@ pub mod alias;
 pub mod atomic;
 pub mod cache;
 pub mod config;
+pub mod daemon;
 pub mod fmt;
 pub mod hook;
 pub mod hookinstall;
