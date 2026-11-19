@@ -9,6 +9,8 @@ pub mod atomic;
 pub mod cache;
 pub mod config;
 pub mod fmt;
+pub mod hook;
+pub mod hookinstall;
 pub mod iso;
 pub mod log;
 pub mod parse;

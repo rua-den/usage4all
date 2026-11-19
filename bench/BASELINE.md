@@ -39,3 +39,16 @@ Daemon onefile: bootloader ~8MB + tiến trình thật ~41MB. Onedir: 1 tiến t
 
 ## Mục tiêu bản Rust
 Hook < 60ms end-to-end (sàn bash ~41ms), mở dashboard < 600ms, frame widget < 2ms với 14 profile, RAM nền < 20MB.
+
+## Phase 2: hook Rust (`rust\target\release\claude-usage.exe hook`), đo 2026-11-19
+Cách đo giống Phase 0 nhưng 15 lần, xen kẽ từng lần giữa các bản (`echo {} | <exe> hook` từ Git Bash), `LOCALAPPDATA` sandbox
+chứa cache 4 profile giả, `CLAUDE_CONFIG_DIR` trỏ profile thứ 2. Máy đang dùng nên nhiễu (sàn bash dao động 81-97ms).
+| Trường hợp | Rust | Python onedir (`dist\claude-usage.exe`) | Sàn `bash -c 'exit 0'` |
+|---|---|---|---|
+| cho qua (exit 0) | **86ms** | 350ms | 97ms |
+| chặn (exit 2, ghi stderr) | **72ms** | 313ms | 81ms |
+
+→ Hook Rust nằm sát sàn của shell (spawn từ Git Bash chiếm gần hết), nhanh hơn ~4-5 lần bản onedir. Hai bản in cùng một thông báo chặn.
+Exe release: 294.400 byte (~288KB), `strip`+`lto=thin`. `dumpbin /dependents`: chỉ kernel32, ntdll, bcryptprimitives, api-ms-win-core-synch,
+VCRUNTIME140.dll và các api-ms-win-crt-* (CRT động; muốn bỏ phụ thuộc VC++ runtime thì build `+crt-static`). Chưa có WebView2/d2d1 (chưa nhúng GUI).
+- Static CRT (`rust/.cargo/config.toml`): exe release 392.704 byte, không còn phụ thuộc VCRUNTIME140.

@@ -1,0 +1,4843 @@
+[
+ {
+  "name": "install into absent file",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      true
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install into absent profile dir",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": true
+    }
+   ],
+   "ops": [
+    "install",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      true
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install into empty object",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {},
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install is idempotent",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "install",
+    "install",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      true
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\r\n  \"hooks\": {\r\n    \"UserPromptSubmit\": [\r\n      {\r\n        \"hooks\": [\r\n          {\r\n            \"type\": \"command\",\r\n            \"command\": \"\\\"C:\\\\cu-fixture\\\\claude-usage.exe\\\" hook\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install into rich settings keeps everything and backs up",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"model\": \"x\",\n  \"permissions\": {\n    \"allow\": [\n      \"Bash(ls)\"\n    ],\n    \"deny\": []\n  },\n  \"env\": {\n    \"A\": \"1\"\n  },\n  \"hooks\": {\n    \"PreToolUse\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"echo hi\"\n          }\n        ]\n      }\n    ],\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          }\n        ]\n      }\n    ]\n  },\n  \"tail\": 1.5\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install replaces stale entry of ours",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"\\\"C:\\\\old\\\\claude-usage.exe\\\" hook\"\n          }\n        ]\n      }\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install with ours and other in the same group",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "a": 1,
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          },
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "claude-usage hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "a": 1,
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"a\": 1,\n  \"hooks\": {\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          },\n          {\n            \"type\": \"command\",\n            \"command\": \"\\\"C:\\\\old\\\\claude-usage.exe\\\" hook\"\n          }\n        ]\n      },\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"claude-usage hook\"\n          }\n        ]\n      }\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install with ours twice",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook  "
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      true
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"\\\"C:\\\\old\\\\claude-usage.exe\\\" hook\"\n          }\n        ]\n      },\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"\\\"C:\\\\old\\\\claude-usage.exe\\\" hook  \"\n          }\n        ]\n      }\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install keeps preexisting backup",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "settings_text": null,
+     "bak_text": "OLD BACKUP",
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "bak_exists": true,
+     "bak_text": "OLD BACKUP"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install with unicode content",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "model": "Tiếng Việt – đủ",
+      "b": [
+       "ü",
+       "日本"
+      ]
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "model": "Tiếng Việt – đủ",
+      "b": [
+       "ü",
+       "日本"
+      ],
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"model\": \"Tiếng Việt – đủ\",\n  \"b\": [\n    \"ü\",\n    \"日本\"\n  ]\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install numbers keep int/float",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "i": 5,
+      "f": 1.0,
+      "e": 1000.0,
+      "neg": -2,
+      "big": 12345678901,
+      "n": null,
+      "t": true
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "i": 5,
+      "f": 1.0,
+      "e": 1000.0,
+      "neg": -2,
+      "big": 12345678901,
+      "n": null,
+      "t": true,
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"i\": 5,\n  \"f\": 1.0,\n  \"e\": 1000.0,\n  \"neg\": -2,\n  \"big\": 12345678901,\n  \"n\": null,\n  \"t\": true\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install hooks empty object moves to the end",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {},
+      "a": 1,
+      "b": 2
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "a": 1,
+      "b": 2,
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {},\n  \"a\": 1,\n  \"b\": 2\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install hooks with only other event",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "Stop": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "z": 0
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "Stop": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      },
+      "z": 0
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"Stop\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          }\n        ]\n      }\n    ]\n  },\n  \"z\": 0\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install UserPromptSubmit empty list",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [],
+       "Stop": []
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "Stop": [],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": [],\n    \"Stop\": []\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install UserPromptSubmit falsy zero",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": 0,
+       "Stop": [
+        1
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "Stop": [
+        1
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": 0,\n    \"Stop\": [\n      1\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install group without hooks key is dropped",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "matcher": "x"
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": [\n      {\n        \"matcher\": \"x\"\n      },\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          }\n        ]\n      }\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install group with empty hooks list is dropped",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": []
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": []
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": []\n      },\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          }\n        ]\n      },\n      {\n        \"hooks\": []\n      }\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install non-dict hook entries are kept",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          "x",
+          5,
+          null,
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          "x",
+          5,
+          null,
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": [\n          \"x\",\n          5,\n          null,\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          }\n        ]\n      }\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install matcher group metadata kept",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ],
+         "matcher": "*",
+         "extra": {
+          "k": [
+           1,
+           2
+          ]
+         }
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ],
+         "matcher": "*",
+         "extra": {
+          "k": [
+           1,
+           2
+          ]
+         }
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          }\n        ],\n        \"matcher\": \"*\",\n        \"extra\": {\n          \"k\": [\n            1,\n            2\n          ]\n        }\n      }\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install key order: UserPromptSubmit before other event",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ],
+       "Stop": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "Stop": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"hooks\": {\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"\\\"C:\\\\old\\\\claude-usage.exe\\\" hook\"\n          }\n        ]\n      }\n    ],\n    \"Stop\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          }\n        ]\n      }\n    ]\n  }\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "install invalid json untouched",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "{ this is not json",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "bỏ qua: settings.json không đọc được"
+     ]
+    ],
+    [
+     [
+      "p",
+      null
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "text": "{ this is not json",
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install json null untouched",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "null",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "bỏ qua: settings.json không đọc được"
+     ]
+    ],
+    [
+     [
+      "p",
+      null
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": null,
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install truncated json untouched",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "{\"a\": 1,",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "bỏ qua: settings.json không đọc được"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "text": "{\"a\": 1,",
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install BOM json untouched",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "﻿{}",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "bỏ qua: settings.json không đọc được"
+     ]
+    ],
+    [
+     [
+      "p",
+      null
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "text": "﻿{}",
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install empty file untouched",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "bỏ qua: settings.json không đọc được"
+     ]
+    ],
+    [
+     [
+      "p",
+      null
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "text": "",
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install list document raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "[]",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": [],
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status list document raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "[1]",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": [
+      1
+     ],
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install number document raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "5",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": 5,
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install hooks null raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": null
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": null
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install hooks list raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": [
+       1
+      ]
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": [
+       1
+      ]
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install hooks string raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": "x"
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": "x"
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install UserPromptSubmit string raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": "x"
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": "x"
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install UserPromptSubmit dict raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": {
+        "a": 1
+       }
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": {
+        "a": 1
+       }
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install group is a string raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        "x"
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        "x"
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install group hooks null raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": null
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "TypeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": null
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install command non-string raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": 5
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": 5
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status command null raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "command": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "command": null
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status stops at first hit (later garbage never reached)",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        },
+        "garbage"
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      true
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        },
+        "garbage"
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status garbage group before hit raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        "garbage",
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        "garbage",
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status group hooks is dict -> not installed",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": {
+          "a": 1
+         }
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": {
+          "a": 1
+         }
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status group hooks is string -> not installed",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": "abc"
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": "abc"
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status group hooks number raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": 3
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "TypeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": 3
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall absent file",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "không có hook"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": false,
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall absent profile dir",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": true
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "không có hook"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": false,
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall empty object",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {},
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "không có hook"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {},
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "install then uninstall leaves empty object",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "uninstall",
+    "status",
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ],
+    [
+     [
+      "p",
+      false
+     ]
+    ],
+    [
+     [
+      "p",
+      "không có hook"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {},
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall rich keeps others",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "uninstall",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ],
+    [
+     [
+      "p",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"model\": \"x\",\n  \"permissions\": {\n    \"allow\": [\n      \"Bash(ls)\"\n    ],\n    \"deny\": []\n  },\n  \"env\": {\n    \"A\": \"1\"\n  },\n  \"hooks\": {\n    \"PreToolUse\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"echo hi\"\n          }\n        ]\n      }\n    ],\n    \"UserPromptSubmit\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"my-own-hook.exe\"\n          }\n        ]\n      }\n    ]\n  },\n  \"tail\": 1.5\n}"
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall keeps other events",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "Stop": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "Stop": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall removes only the ours entry of a mixed group",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          },
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          },
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          },
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall empty groups removed when something removed",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "matcher": "x"
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        },
+        {
+         "hooks": []
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {},
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall nothing of ours leaves file byte-identical (empty groups kept)",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": []
+        },
+        {
+         "matcher": "q"
+        }
+       ]
+      },
+      "a": [
+       1,
+       2
+      ]
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "không có hook"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": []
+        },
+        {
+         "matcher": "q"
+        }
+       ]
+      },
+      "a": [
+       1,
+       2
+      ]
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall does not create a backup",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {},
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall keeps hooks object when other events remain",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ],
+       "Stop": []
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "Stop": []
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall hooks empty object removed when n>0",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      },
+      "x": 1
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "x": 1
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall marker variants",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "Claude-Usage.EXE hook"
+          },
+          {
+           "type": "command",
+           "command": "claude-usage hook   "
+          },
+          {
+           "type": "command",
+           "command": "claude-usage hook now"
+          },
+          {
+           "type": "command",
+           "command": "claude-usagehook"
+          },
+          {
+           "type": "command",
+           "command": "echo hook"
+          },
+          {
+           "type": "command",
+           "command": "C:\\Tools\\CLAUDE-USAGE\\run.exe hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status",
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      true
+     ]
+    ],
+    [
+     [
+      "p",
+      "đã gỡ"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "claude-usage hook now"
+          },
+          {
+           "type": "command",
+           "command": "claude-usagehook"
+          },
+          {
+           "type": "command",
+           "command": "echo hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall invalid json",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "{ no",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "bỏ qua: settings.json không đọc được"
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "text": "{ no",
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall list document raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "[]",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": [],
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "uninstall hooks null raises",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": null
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "uninstall"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    {
+     "raises": "AttributeError"
+    }
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": null
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status variants none",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status no hooks key",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "a": 1
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "a": 1
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status installed",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      true
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status falsy containers",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": ""
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": ""
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status hooks falsy zero",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": 0
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": 0
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "status absent",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": false,
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "multi profile mix",
+  "input": {
+   "profiles": [
+    {
+     "name": "a",
+     "settings": {
+      "x": 1
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    },
+    {
+     "name": "b",
+     "settings": null,
+     "settings_text": "{bad",
+     "bak_text": null,
+     "no_dir": false
+    },
+    {
+     "name": "c",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    },
+    {
+     "name": "d",
+     "settings": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "settings_text": null,
+     "bak_text": "B",
+     "no_dir": false
+    },
+    {
+     "name": "e",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": true
+    }
+   ],
+   "ops": [
+    "status",
+    "install",
+    "status",
+    "uninstall",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "a",
+      false
+     ],
+     [
+      "b",
+      null
+     ],
+     [
+      "c",
+      false
+     ],
+     [
+      "d",
+      false
+     ],
+     [
+      "e",
+      false
+     ]
+    ],
+    [
+     [
+      "a",
+      "đã cài"
+     ],
+     [
+      "b",
+      "bỏ qua: settings.json không đọc được"
+     ],
+     [
+      "c",
+      "đã cài"
+     ],
+     [
+      "d",
+      "đã cài"
+     ],
+     [
+      "e",
+      "đã cài"
+     ]
+    ],
+    [
+     [
+      "a",
+      true
+     ],
+     [
+      "b",
+      null
+     ],
+     [
+      "c",
+      true
+     ],
+     [
+      "d",
+      true
+     ],
+     [
+      "e",
+      true
+     ]
+    ],
+    [
+     [
+      "a",
+      "đã gỡ"
+     ],
+     [
+      "b",
+      "bỏ qua: settings.json không đọc được"
+     ],
+     [
+      "c",
+      "đã gỡ"
+     ],
+     [
+      "d",
+      "đã gỡ"
+     ],
+     [
+      "e",
+      "đã gỡ"
+     ]
+    ],
+    [
+     [
+      "a",
+      false
+     ],
+     [
+      "b",
+      null
+     ],
+     [
+      "c",
+      false
+     ],
+     [
+      "d",
+      false
+     ],
+     [
+      "e",
+      false
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "x": 1
+     },
+     "bak_exists": true,
+     "bak_text": "{\n  \"x\": 1\n}"
+    },
+    {
+     "exists": true,
+     "text": "{bad",
+     "bak_exists": false
+    },
+    {
+     "exists": true,
+     "json": {},
+     "bak_exists": false
+    },
+    {
+     "exists": true,
+     "json": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "bak_exists": true,
+     "bak_text": "B"
+    },
+    {
+     "exists": true,
+     "json": {},
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair stale nonexistent exe",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      },
+      "k": 1
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "k": 1,
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair same command leaves file",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair absent file",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": false,
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair empty object",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {},
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {},
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair no ours",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "model": "x",
+      "permissions": {
+       "allow": [
+        "Bash(ls)"
+       ],
+       "deny": []
+      },
+      "env": {
+       "A": "1"
+      },
+      "hooks": {
+       "PreToolUse": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "echo hi"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ]
+      },
+      "tail": 1.5
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair invalid json",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "{bad",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "text": "{bad",
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair does not make a backup",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair python dev-form command nonexistent",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\nope\\python.exe\" \"C:\\nope\\claude-usage\\main.py\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair",
+    "status"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null,
+    [
+     [
+      "p",
+      true
+     ]
+    ]
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair unquoted command nonexistent",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          },
+          {
+           "type": "command",
+           "command": "C:\\old dir\\claude-usage.exe hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair keeps other hooks and order",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "a": 1,
+      "hooks": {
+       "Stop": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          },
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair",
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null,
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "a": 1,
+      "hooks": {
+       "Stop": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        }
+       ],
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "my-own-hook.exe"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair several stale entries collapse into one",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"D:\\gone\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair after install is a no-op",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "install",
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    [
+     [
+      "p",
+      "đã cài"
+     ]
+    ],
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair list document skipped",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "[]",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": [],
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair falsy document skipped",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": null,
+     "settings_text": "0",
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": 0,
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair ours with existing exe: python rewrites, rust leaves alone (R1)",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"{EXISTING_EXE}\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": true,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair mixed: one existing one missing rewrites all (R1)",
+  "input": {
+   "profiles": [
+    {
+     "name": "p",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"{EXISTING_EXE}\" hook"
+          }
+         ]
+        },
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ },
+ {
+  "name": "repair multi profile",
+  "input": {
+   "profiles": [
+    {
+     "name": "a",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\old\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    },
+    {
+     "name": "b",
+     "settings": null,
+     "settings_text": "[]",
+     "bak_text": null,
+     "no_dir": false
+    },
+    {
+     "name": "c",
+     "settings": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "settings_text": null,
+     "bak_text": null,
+     "no_dir": false
+    }
+   ],
+   "ops": [
+    "repair"
+   ]
+  },
+  "deviation": false,
+  "expected": {
+   "results": [
+    null
+   ],
+   "files": [
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    },
+    {
+     "exists": true,
+     "json": [],
+     "bak_exists": false
+    },
+    {
+     "exists": true,
+     "json": {
+      "hooks": {
+       "UserPromptSubmit": [
+        {
+         "hooks": [
+          {
+           "type": "command",
+           "command": "\"C:\\cu-fixture\\claude-usage.exe\" hook"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "bak_exists": false
+    }
+   ]
+  }
+ }
+]
