@@ -1,0 +1,8 @@
+D:\stu\repo\claude-usage\rust\target\debug\deps\windows_link-6d363fc7442221ec.d: C:\Users\huy.nguyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-link-0.1.3\src\lib.rs C:\Users\huy.nguyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-link-0.1.3\src\../readme.md
+
+D:\stu\repo\claude-usage\rust\target\debug\deps\libwindows_link-6d363fc7442221ec.rlib: C:\Users\huy.nguyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-link-0.1.3\src\lib.rs C:\Users\huy.nguyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-link-0.1.3\src\../readme.md
+
+D:\stu\repo\claude-usage\rust\target\debug\deps\libwindows_link-6d363fc7442221ec.rmeta: C:\Users\huy.nguyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-link-0.1.3\src\lib.rs C:\Users\huy.nguyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-link-0.1.3\src\../readme.md
+
+C:\Users\huy.nguyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-link-0.1.3\src\lib.rs:
+C:\Users\huy.nguyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-link-0.1.3\src\../readme.md:
