@@ -5,5 +5,3 @@ dist/
 release/
 *.spec
 *.tmp
-rust/target/
-.claude/worktrees/
