@@ -1,0 +1,748 @@
+[
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": []
+   },
+   "data": {},
+   "busy": [],
+   "refresh": null
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [],
+   "refresh": null,
+   "profiles": {}
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     }
+    ]
+   },
+   "data": {},
+   "busy": [],
+   "refresh": null
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [],
+   "refresh": null,
+   "profiles": {
+    "claude-da": {
+     "path": "C:\\p\\da"
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     },
+     {
+      "name": "claude-hn",
+      "path": "C:\\p\\hn"
+     },
+     {
+      "name": "default (desktop)",
+      "path": "C:\\Users\\x\\.claude"
+     }
+    ]
+   },
+   "data": {
+    "claude-da": {
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    },
+    "claude-hn": {
+     "err": "HTTP 429",
+     "status": 429,
+     "retry_at": 1795000100.25,
+     "retry_after": null
+    }
+   },
+   "busy": [
+    "claude-hn",
+    "claude-da"
+   ],
+   "refresh": null
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [
+    "claude-da",
+    "claude-hn"
+   ],
+   "refresh": null,
+   "profiles": {
+    "claude-da": {
+     "path": "C:\\p\\da",
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    },
+    "claude-hn": {
+     "path": "C:\\p\\hn",
+     "err": "HTTP 429",
+     "status": 429,
+     "retry_at": 1795000100.25,
+     "retry_after": null
+    },
+    "default (desktop)": {
+     "path": "C:\\Users\\x\\.claude"
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "default (desktop)",
+      "path": "C:\\Users\\x\\.claude"
+     },
+     {
+      "name": "claude-hn",
+      "path": "C:\\p\\hn"
+     },
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     }
+    ]
+   },
+   "data": {
+    "claude-da": {
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    },
+    "claude-hn": {
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ],
+     "err": "HTTP 429",
+     "status": 429,
+     "retry_at": 1795000100.25,
+     "retry_after": null
+    },
+    "default (desktop)": {
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    }
+   },
+   "busy": [],
+   "refresh": null
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [],
+   "refresh": null,
+   "profiles": {
+    "default (desktop)": {
+     "path": "C:\\Users\\x\\.claude",
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    },
+    "claude-hn": {
+     "path": "C:\\p\\hn",
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ],
+     "err": "HTTP 429",
+     "status": 429,
+     "retry_at": 1795000100.25,
+     "retry_after": null
+    },
+    "claude-da": {
+     "path": "C:\\p\\da",
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     }
+    ]
+   },
+   "data": {
+    "claude-da": {
+     "path": "OVERRIDE",
+     "five": 1
+    }
+   },
+   "busy": [],
+   "refresh": null
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [],
+   "refresh": null,
+   "profiles": {
+    "claude-da": {
+     "path": "OVERRIDE",
+     "five": 1
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     }
+    ]
+   },
+   "data": {
+    "claude-da": {
+     "five": 1,
+     "path": "late"
+    },
+    "ghost": {
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    }
+   },
+   "busy": [
+    "z",
+    "Z",
+    "a",
+    "é",
+    "B"
+   ],
+   "refresh": {
+    "ts": 1795000000.5,
+    "started": [
+     "claude-da"
+    ],
+    "skipped": [
+     {
+      "name": "claude-hn",
+      "why": "vừa cập nhật"
+     }
+    ]
+   }
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [
+    "B",
+    "Z",
+    "a",
+    "z",
+    "é"
+   ],
+   "refresh": {
+    "ts": 1795000000.5,
+    "started": [
+     "claude-da"
+    ],
+    "skipped": [
+     {
+      "name": "claude-hn",
+      "why": "vừa cập nhật"
+     }
+    ]
+   },
+   "profiles": {
+    "claude-da": {
+     "path": "late",
+     "five": 1
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     },
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     }
+    ]
+   },
+   "data": {
+    "claude-da": {
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    }
+   },
+   "busy": [
+    "claude-da",
+    "claude-da"
+   ],
+   "refresh": {}
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [
+    "claude-da",
+    "claude-da"
+   ],
+   "refresh": {},
+   "profiles": {
+    "claude-da": {
+     "path": "C:\\p\\da",
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": false,
+    "block_pct": 99.5,
+    "warn_pct": 0,
+    "profiles": [
+     {
+      "name": "claude-hn",
+      "path": "C:\\p\\hn"
+     },
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     }
+    ],
+    "interval_sec": 300,
+    "zzz": 1
+   },
+   "data": {
+    "claude-hn": {
+     "extra": null,
+     "scoped": []
+    }
+   },
+   "busy": [],
+   "refresh": 0
+  },
+  "expected": {
+   "block_enabled": false,
+   "block_pct": 99.5,
+   "warn_pct": 0,
+   "busy": [],
+   "refresh": 0,
+   "profiles": {
+    "claude-hn": {
+     "path": "C:\\p\\hn",
+     "extra": null,
+     "scoped": []
+    },
+    "claude-da": {
+     "path": "C:\\p\\da"
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "Việt Nam",
+      "path": "D:\\Đường dẫn"
+     }
+    ]
+   },
+   "data": {
+    "Việt Nam": {
+     "err": "không đọc được credentials",
+     "status": 0
+    }
+   },
+   "busy": [
+    "Việt Nam"
+   ],
+   "refresh": null
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [
+    "Việt Nam"
+   ],
+   "refresh": null,
+   "profiles": {
+    "Việt Nam": {
+     "path": "D:\\Đường dẫn",
+     "err": "không đọc được credentials",
+     "status": 0
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     },
+     {
+      "name": "claude-hn",
+      "path": "C:\\p\\hn"
+     }
+    ]
+   },
+   "data": {
+    "claude-da": {},
+    "claude-hn": {
+     "five": 0,
+     "week": 0.0
+    }
+   },
+   "busy": [],
+   "refresh": false
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [],
+   "refresh": false,
+   "profiles": {
+    "claude-da": {
+     "path": "C:\\p\\da"
+    },
+    "claude-hn": {
+     "path": "C:\\p\\hn",
+     "five": 0,
+     "week": 0.0
+    }
+   }
+  }
+ },
+ {
+  "input": {
+   "cfg": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "profiles": [
+     {
+      "name": "claude-da",
+      "path": "C:\\p\\da"
+     }
+    ]
+   },
+   "data": {
+    "claude-da": {
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    }
+   },
+   "busy": [
+    "x"
+   ],
+   "refresh": [
+    1,
+    2
+   ]
+  },
+  "expected": {
+   "block_enabled": true,
+   "block_pct": 95,
+   "warn_pct": 80,
+   "busy": [
+    "x"
+   ],
+   "refresh": [
+    1,
+    2
+   ],
+   "profiles": {
+    "claude-da": {
+     "path": "C:\\p\\da",
+     "five": 23.0,
+     "five_reset": "2026-11-19T14:00:00+00:00",
+     "week": 49.0,
+     "week_reset": "2026-11-26T09:00:00+00:00",
+     "fetched_at": 1795000000.5,
+     "plan": "team",
+     "extra": {
+      "used": 0.98,
+      "limit": 25.0,
+      "pct": 3.92,
+      "currency": "USD"
+     },
+     "scoped": [
+      {
+       "name": "Fable",
+       "pct": 21,
+       "resets_at": "2026-11-26T09:00:00+00:00"
+      }
+     ]
+    }
+   }
+  }
+ }
+]

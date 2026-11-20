@@ -1,0 +1,3870 @@
+[
+ {
+  "name": "no cache file",
+  "input": {
+   "cache": null,
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "empty file",
+  "input": {
+   "cache": null,
+   "cache_text": "",
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "invalid json",
+  "input": {
+   "cache": null,
+   "cache_text": "{ nope",
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "json null",
+  "input": {
+   "cache": null,
+   "cache_text": "null",
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "json list",
+  "input": {
+   "cache": null,
+   "cache_text": "[]",
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "json number",
+  "input": {
+   "cache": null,
+   "cache_text": "5",
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "utf-8 BOM",
+  "input": {
+   "cache": null,
+   "cache_text": "﻿{\"ts\": 1799999990.0, \"block_enabled\": true, \"block_pct\": 95, \"warn_pct\": 80, \"busy\": [], \"refresh\": null, \"profiles\": {\"p1\": {\"path\": \"{HOME}\\\\p1\", \"five\": 96, \"week\": 10}, \"alt\": {\"path\": \"{HOME}\\\\alt\", \"five\": 20, \"week\": 30}}}",
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block disabled false",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": false,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block disabled 0",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": 0,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block disabled null",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": null,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block disabled empty string",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": "",
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block_enabled missing",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block_enabled truthy int 1",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": 1,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95%. Đổi sang profile 'alt' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_enabled truthy string",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": "no",
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95%. Đổi sang profile 'alt' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "ts missing",
+  "input": {
+   "cache": {
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "ts string",
+  "input": {
+   "cache": {
+    "ts": "1800000000",
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "ts null",
+  "input": {
+   "cache": {
+    "ts": null,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "ts list",
+  "input": {
+   "cache": {
+    "ts": [
+     1
+    ],
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "ts bool true is ancient",
+  "input": {
+   "cache": {
+    "ts": true,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "ts age 901 -> stale",
+  "input": {
+   "cache": {
+    "ts": 1799999099.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "ts age exactly 900 -> blocks",
+  "input": {
+   "cache": {
+    "ts": 1799999100.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95%. Đổi sang profile 'alt' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "ts age 899.5 -> blocks",
+  "input": {
+   "cache": {
+    "ts": 1799999100.5,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95%. Đổi sang profile 'alt' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "ts in the future -> blocks",
+  "input": {
+   "cache": {
+    "ts": 1800000500.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95%. Đổi sang profile 'alt' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "ts int",
+  "input": {
+   "cache": {
+    "ts": 1799999995,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95%. Đổi sang profile 'alt' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "profiles missing",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "profiles list",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": []
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "profiles null",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": null
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "profiles empty",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {}
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "current profile not found",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "x": {
+      "path": "{HOME}\\other",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "current has no five (err)",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "err": "HTTP 429",
+      "status": 429
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "current five present but week missing",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "current five null",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": null,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "current week null",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": null
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "current five string",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": "99",
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block_pct missing",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block_pct string",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": "95",
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block_pct null",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": null,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block_pct list",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": [
+     95
+    ],
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "profile entry without path before match",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "junk": {
+      "five": 1
+     },
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "profile path non-string before match",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "junk": {
+      "path": 5,
+      "five": 1
+     },
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "profile path null before match",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "junk": {
+      "path": null
+     },
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "profile entry is a string before match",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "junk": "x",
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "profile entry is a list before match",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "junk": [],
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "malformed entry AFTER the match is ignored by the lookup but not by best",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "junk": {
+      "five": 1
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "malformed non-dict entry after match: null -> fail open",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "junk": null
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "after match: number entry -> fail open",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "junk": 7
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "after match: empty list entry ignored",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "junk": []
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "after match: list containing five -> fail open",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "junk": [
+      "five"
+     ]
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "after match: string without five ignored",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "junk": "abc"
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "after match: string containing five -> fail open",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "junk": "five"
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "after match: bad entry without path is fine",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "junk": {
+      "err": "x"
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "empty profile name -> allow",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "other has five but no week -> fail open",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "o": {
+      "path": "x",
+      "five": 5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "other five null -> fail open",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "o": {
+      "path": "x",
+      "five": null,
+      "week": 1
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "cache is a list of profiles",
+  "input": {
+   "cache": null,
+   "cache_text": "{\"ts\": 1800000000.0, \"block_enabled\": true, \"block_pct\": 1, \"profiles\": [{\"path\": \"{HOME}\\\\p1\", \"five\": 9, \"week\": 9}]}",
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "NaN ts (python json accepts it; rust fails open)",
+  "input": {
+   "cache": null,
+   "cache_text": "{\"ts\": NaN, \"block_enabled\": true, \"block_pct\": 95, \"profiles\": {\"p1\": {\"path\": \"{HOME}\\\\p1\", \"five\": 99, \"week\": 99}}}",
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": true,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "below limit",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 94.9,
+      "week": 10
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "below limit both",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 10,
+      "week": 20
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "equal limit five (int)",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 95,
+      "week": 10
+     },
+     "o": {
+      "path": "x",
+      "five": 1,
+      "week": 2
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 95% (5h) / 10% (7d) >= 95%. Đổi sang profile 'o' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "equal limit week",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 10,
+      "week": 95
+     },
+     "o": {
+      "path": "x",
+      "five": 1,
+      "week": 2
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 10% (5h) / 95% (7d) >= 95%. Đổi sang profile 'o' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "above limit week-driven",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 10,
+      "week": 99
+     },
+     "o": {
+      "path": "x",
+      "five": 1,
+      "week": 2
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 10% (5h) / 99% (7d) >= 95%. Đổi sang profile 'o' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "above limit five-driven",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 100,
+      "week": 3
+     },
+     "o": {
+      "path": "x",
+      "five": 1,
+      "week": 2
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 100% (5h) / 3% (7d) >= 95%. Đổi sang profile 'o' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "just below limit float",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 94.99999999,
+      "week": 94.9
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "equal limit float",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 95.0,
+      "week": 0.0
+     },
+     "o": {
+      "path": "x",
+      "five": 1,
+      "week": 2
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 95% (5h) / 0% (7d) >= 95%. Đổi sang profile 'o' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct float 95.0 prints 95.0",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95.0,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95.0%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct int 95 prints 95",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct float 90.5",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 90.5,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 91,
+      "week": 10
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 91% (5h) / 10% (7d) >= 90.5%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct float 1e-05",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 1e-05,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 1,
+      "week": 0
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 1% (5h) / 0% (7d) >= 1e-05%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct float 1e16",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 1e+16,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "block_pct tiny float hit",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 0.1,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 3,
+      "week": 0
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 3% (5h) / 0% (7d) >= 0.1%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct float 0.0001",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 0.0001,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 3,
+      "week": 0
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 3% (5h) / 0% (7d) >= 0.0001%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct bool true",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": true,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 3,
+      "week": 0
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 3% (5h) / 0% (7d) >= True%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct bool false",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": false,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 3,
+      "week": 0
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 3% (5h) / 0% (7d) >= False%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct 0 blocks at zero usage",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 0,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 0,
+      "week": 0
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 0% (5h) / 0% (7d) >= 0%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct negative",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": -1,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": -0.4,
+      "week": -3
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã -0% (5h) / -3% (7d) >= -1%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct 100 at 100",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 100,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 100,
+      "week": 100
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 100% (5h) / 100% (7d) >= 100%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "block_pct 100.0 at 99.99",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 100.0,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99.99,
+      "week": 100
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 100% (5h) / 100% (7d) >= 100.0%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "five bool true",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 1,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": true,
+      "week": false
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 1% (5h) / 0% (7d) >= 1%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "large ints",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 100,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 250,
+      "week": 100000
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 250% (5h) / 100000% (7d) >= 100%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round 0.5 and 1.5",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 0,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 0.5,
+      "week": 1.5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 0% (5h) / 2% (7d) >= 0%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round 2.5 and 3.5",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 0,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 2.5,
+      "week": 3.5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 2% (5h) / 4% (7d) >= 0%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round 94.5 and 95.5",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 94,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 94.5,
+      "week": 95.5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 94% (5h) / 96% (7d) >= 94%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round 98.5 and 99.5",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 90,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 98.5,
+      "week": 99.5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 98% (5h) / 100% (7d) >= 90%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round 99.49999 and 99.50001",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 90,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99.49999,
+      "week": 99.50001
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 100% (7d) >= 90%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round 0.49999999999999994",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 0,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 0.49999999999999994,
+      "week": 0.5000000000000001
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 0% (5h) / 1% (7d) >= 0%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round negative -0.4 and -0.5",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": -5,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": -0.4,
+      "week": -0.5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã -0% (5h) / -0% (7d) >= -5%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round -1.5 -2.5",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": -5,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": -1.5,
+      "week": -2.5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã -2% (5h) / -2% (7d) >= -5%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "many digits",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 10,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 12.3456789,
+      "week": 77.7777777
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 12% (5h) / 78% (7d) >= 10%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "round 100.5",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 0,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 100.5,
+      "week": 0.5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 100% (5h) / 0% (7d) >= 0%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "float five equal to int week",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96.0,
+      "week": 96
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 96% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "cache path with trailing slash",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1\\",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "cache path with forward slashes",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}/p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "cache path other case",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\P1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "cache path upper-cased drive",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\P1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "cache path with dotdot",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\x\\..\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "cache path with dot",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\.\\p1\\.",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "cache path double separators",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\\\p1\\\\",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "env path with trailing slash",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1\\",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "env path with forward slashes",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}/p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "env path with dotdot",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\a\\b\\..\\..\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "env path other case",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\P1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "relative cache path",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "rel\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{CWD}\\rel\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "relative cache path with dotdot",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "..\\sibling\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{CWD}\\..\\sibling\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "relative env path",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{CWD}\\rel2\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "rel2\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "both relative",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "rel3",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "rel3\\.",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "rooted without drive",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "\\rooted\\p",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{DRIVE}\\rooted\\p",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "drive root with trailing slash",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{DRIVE}/",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{DRIVE}\\",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "drive root vs no slash",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{DRIVE}\\",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{DRIVE}\\.",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "vietnamese path different case",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\Đồ Án\\p",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\đồ án\\p",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "unc path trailing slash and case",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "\\\\SRV\\Share\\p",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "\\\\srv\\share\\p\\",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "unc path forward slashes",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "//srv/share/p",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "\\\\srv\\share\\p",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "empty cache path means cwd",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{CWD}",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "path differs by one char",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p10",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "default config dir (env unset)",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "default": {
+      "path": "{HOME}\\.claude",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": null,
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'default' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "default config dir when env empty",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "default": {
+      "path": "{HOME}\\.claude",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'default' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "env set so default profile does not match",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "default": {
+      "path": "{HOME}\\.claude",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "default dir not in cache",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "x": {
+      "path": "{HOME}\\x",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": null,
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "duplicate path first wins (first lacks five)",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "a": {
+      "path": "{HOME}\\p1",
+      "err": "x"
+     },
+     "b": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 0,
+   "stderr": null
+  }
+ },
+ {
+  "name": "duplicate path first wins (first blocks)",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "a": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "b": {
+      "path": "{HOME}\\p1",
+      "five": 1,
+      "week": 1
+     },
+     "c": {
+      "path": "{HOME}\\c",
+      "five": 5,
+      "week": 5
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'a' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'b' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: single other",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 96,
+      "week": 10
+     },
+     "alt": {
+      "path": "{HOME}\\alt",
+      "five": 20,
+      "week": 30
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 96% (5h) / 10% (7d) >= 95%. Đổi sang profile 'alt' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: no other profiles",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: others without five -> ?",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "o": {
+      "path": "x",
+      "err": "e"
+     },
+     "o2": {
+      "path": "y"
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: tie keeps first in file order",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "a": {
+      "path": "{HOME}\\a",
+      "five": 50,
+      "week": 10
+     },
+     "b": {
+      "path": "{HOME}\\b",
+      "five": 10,
+      "week": 50
+     },
+     "c": {
+      "path": "{HOME}\\c",
+      "five": 60,
+      "week": 60
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'a' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: min of several uses max(five,week)",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "a": {
+      "path": "{HOME}\\a",
+      "five": 5,
+      "week": 90
+     },
+     "b": {
+      "path": "{HOME}\\b",
+      "five": 40,
+      "week": 41
+     },
+     "c": {
+      "path": "{HOME}\\c",
+      "five": 39,
+      "week": 10
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'c' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: other listed before current",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "z": {
+      "path": "{HOME}\\z",
+      "five": 3,
+      "week": 3
+     },
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "y": {
+      "path": "{HOME}\\y",
+      "five": 2,
+      "week": 2
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'y' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: tie between int and float",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "a": {
+      "path": "{HOME}\\a",
+      "five": 20,
+      "week": 30
+     },
+     "b": {
+      "path": "{HOME}\\b",
+      "five": 30.0,
+      "week": 1
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'a' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: other over limit still can be best",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "a": {
+      "path": "{HOME}\\a",
+      "five": 100,
+      "week": 100
+     },
+     "b": {
+      "path": "{HOME}\\b",
+      "five": 99,
+      "week": 100
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'a' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: other with error but with five",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "a": {
+      "path": "{HOME}\\a",
+      "five": 10,
+      "week": 10,
+      "err": "HTTP 429"
+     },
+     "b": {
+      "path": "{HOME}\\b",
+      "five": 50,
+      "week": 50
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'a' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: name with quotes and Vietnamese",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "Tài khoản 'phụ'": {
+      "path": "{HOME}\\a",
+      "five": 1,
+      "week": 1
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'Tài khoản 'phụ'' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "current name with Vietnamese and quotes",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "Công ty \"A\"": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "b": {
+      "path": "{HOME}\\b",
+      "five": 1,
+      "week": 1
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'Công ty \"A\"' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'b' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "best: other bool values",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99
+     },
+     "a": {
+      "path": "x",
+      "five": true,
+      "week": 0
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile 'a' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "current with extra keys",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "p1": {
+      "path": "{HOME}\\p1",
+      "five": 99,
+      "week": 99,
+      "five_reset": "2026-11-19T10:00:00Z",
+      "extra": [
+       1
+      ]
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'p1' đã 99% (5h) / 99% (7d) >= 95%. Đổi sang profile '?' hoặc tắt chặn trong claude-usage.\n"
+  }
+ },
+ {
+  "name": "four profile realistic",
+  "input": {
+   "cache": {
+    "ts": 1799999990.0,
+    "block_enabled": true,
+    "block_pct": 95,
+    "warn_pct": 80,
+    "busy": [],
+    "refresh": null,
+    "profiles": {
+     "main": {
+      "path": "{HOME}\\.claude",
+      "five": 31,
+      "week": 12
+     },
+     "work": {
+      "path": "{HOME}\\p1",
+      "five": 97.0,
+      "week": 45.5
+     },
+     "side": {
+      "path": "{HOME}\\s",
+      "five": 12.25,
+      "week": 80
+     },
+     "old": {
+      "path": "{HOME}\\o",
+      "err": "HTTP 401"
+     }
+    }
+   },
+   "cache_text": null,
+   "env_config_dir": "{HOME}\\p1",
+   "now": 1800000000.0
+  },
+  "deviation": false,
+  "expected": {
+   "code": 2,
+   "stderr": "Profile 'work' đã 97% (5h) / 46% (7d) >= 95%. Đổi sang profile 'main' hoặc tắt chặn trong claude-usage.\n"
+  }
+ }
+]

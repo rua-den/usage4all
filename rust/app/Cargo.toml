@@ -1,0 +1,16 @@
+[package]
+name = "claude-usage"
+version.workspace = true
+edition.workspace = true
+description = "claude-usage tray app (Rust port); Phase 2: hook subcommand"
+
+[[bin]]
+name = "claude-usage"
+path = "src/main.rs"
+
+[dependencies]
+cu-core = { path = "../crates/core" }
+
+[dev-dependencies]
+tempfile = "=3.20.0"
+serde_json = { version = "=1.0.140", features = ["preserve_order"] }

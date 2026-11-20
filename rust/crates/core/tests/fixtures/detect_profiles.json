@@ -1,0 +1,206 @@
+[
+ {
+  "input": {
+   "layout": {}
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "layout": {
+    "default": true
+   }
+  },
+  "expected": [
+   {
+    "name": "default (desktop)",
+    "path": "{HOME}\\.claude"
+   }
+  ]
+ },
+ {
+  "input": {
+   "layout": {
+    "profiles_dir": true
+   }
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "layout": {
+    "default": true,
+    "profiles_dir": true,
+    "entries": [
+     [
+      "claude-hn",
+      "dir_creds"
+     ],
+     [
+      "claude-da",
+      "dir_creds"
+     ],
+     [
+      "Claude-Zed",
+      "dir_creds"
+     ],
+     [
+      "alpha",
+      "dir_creds"
+     ],
+     [
+      "Beta",
+      "dir_creds"
+     ],
+     [
+      "beta2",
+      "dir_nocreds"
+     ],
+     [
+      "notes.txt",
+      "file"
+     ],
+     [
+      "_under",
+      "dir_creds"
+     ],
+     [
+      "claude-ngoai",
+      "dir_creds"
+     ],
+     [
+      "ÉCLAIR",
+      "dir_creds"
+     ],
+     [
+      "zulu",
+      "dir_creds"
+     ],
+     [
+      "Zulu2",
+      "dir_creds"
+     ],
+     [
+      "10",
+      "dir_creds"
+     ],
+     [
+      "9",
+      "dir_creds"
+     ],
+     [
+      "a b",
+      "dir_creds"
+     ],
+     [
+      "a-b",
+      "dir_creds"
+     ],
+     [
+      "a_b",
+      "dir_creds"
+     ]
+    ]
+   }
+  },
+  "expected": [
+   {
+    "name": "default (desktop)",
+    "path": "{HOME}\\.claude"
+   },
+   {
+    "name": "10",
+    "path": "{HOME}\\claude-profiles\\10"
+   },
+   {
+    "name": "9",
+    "path": "{HOME}\\claude-profiles\\9"
+   },
+   {
+    "name": "_under",
+    "path": "{HOME}\\claude-profiles\\_under"
+   },
+   {
+    "name": "a b",
+    "path": "{HOME}\\claude-profiles\\a b"
+   },
+   {
+    "name": "a-b",
+    "path": "{HOME}\\claude-profiles\\a-b"
+   },
+   {
+    "name": "a_b",
+    "path": "{HOME}\\claude-profiles\\a_b"
+   },
+   {
+    "name": "alpha",
+    "path": "{HOME}\\claude-profiles\\alpha"
+   },
+   {
+    "name": "Beta",
+    "path": "{HOME}\\claude-profiles\\Beta"
+   },
+   {
+    "name": "claude-da",
+    "path": "{HOME}\\claude-profiles\\claude-da"
+   },
+   {
+    "name": "claude-hn",
+    "path": "{HOME}\\claude-profiles\\claude-hn"
+   },
+   {
+    "name": "claude-ngoai",
+    "path": "{HOME}\\claude-profiles\\claude-ngoai"
+   },
+   {
+    "name": "Claude-Zed",
+    "path": "{HOME}\\claude-profiles\\Claude-Zed"
+   },
+   {
+    "name": "zulu",
+    "path": "{HOME}\\claude-profiles\\zulu"
+   },
+   {
+    "name": "Zulu2",
+    "path": "{HOME}\\claude-profiles\\Zulu2"
+   },
+   {
+    "name": "ÉCLAIR",
+    "path": "{HOME}\\claude-profiles\\ÉCLAIR"
+   }
+  ]
+ },
+ {
+  "input": {
+   "layout": {
+    "default": false,
+    "profiles_dir": true,
+    "entries": [
+     [
+      "only",
+      "dir_nocreds"
+     ],
+     [
+      "f",
+      "file"
+     ]
+    ]
+   }
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "layout": {
+    "default": true,
+    "profiles_dir": false
+   }
+  },
+  "expected": [
+   {
+    "name": "default (desktop)",
+    "path": "{HOME}\\.claude"
+   }
+  ]
+ }
+]

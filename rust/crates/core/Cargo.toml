@@ -1,0 +1,24 @@
+[package]
+name = "cu-core"
+version.workspace = true
+edition.workspace = true
+description = "Pure data/config/cache/format logic of claude-usage (port of core.py)"
+
+[lib]
+name = "cu_core"
+
+[dependencies]
+serde_json = { version = "=1.0.140", features = ["preserve_order"] }
+chrono = { version = "=0.4.41", default-features = false, features = ["clock", "std"] }
+
+sha2 = "=0.10.9"
+# HTTP: ureq (sync) + rustls with the Windows certificate store (rustls-platform-verifier, selected by ureq's
+# `platform-verifier` feature so the versions always match). ring provider (ureq's `rustls` feature).
+ureq = { version = "=3.5.2", default-features = false, features = ["rustls", "platform-verifier"] }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "=0.61.2", features = ["Win32_System_Registry", "Win32_Foundation"] }
+
+[dev-dependencies]
+tiny_http = "=0.12.0"
+tempfile = "=3.20.0"

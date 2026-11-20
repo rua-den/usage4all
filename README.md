@@ -3,7 +3,7 @@
 Theo dõi **hạn mức Claude (5h / 7d) của nhiều account cùng lúc** trên Windows: icon ở tray, widget nhỏ trên taskbar,
 dashboard, thông báo khi gần hết và (tuỳ chọn) chặn prompt của Claude Code CLI khi account đã quá ngưỡng.
 
-Một file `claude-usage.exe`, không cần cài đặt, không cần Python.
+Giải nén cả thư mục rồi chạy `claude-usage.exe` (cần thư mục `_internal` nằm cạnh exe). Không cần cài đặt, không cần Python.
 
 ## Cách dùng nhanh
 
@@ -33,8 +33,8 @@ Một file `claude-usage.exe`, không cần cài đặt, không cần Python.
 
 Dashboard → **cài hook vào các profile**. Nó thêm một mục `UserPromptSubmit` vào `settings.json` của từng profile
 (giữ nguyên mọi thứ khác, tạo bản sao lưu `settings.json.claude-usage.bak` lần đầu). **gỡ hook** để xoá đúng mục đó.
-Nếu bạn dời file exe sang chỗ khác, mở app một lần là hook tự được sửa đường dẫn.
-Mỗi lần hook chạy mất khoảng 0.5 giây vì exe một file phải giải nén.
+Nếu bạn dời thư mục app sang chỗ khác (exe cùng `_internal`), mở app một lần là hook tự được sửa đường dẫn.
+Mỗi lần hook chạy mất khoảng 0.25 giây.
 
 ## Chạy cùng Windows
 
@@ -65,7 +65,7 @@ Nếu dời exe: mở ở chỗ mới một lần, đường dẫn tự cập nh
 
 ## Gỡ cài đặt
 
-Quit app → xoá `claude-usage.exe` → xoá thư mục `%LOCALAPPDATA%\claude-usage\` → (nếu đã cài hook) dùng *gỡ hook* trước khi xoá app,
+Quit app → xoá thư mục chứa `claude-usage.exe` và `_internal` → xoá thư mục `%LOCALAPPDATA%\claude-usage\` → (nếu đã cài hook) dùng *gỡ hook* trước khi xoá app,
 và bỏ tick *Chạy cùng Windows*.
 
 ## Giới hạn đã biết
