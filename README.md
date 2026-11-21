@@ -5,6 +5,8 @@ dashboard, thông báo khi gần hết và (tuỳ chọn) chặn prompt của Cl
 
 Giải nén cả thư mục rồi chạy `claude-usage.exe` (cần thư mục `_internal` nằm cạnh exe). Không cần cài đặt, không cần Python.
 
+> Có bản Rust thử nghiệm (nhánh `rust-port`, thư mục `release/rust-2.0.0-dev`: hai file .exe đặt cạnh nhau). Chưa thay bản Python mặc định.
+
 ## Cách dùng nhanh
 
 1. Chạy `claude-usage.exe`. Lần đầu nó tự tìm các profile Claude Code của bạn (`~\.claude` và `~\claude-profiles\*`).

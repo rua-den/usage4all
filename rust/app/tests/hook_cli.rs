@@ -158,20 +158,14 @@ fn hook_does_not_create_any_files() {
 }
 
 #[test]
-fn unimplemented_modes_log_and_exit_zero() {
-    for (args, word) in [
-        (&["dashboard"][..], "dashboard"),
-        (&["--hidden"][..], "--hidden"),
-        (&[][..], "tray"),
-    ] {
-        let tmp = tempfile::tempdir().unwrap();
-        let local = tmp.path().join("local");
-        let o = run(args, &local, None, tmp.path());
-        assert_eq!(o.status.code(), Some(0));
-        let log = std::fs::read_to_string(local.join("claude-usage").join("events.log")).unwrap();
-        assert!(
-            log.contains(&format!("not implemented yet: {word}")),
-            "{log}"
-        );
-    }
+fn dashboard_mode_starts_the_dashboard_exe_unless_disabled() {
+    // The tray modes (no args / --hidden) are covered by tray_ui.rs; running them here would start a real tray.
+    // CU_NO_DASHBOARD keeps this test from opening a real window.
+    std::env::set_var("CU_NO_DASHBOARD", "1");
+    let tmp = tempfile::tempdir().unwrap();
+    let local = tmp.path().join("local");
+    let o = run(&["dashboard"], &local, None, tmp.path());
+    assert_eq!(o.status.code(), Some(0));
+    let log = std::fs::read_to_string(local.join("claude-usage").join("events.log")).unwrap();
+    assert!(log.contains("dashboard skipped"), "{log}");
 }

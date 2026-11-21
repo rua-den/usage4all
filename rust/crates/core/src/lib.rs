@@ -2,7 +2,7 @@
 //! `widget.py`). The Python code is the reference: parity is checked against fixtures generated from it
 //! (`tools/gen_fixtures.py` -> `tests/fixtures/*.json`, compared in `tests/parity.rs`).
 //!
-//! Out of scope in this phase: fetch / token refresh / locks / HTTP, daemon_running, autostart, hook, GUI.
+//! Out of scope in this phase: daemon_running, autostart, hook, GUI.
 
 pub mod alias;
 pub mod atomic;
@@ -14,9 +14,11 @@ pub mod hook;
 pub mod hookinstall;
 pub mod iso;
 pub mod log;
+pub mod net;
 pub mod parse;
 pub mod paths;
 pub mod pyval;
+pub mod widget;
 
 pub use serde_json::{Map, Value};
 

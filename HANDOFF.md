@@ -3,6 +3,8 @@
 Tài liệu bàn giao cho AI / người tiếp theo. Đọc hết mục 1-4 trước khi sửa code. Cập nhật file này mỗi khi thay đổi kiến trúc,
 thêm config key, hoặc phát hiện thêm "bẫy" (mục 9). Ngày cập nhật gần nhất: 2026-11-12, phiên bản `1.1.0` (tự làm mới token).
 
+> **Bản port Rust (nhánh `rust-port`)**: xem `PORT_PLAN.md` (trạng thái) và thư mục `rust/`. Test: `cd rust; cargo test --workspace --release --features claude-usage-dashboard/e2e -- --test-threads=1`. Build phát hành KHÔNG bật feature `e2e`. Test GUI cần không có tray Rust nào đang chạy; bản Python của người dùng không bị đụng.
+
 ## 1. Đây là gì
 
 App Windows theo dõi **hạn mức Claude (5h / 7d) của nhiều account Claude Code cùng lúc**. Thư mục `claude-usage.exe` + `_internal` (PyInstaller onedir):
