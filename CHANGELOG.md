@@ -1,5 +1,17 @@
 # Changelog
 
+## Chưa phát hành
+
+### Bản port Rust (nhánh `rust-port`, 2.0.0-dev, chưa thay bản Python)
+- Viết lại bằng Rust (`rust/`): `claude-usage.exe` (tray + daemon + widget + hook, ~3.2MB) và `claude-usage-dashboard.exe` (wry/WebView2, dùng nguyên `ui.html`, ~1.2MB). Config/cache/alerts/hook/autostart dùng chung định dạng với bản Python.
+- Làm mới token như CLI (khoá mkdir, .bak, invalid_grant, invalid_scope), proxy hệ thống (ProxyEnable/ProxyServer, bỏ qua PAC/ProxyOverride), toast WinRT với AUMID riêng `ClaudeUsage.App` (lỗi thì rơi về balloon), dashboard nằm trong Job Object (tray chết thì dashboard chết), ProxyOverride cơ bản.
+- Test: parity với Python qua fixture (config/fmt/daemon/hook/widget layout), UI test tiến trình thật cho tray, widget, dashboard, tray→dashboard.
+
+- Nhanh hơn: exe không còn là một file tự giải nén mỗi lần chạy. Gói giờ là thư mục `claude-usage.exe` + `_internal`.
+  Hook chặn prompt từ khoảng 0.84s còn khoảng 0.23s mỗi prompt; mở dashboard nhanh hơn một chút.
+  Đường dẫn `claude-usage.exe` giữ nguyên nên autostart và hook đã cài vẫn chạy.
+- Đang chuẩn bị chuyển sang Rust (xem `PORT_PLAN.md`).
+
 ## 1.1.0
 
 - Mới: **tự làm mới token hết hạn**. Trước đây profile nào lâu không mở `claude` (token sống khoảng 8 giờ) sẽ kẹt ở `token hết hạn` cho tới khi bạn chạy `claude` ở đó.

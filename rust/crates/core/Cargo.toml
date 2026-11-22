@@ -1,0 +1,16 @@
+[package]
+name = "cu-core"
+version.workspace = true
+edition.workspace = true
+description = "Pure data/config/cache/format logic of claude-usage (port of core.py)"
+
+[lib]
+name = "cu_core"
+
+[dependencies]
+serde_json = { version = "=1.0.140", features = ["preserve_order"] }
+chrono = { version = "=0.4.41", default-features = false, features = ["clock", "std"] }
+sha2 = { version = "=0.10.9", default-features = false }
+
+[dev-dependencies]
+tempfile = "=3.20.0"

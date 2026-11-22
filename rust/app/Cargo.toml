@@ -1,0 +1,29 @@
+[package]
+name = "claude-usage"
+version.workspace = true
+edition.workspace = true
+description = "claude-usage tray app (Rust port); Phase 2: hook subcommand"
+
+[[bin]]
+name = "claude-usage"
+path = "src/main.rs"
+
+[dependencies]
+cu-core = { path = "../crates/core" }
+serde_json = { version = "=1.0.140", features = ["preserve_order"] }
+ureq = { version = "=3.5.2", default-features = false, features = ["rustls", "platform-verifier"] }
+
+windows-sys = { version = "=0.59.0", features = ["Win32_Foundation", "Win32_System_Threading", "Win32_System_LibraryLoader", "Win32_UI_WindowsAndMessaging", "Win32_UI_Shell", "Win32_Graphics_Gdi", "Win32_System_Registry", "Win32_System_JobObjects", "Win32_Security", "Win32_UI_HiDpi", "Win32_UI_Input_KeyboardAndMouse"] }
+
+windows = { version = "=0.61.3", features = ["Data_Xml_Dom", "UI_Notifications", "Win32_System_WinRT"] }
+
+[dev-dependencies]
+tempfile = "=3.20.0"
+
+[features]
+# Test-only seams (endpoint override env CU_API_BASE / CU_TOKEN_URL, widget state dump, fake taskbar/fullscreen).
+# Always on in debug builds; the SHIPPED release must be built WITHOUT this feature.
+e2e = []
+
+[build-dependencies]
+winresource = "=0.1.34"

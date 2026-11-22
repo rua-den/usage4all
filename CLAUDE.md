@@ -2,7 +2,7 @@
 
 **Đọc `HANDOFF.md` trước** (kiến trúc, bản đồ file, test, bẫy). File này chỉ nhắc những quy tắc quan trọng nhất.
 
-- App Windows (Python 3.14 + pystray + Pillow + pywebview, PyInstaller một file) theo dõi hạn mức 5h/7d của nhiều account Claude Code.
+- App Windows (Python 3.14 + pystray + Pillow + pywebview, PyInstaller onedir: `dist\claude-usage.exe` + `dist\_internal`). **Đang port sang Rust: đọc `PORT_PLAN.md`** theo dõi hạn mức 5h/7d của nhiều account Claude Code.
 - Giao tiếp với người dùng **bằng tiếng Việt**, ngắn gọn, báo cáo trung thực (cái gì test thật / giả lập / chưa kiểm chứng).
 - Lệnh chính: `.\.venv\Scripts\python tests\test_unit.py` (~40s) · `powershell -ExecutionPolicy Bypass -File build.ps1` (test + build + đóng gói) ·
   `.\.venv\Scripts\python tests\smoke_release.py` (kiểm tra gói). Chỉ chạy **một** test GUI mỗi lần.

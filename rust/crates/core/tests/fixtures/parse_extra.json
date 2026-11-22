@@ -1,0 +1,1691 @@
+[
+ {
+  "input": {
+   "ex": null
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {}
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": []
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": 0
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": false
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": ""
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": 5
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": 1.5
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": true
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": [
+    1
+   ]
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": "abc"
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": false,
+    "monthly_limit": 1
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": null
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "monthly_limit": 100
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": 1,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": "yes",
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": 0,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": "",
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": [],
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": {},
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": "false",
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": null,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": 2.5,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": [
+     0
+    ],
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": null,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 0,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 0.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 0.0,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 0.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": -100,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": -1.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 1000.0,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 10.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 12345678901,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 123456789.01,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": "x",
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": "100",
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": true,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 0.01,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": false,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 0.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": [
+     1
+    ],
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": {},
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500.5,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.005,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 1,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 0.01,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": null,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.0,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 0,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.0,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 0.0,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.0,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 12.5,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.125,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": "x",
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": "5",
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": true,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.01,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": false,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.0,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": [],
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.0,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": [
+     1
+    ],
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": {},
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.0,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 123456789012,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 1234567890.12,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 2600,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 26.0,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": -50,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": -0.5,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 1,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.01,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": 0
+   }
+  },
+  "expected": {
+   "used": 98.0,
+   "limit": 2500.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": 1
+   }
+  },
+  "expected": {
+   "used": 9.8,
+   "limit": 250.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": 3
+   }
+  },
+  "expected": {
+   "used": 0.098,
+   "limit": 2.5,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": 4
+   }
+  },
+  "expected": {
+   "used": 0.0098,
+   "limit": 0.25,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": 6
+   }
+  },
+  "expected": {
+   "used": 9.8e-05,
+   "limit": 0.0025,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": 15
+   }
+  },
+  "expected": {
+   "used": 9.8e-14,
+   "limit": 2.5e-12,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": null
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": "2"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": "x"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": 2.9
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": -1
+   }
+  },
+  "expected": {
+   "used": 980.0,
+   "limit": 25000.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": -2
+   }
+  },
+  "expected": {
+   "used": 9800.0,
+   "limit": 250000.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": true
+   }
+  },
+  "expected": {
+   "used": 9.8,
+   "limit": 250.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": false
+   }
+  },
+  "expected": {
+   "used": 98.0,
+   "limit": 2500.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": []
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": {}
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": " 3 "
+   }
+  },
+  "expected": {
+   "used": 0.098,
+   "limit": 2.5,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD",
+    "decimal_places": "1_0"
+   }
+  },
+  "expected": {
+   "used": 9.8e-09,
+   "limit": 2.5e-07,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 0,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 0,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 0.0,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 0.0,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": null,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": "n/a",
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": "n/a",
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": false,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": false,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": true,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": true,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 150,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 150,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 12.345678,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 12.345678,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": -1,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": -1,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": [],
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": [],
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": {},
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": {},
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": "",
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": "",
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 1e-09,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 1e-09,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 99.999999999,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 99.999999999,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "EUR"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "EUR"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "GBP"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "GBP"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": ""
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": null
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": 5
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": 5
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "JPY"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "JPY"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "usd"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "usd"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "Đồng"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "Đồng"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": false
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": []
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "A B"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "A B"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": null
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.0,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "currency": "USD"
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "utilization": 3.92
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 0,
+    "used_credits": 5
+   }
+  },
+  "expected": {
+   "used": 0.05,
+   "limit": 0.0,
+   "pct": 0,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 1000,
+    "used_credits": 333
+   }
+  },
+  "expected": {
+   "used": 3.33,
+   "limit": 10.0,
+   "pct": 33.300000000000004,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 3,
+    "used_credits": 1,
+    "decimal_places": 0
+   }
+  },
+  "expected": {
+   "used": 1.0,
+   "limit": 3.0,
+   "pct": 33.33333333333333,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 7,
+    "used_credits": 2,
+    "decimal_places": 3
+   }
+  },
+  "expected": {
+   "used": 0.002,
+   "limit": 0.007,
+   "pct": 28.57142857142857,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 100,
+    "used_credits": 1,
+    "decimal_places": 2,
+    "extra": {
+     "x": 1
+    }
+   }
+  },
+  "expected": {
+   "used": 0.01,
+   "limit": 1.0,
+   "pct": 1.0,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 100,
+    "used_credits": 0.1,
+    "decimal_places": 2
+   }
+  },
+  "expected": {
+   "used": 0.001,
+   "limit": 1.0,
+   "pct": 0.1,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 1,
+    "used_credits": 3,
+    "decimal_places": 2
+   }
+  },
+  "expected": {
+   "used": 0.03,
+   "limit": 0.01,
+   "pct": 300.0,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 2500,
+    "used_credits": 98,
+    "decimal_places": 2
+   }
+  },
+  "expected": {
+   "used": 0.98,
+   "limit": 25.0,
+   "pct": 3.92,
+   "currency": "USD"
+  }
+ },
+ {
+  "input": {
+   "ex": {
+    "is_enabled": true,
+    "monthly_limit": 123456789,
+    "used_credits": 987654321,
+    "decimal_places": 4
+   }
+  },
+  "expected": {
+   "used": 98765.4321,
+   "limit": 12345.6789,
+   "pct": 800.0000072900001,
+   "currency": "USD"
+  }
+ }
+]

@@ -3,22 +3,24 @@
 Tài liệu bàn giao cho AI / người tiếp theo. Đọc hết mục 1-4 trước khi sửa code. Cập nhật file này mỗi khi thay đổi kiến trúc,
 thêm config key, hoặc phát hiện thêm "bẫy" (mục 9). Ngày cập nhật gần nhất: 2026-11-12, phiên bản `1.1.0` (tự làm mới token).
 
+> **Bản port Rust (nhánh `rust-port`)**: xem `PORT_PLAN.md` (trạng thái) và thư mục `rust/`. Test: `cd rust; cargo test --workspace --release --features claude-usage-dashboard/e2e -- --test-threads=1`. Build phát hành KHÔNG bật feature `e2e`. Test GUI cần không có tray Rust nào đang chạy; bản Python của người dùng không bị đụng.
+
 ## 1. Đây là gì
 
-App Windows theo dõi **hạn mức Claude (5h / 7d) của nhiều account Claude Code cùng lúc**. Một file `claude-usage.exe`:
+App Windows theo dõi **hạn mức Claude (5h / 7d) của nhiều account Claude Code cùng lúc**. Thư mục `claude-usage.exe` + `_internal` (PyInstaller onedir):
 
 - **Tray icon** (số % cao nhất, đổi màu), **widget trên taskbar** (5 kiểu, kéo thả/resize/xoay, hover ra thẻ chi tiết),
   **dashboard** (cửa sổ kiểu terminal, kéo giãn được), **thông báo toast** (cấu hình được, không spam),
   **hook chặn prompt Claude Code CLI** khi account vượt ngưỡng (tuỳ chọn, mặc định KHÔNG cài).
 - Chủ dự án: người dùng cá nhân (máy Windows 11, 4 profile Claude Code gói Team). Giao tiếp bằng **tiếng Việt**, thích câu trả lời ngắn,
   ghét thanh cuộn thấy được, ghét thông báo lặp. Các account đều hợp lệ của họ.
-- Ngôn ngữ/stack: Python 3.14, `pystray` + `Pillow` (tray, widget), `pywebview` (WebView2, dashboard), PyInstaller `--onefile`.
-  Đã cân nhắc Rust/Tauri và **quyết định giữ Python** (xem mục 11).
-- Repo **chưa phải git repo** (chưa có remote). Nên `git init` trước khi làm việc lớn.
+- Ngôn ngữ/stack: Python 3.14, `pystray` + `Pillow` (tray, widget), `pywebview` (WebView2, dashboard), PyInstaller `--onedir` (dồn vào `dist\` để đường dẫn exe không đổi).
+  **Đang port sang Rust** (quyết định 2026-11-19, xem mục 11 và `PORT_PLAN.md`). Code Python gốc ở tag `python-1.1.0`.
+- Repo git (nhánh `main`, tag `python-1.1.0`), **chưa có remote**: người dùng sẽ tự chọn chỗ push.
 
 ### Trạng thái hiện tại
 
-Bản đóng gói gần nhất: `release\claude-usage-v1.0.1-win-x64.zip` (+ `.sha256`). Mã nguồn đã lên `1.1.0` (tự làm mới token); unit test qua, cần build lại để đóng gói.
+Bản đóng gói gần nhất: `release\claude-usage-v1.1.0-win-x64.zip` (onedir, build 2026-11-19, unit 67/67 + `smoke_release` 13/13), đang chạy thật từ `dist\`.
 **Chưa kiểm chứng bằng người thật / môi trường thật** (xem mục 12): click chuột thật vào tray/widget, kéo cạnh dashboard bằng chuột thật,
 hook đã cài vào `settings.json` thật của 4 profile (chỉ test trên profile sandbox), exe chưa ký số, máy Windows 10 / máy không có WebView2.
 
@@ -42,7 +44,7 @@ powershell -ExecutionPolicy Bypass -File build.ps1  # test + build exe + đóng 
 ## 3. Kiến trúc
 
 ```
-claude-usage.exe  (1 file, windowed)
+claude-usage.exe + _internal\  (onedir, windowed)
 ├─ main.py            điều phối theo tham số
 │   ├─ (không tham số) / --hidden  → app.main()        : tiến trình NỀN (singleton)
 │   ├─ dashboard                   → dashboard.run()   : tiến trình RIÊNG, sống ngắn, chỉ khi mở dashboard
@@ -61,7 +63,7 @@ claude-usage.exe  (1 file, windowed)
 3. **Dashboard là tiến trình riêng** vì WebView2 tốn ~450MB; đóng dashboard là trả hết RAM. Nền chỉ ~63MB. Nút ✕/Esc: ẩn cửa sổ ngay, lưu cỡ, rồi `dashboard.quit_now()` (`TerminateProcess`).
 4. **Widget không dùng WebView**: cửa sổ Win32 `WS_EX_LAYERED` per-pixel-alpha, ảnh vẽ bằng Pillow (supersample x3), đẩy lên bằng
    `UpdateLayeredWindow`. Có 2 cửa sổ: `ClaudeUsageWidget` (chính) và `ClaudeUsageTip` (thẻ hover, `WS_EX_TRANSPARENT` nên không chặn chuột).
-5. **Hook** chạy `claude-usage.exe hook` mỗi prompt (~0.5s do onefile giải nén). Nó chỉ đọc cache; **lỗi/không chắc → cho qua**.
+5. **Hook** chạy `claude-usage.exe hook` mỗi prompt (~0.23s; bản onefile cũ ~0.84s). Nó chỉ đọc cache; **lỗi/không chắc → cho qua**.
 
 ### Luồng dữ liệu
 
@@ -213,7 +215,7 @@ Quy ước viết test mới: `@test` + `check(name, ok, detail)`; test unit ph�
    Cũng vì vậy marker "đang fetch" phải vẽ **sau** nền thẻ (từng bị che mất ở kiểu `cards`).
 4. **PyInstaller bỏ qua module có lỗi cú pháp** và chỉ báo "invalid module" trong `build\...\warn-*.txt`; exe chạy sẽ báo `ModuleNotFoundError`.
    Khi gặp lỗi kiểu này, trước hết `py_compile` module đó. Các import động/lazy cần `--hidden-import` (đã liệt kê trong `build.ps1`).
-5. **Exe windowed không có `sys.stderr`** → hook ghi lỗi bằng `GetStdHandle`/`WriteFile`. Exe onefile giải nén mỗi lần chạy (~0.5s cho hook).
+5. **Exe windowed không có `sys.stderr`** → hook ghi lỗi bằng `GetStdHandle`/`WriteFile`. Từ 2026-11-19 build onedir (không còn giải nén mỗi lần chạy); số đo ở `bench/BASELINE.md`.
 6. **Windows từ chối `os.replace` lên file đang được đọc** → `write_cache` thử lại; `load_cache` cũng thử lại. Test tải 250 lần ghi/giây đã có.
 7. **`Get-FileHash` có thể không nạp được** khi PowerShell 5.1 được khởi từ PowerShell 7 → `build.ps1` dùng .NET SHA256. PyInstaller log ra stderr nên
    `$ErrorActionPreference="Stop"` coi là lỗi → đã bọc bằng `Continue` + kiểm tra exit code.
@@ -264,8 +266,9 @@ Quy ước viết test mới: `@test` + `check(name, ok, detail)`; test unit ph�
 
 - **Tự làm mới token (1.1.0)**: profile ít dùng hết hạn token (~8h) nên kẹt `token hết hạn`. Chủ dự án chọn để app tự refresh và ghi lại file như CLI
   (thay vì chỉ đọc). Không thể refresh mà chỉ giữ token trong RAM: server xoay vòng refresh token, file sẽ giữ token chết và CLI phải `/login` lại.
-- **Python thay vì Rust**: công việc chủ yếu là gọi HTTP mỗi vài phút; Rust chỉ thắng ở độ trễ hook (0.5s → ~20ms) và kích thước exe. Nếu 0.5s/prompt thành vấn đề,
-  phương án nhẹ nhất là chuyển hook sang script PowerShell hoặc một exe Rust nhỏ riêng chỉ cho hook.
+- **Chuyển sang Rust (2026-11-19)**: trước đây giữ Python vì việc chính là gọi HTTP vài phút một lần. Người dùng thấy lag nên quyết định port toàn bộ
+  + refactor dashboard (Tauri v2 + Svelte). Đo mốc ở `bench/BASELINE.md`: lag lớn nhất là hook onefile (~0.84s/prompt) và mở dashboard (~1.5s);
+  vẽ widget với 4 profile chỉ 8–12ms/frame. Trong lúc port đã đổi build sang onedir (hook ~0.23s). Kế hoạch + review + các quyết định: `PORT_PLAN.md`.
 - **Widget bằng layered window + Pillow, không WebView**: để nền trong suốt thật, antialias đẹp, và RAM nền nhỏ. Dashboard WebView tách tiến trình để trả RAM khi đóng.
 - **Poll theo lịch từng profile + giữ số cũ khi lỗi**: bản đầu ghi đè số bằng lỗi nên widget trống khi 429.
 - **Giao tiếp qua file**: đơn giản, debug được bằng mắt, không cần cổng/quyền; chấp nhận độ trễ ≤1s.

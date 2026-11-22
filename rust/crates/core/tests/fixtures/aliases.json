@@ -1,0 +1,6002 @@
+[
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DT"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps",
+    "claude-al"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-ab",
+    "claude-a-b",
+    "claude-a.b"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-ab",
+    "AB1"
+   ],
+   [
+    "claude-a-b",
+    "AB2"
+   ],
+   [
+    "claude-a.b",
+    "A."
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-Da",
+    "claude-da",
+    "claude-dx"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-Da",
+    "DA1"
+   ],
+   [
+    "claude-da",
+    "DA2"
+   ],
+   [
+    "claude-dx",
+    "DX"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default (2)"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default (2)",
+    "DE2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-03",
+    "claude-tango-01",
+    "claude-tango-02"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-team-01",
+    "TEA"
+   ],
+   [
+    "claude-team-02",
+    "TEA"
+   ],
+   [
+    "claude-team-03",
+    "T03"
+   ],
+   [
+    "claude-tango-01",
+    "TAN"
+   ],
+   [
+    "claude-tango-02",
+    "TAN"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-al",
+    "claude-alpha",
+    "claude-alps",
+    "claude-alpine",
+    "claude-alpha2"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-alpha",
+    "ALPHA"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-alpine",
+    "ALPINE"
+   ],
+   [
+    "claude-alpha2",
+    "ALPHA2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abc",
+    "claude-abd",
+    "claude-abe",
+    "claude-abf"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abc",
+    "ABC"
+   ],
+   [
+    "claude-abd",
+    "ABD"
+   ],
+   [
+    "claude-abe",
+    "ABE"
+   ],
+   [
+    "claude-abf",
+    "ABF"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "x",
+    "x",
+    "y"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "x",
+    "X2"
+   ],
+   [
+    "y",
+    "Y"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-hn",
+    "claude-hn"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-hn",
+    "HN2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "日本",
+    "日本語",
+    "本日"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "日本",
+    "日本"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "本日",
+    "本日"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-é1",
+    "claude-é2",
+    "claude-e1"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-é1",
+    "É1"
+   ],
+   [
+    "claude-é2",
+    "É2"
+   ],
+   [
+    "claude-e1",
+    "E1"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-",
+    "claude--",
+    "claude"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "claude",
+    "CL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-sam-1",
+    "claude-sam-2",
+    "claude-sue-1",
+    "claude-sue-2",
+    "claude-sue-3"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-sam-1",
+    "SAM"
+   ],
+   [
+    "claude-sam-2",
+    "SAM"
+   ],
+   [
+    "claude-sue-1",
+    "SUE"
+   ],
+   [
+    "claude-sue-2",
+    "SUE"
+   ],
+   [
+    "claude-sue-3",
+    "S3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "names": [
+    "claude-da"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-da",
+    "DA"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgi"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgi",
+    "AB2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgh2",
+    "claude-abcdefgh3"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgh2",
+    "AB2"
+   ],
+   [
+    "claude-abcdefgh3",
+    "AB3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-10",
+    "claude-alpha",
+    "claude-alps",
+    "claude-al",
+    "claude-a",
+    "a",
+    "claude-",
+    "claude--",
+    "",
+    "-",
+    "--x",
+    "claude-x-y",
+    "claude-x-y-7",
+    "x-1",
+    "claude-Team-Beta-3",
+    "team",
+    "claude-é",
+    "éa",
+    "日本語",
+    "claude-日本-02",
+    "claude-ab-cd",
+    "  claude-sp ace",
+    "claude claude-",
+    "myclaude-x",
+    "Claude-Upper",
+    "claude-9",
+    "9-9",
+    "claude-a1-b2-c3",
+    "claude-hà-nội",
+    "default-2",
+    "Default",
+    "claude-claude-x",
+    "ß-1",
+    "claude-ngoai-vn-12"
+   ],
+   "cfg": {},
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default",
+    "DE2"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ],
+   [
+    "claude-team-10",
+    "T10"
+   ],
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-a",
+    "A1"
+   ],
+   [
+    "a",
+    "A2"
+   ],
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "",
+    "3"
+   ],
+   [
+    "-",
+    "-4"
+   ],
+   [
+    "--x",
+    "X"
+   ],
+   [
+    "claude-x-y",
+    "XY"
+   ],
+   [
+    "claude-x-y-7",
+    "X7"
+   ],
+   [
+    "x-1",
+    "X1"
+   ],
+   [
+    "claude-Team-Beta-3",
+    "T3"
+   ],
+   [
+    "team",
+    "TE"
+   ],
+   [
+    "claude-é",
+    "É"
+   ],
+   [
+    "éa",
+    "ÉA"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "claude-日本-02",
+    "02"
+   ],
+   [
+    "claude-ab-cd",
+    "AB"
+   ],
+   [
+    "  claude-sp ace",
+    "  "
+   ],
+   [
+    "claude claude-",
+    "CLAUDE"
+   ],
+   [
+    "myclaude-x",
+    "MY"
+   ],
+   [
+    "Claude-Upper",
+    "CLAUDEU"
+   ],
+   [
+    "claude-9",
+    "9"
+   ],
+   [
+    "9-9",
+    "99"
+   ],
+   [
+    "claude-a1-b2-c3",
+    "A1"
+   ],
+   [
+    "claude-hà-nội",
+    "HÀ"
+   ],
+   [
+    "default-2",
+    "DE3"
+   ],
+   [
+    "Default",
+    "DE"
+   ],
+   [
+    "claude-claude-x",
+    "CLAUDEX"
+   ],
+   [
+    "ß-1",
+    "SS1"
+   ],
+   [
+    "claude-ngoai-vn-12",
+    "N12"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DT"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps",
+    "claude-al"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-ab",
+    "claude-a-b",
+    "claude-a.b"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-ab",
+    "AB1"
+   ],
+   [
+    "claude-a-b",
+    "AB2"
+   ],
+   [
+    "claude-a.b",
+    "A."
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-Da",
+    "claude-da",
+    "claude-dx"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-Da",
+    "DA1"
+   ],
+   [
+    "claude-da",
+    "DA2"
+   ],
+   [
+    "claude-dx",
+    "DX"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default (2)"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default (2)",
+    "DE2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-03",
+    "claude-tango-01",
+    "claude-tango-02"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-team-01",
+    "TEA"
+   ],
+   [
+    "claude-team-02",
+    "TEA"
+   ],
+   [
+    "claude-team-03",
+    "T03"
+   ],
+   [
+    "claude-tango-01",
+    "TAN"
+   ],
+   [
+    "claude-tango-02",
+    "TAN"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-al",
+    "claude-alpha",
+    "claude-alps",
+    "claude-alpine",
+    "claude-alpha2"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-alpine",
+    "ALPI"
+   ],
+   [
+    "claude-alpha2",
+    "ALPH"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abc",
+    "claude-abd",
+    "claude-abe",
+    "claude-abf"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abc",
+    "ABC"
+   ],
+   [
+    "claude-abd",
+    "ABD"
+   ],
+   [
+    "claude-abe",
+    "ABE"
+   ],
+   [
+    "claude-abf",
+    "ABF"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "x",
+    "x",
+    "y"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "x",
+    "X2"
+   ],
+   [
+    "y",
+    "Y"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-hn",
+    "claude-hn"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-hn",
+    "HN2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "日本",
+    "日本語",
+    "本日"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "日本",
+    "日本"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "本日",
+    "本日"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-é1",
+    "claude-é2",
+    "claude-e1"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-é1",
+    "É1"
+   ],
+   [
+    "claude-é2",
+    "É2"
+   ],
+   [
+    "claude-e1",
+    "E1"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-",
+    "claude--",
+    "claude"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "claude",
+    "CL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-sam-1",
+    "claude-sam-2",
+    "claude-sue-1",
+    "claude-sue-2",
+    "claude-sue-3"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-sam-1",
+    "SAM"
+   ],
+   [
+    "claude-sam-2",
+    "SAM"
+   ],
+   [
+    "claude-sue-1",
+    "SUE"
+   ],
+   [
+    "claude-sue-2",
+    "SUE"
+   ],
+   [
+    "claude-sue-3",
+    "S3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "names": [
+    "claude-da"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-da",
+    "DA"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgi"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgi",
+    "AB2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgh2",
+    "claude-abcdefgh3"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgh2",
+    "AB2"
+   ],
+   [
+    "claude-abcdefgh3",
+    "AB3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-10",
+    "claude-alpha",
+    "claude-alps",
+    "claude-al",
+    "claude-a",
+    "a",
+    "claude-",
+    "claude--",
+    "",
+    "-",
+    "--x",
+    "claude-x-y",
+    "claude-x-y-7",
+    "x-1",
+    "claude-Team-Beta-3",
+    "team",
+    "claude-é",
+    "éa",
+    "日本語",
+    "claude-日本-02",
+    "claude-ab-cd",
+    "  claude-sp ace",
+    "claude claude-",
+    "myclaude-x",
+    "Claude-Upper",
+    "claude-9",
+    "9-9",
+    "claude-a1-b2-c3",
+    "claude-hà-nội",
+    "default-2",
+    "Default",
+    "claude-claude-x",
+    "ß-1",
+    "claude-ngoai-vn-12"
+   ],
+   "cfg": {},
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default",
+    "DE2"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ],
+   [
+    "claude-team-10",
+    "T10"
+   ],
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-a",
+    "A1"
+   ],
+   [
+    "a",
+    "A2"
+   ],
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "",
+    "3"
+   ],
+   [
+    "-",
+    "-4"
+   ],
+   [
+    "--x",
+    "X"
+   ],
+   [
+    "claude-x-y",
+    "XY"
+   ],
+   [
+    "claude-x-y-7",
+    "X7"
+   ],
+   [
+    "x-1",
+    "X1"
+   ],
+   [
+    "claude-Team-Beta-3",
+    "T3"
+   ],
+   [
+    "team",
+    "TE"
+   ],
+   [
+    "claude-é",
+    "É"
+   ],
+   [
+    "éa",
+    "ÉA"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "claude-日本-02",
+    "02"
+   ],
+   [
+    "claude-ab-cd",
+    "AB"
+   ],
+   [
+    "  claude-sp ace",
+    "  "
+   ],
+   [
+    "claude claude-",
+    "CLAU"
+   ],
+   [
+    "myclaude-x",
+    "MY"
+   ],
+   [
+    "Claude-Upper",
+    "CLAU"
+   ],
+   [
+    "claude-9",
+    "9"
+   ],
+   [
+    "9-9",
+    "99"
+   ],
+   [
+    "claude-a1-b2-c3",
+    "A1"
+   ],
+   [
+    "claude-hà-nội",
+    "HÀ"
+   ],
+   [
+    "default-2",
+    "DE3"
+   ],
+   [
+    "Default",
+    "DE"
+   ],
+   [
+    "claude-claude-x",
+    "CLAU"
+   ],
+   [
+    "ß-1",
+    "SS1"
+   ],
+   [
+    "claude-ngoai-vn-12",
+    "N12"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "desk"
+   ],
+   [
+    "claude-da",
+    "da"
+   ],
+   [
+    "claude-hn",
+    "hn"
+   ],
+   [
+    "claude-ngoai",
+    "ngoai"
+   ],
+   [
+    "claude-team-01",
+    "team-01"
+   ],
+   [
+    "claude-team-02",
+    "team-02"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps",
+    "claude-al"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "alpha"
+   ],
+   [
+    "claude-alps",
+    "alps"
+   ],
+   [
+    "claude-al",
+    "al"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "alpha"
+   ],
+   [
+    "claude-alps",
+    "alps"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-ab",
+    "claude-a-b",
+    "claude-a.b"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-ab",
+    "ab"
+   ],
+   [
+    "claude-a-b",
+    "a-b"
+   ],
+   [
+    "claude-a.b",
+    "a.b"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-Da",
+    "claude-da",
+    "claude-dx"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-Da",
+    "DA1"
+   ],
+   [
+    "claude-da",
+    "DA2"
+   ],
+   [
+    "claude-dx",
+    "dx"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default (2)"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default (2)",
+    "DE2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-03",
+    "claude-tango-01",
+    "claude-tango-02"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-team-01",
+    "team-01"
+   ],
+   [
+    "claude-team-02",
+    "team-02"
+   ],
+   [
+    "claude-team-03",
+    "team-03"
+   ],
+   [
+    "claude-tango-01",
+    "tango-01"
+   ],
+   [
+    "claude-tango-02",
+    "tango-02"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-al",
+    "claude-alpha",
+    "claude-alps",
+    "claude-alpine",
+    "claude-alpha2"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-al",
+    "al"
+   ],
+   [
+    "claude-alpha",
+    "alpha"
+   ],
+   [
+    "claude-alps",
+    "alps"
+   ],
+   [
+    "claude-alpine",
+    "alpine"
+   ],
+   [
+    "claude-alpha2",
+    "alpha2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abc",
+    "claude-abd",
+    "claude-abe",
+    "claude-abf"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abc",
+    "abc"
+   ],
+   [
+    "claude-abd",
+    "abd"
+   ],
+   [
+    "claude-abe",
+    "abe"
+   ],
+   [
+    "claude-abf",
+    "abf"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "x",
+    "x",
+    "y"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "x",
+    "X2"
+   ],
+   [
+    "y",
+    "y"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-hn",
+    "claude-hn"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-hn",
+    "HN2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "日本",
+    "日本語",
+    "本日"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "日本",
+    "日本"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "本日",
+    "本日"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-é1",
+    "claude-é2",
+    "claude-e1"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-é1",
+    "é1"
+   ],
+   [
+    "claude-é2",
+    "é2"
+   ],
+   [
+    "claude-e1",
+    "e1"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-",
+    "claude--",
+    "claude"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-",
+    ""
+   ],
+   [
+    "claude--",
+    "-"
+   ],
+   [
+    "claude",
+    "claude"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-sam-1",
+    "claude-sam-2",
+    "claude-sue-1",
+    "claude-sue-2",
+    "claude-sue-3"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-sam-1",
+    "sam-1"
+   ],
+   [
+    "claude-sam-2",
+    "sam-2"
+   ],
+   [
+    "claude-sue-1",
+    "sue-1"
+   ],
+   [
+    "claude-sue-2",
+    "sue-2"
+   ],
+   [
+    "claude-sue-3",
+    "sue-3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "names": [
+    "claude-da"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-da",
+    "da"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgi"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "abcdefgh"
+   ],
+   [
+    "claude-abcdefgi",
+    "abcdefgi"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgh2",
+    "claude-abcdefgh3"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "abcdefgh"
+   ],
+   [
+    "claude-abcdefgh2",
+    "abcdefgh2"
+   ],
+   [
+    "claude-abcdefgh3",
+    "abcdefgh3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-10",
+    "claude-alpha",
+    "claude-alps",
+    "claude-al",
+    "claude-a",
+    "a",
+    "claude-",
+    "claude--",
+    "",
+    "-",
+    "--x",
+    "claude-x-y",
+    "claude-x-y-7",
+    "x-1",
+    "claude-Team-Beta-3",
+    "team",
+    "claude-é",
+    "éa",
+    "日本語",
+    "claude-日本-02",
+    "claude-ab-cd",
+    "  claude-sp ace",
+    "claude claude-",
+    "myclaude-x",
+    "Claude-Upper",
+    "claude-9",
+    "9-9",
+    "claude-a1-b2-c3",
+    "claude-hà-nội",
+    "default-2",
+    "Default",
+    "claude-claude-x",
+    "ß-1",
+    "claude-ngoai-vn-12"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default",
+    "DE2"
+   ],
+   [
+    "claude-da",
+    "da"
+   ],
+   [
+    "claude-hn",
+    "hn"
+   ],
+   [
+    "claude-ngoai",
+    "ngoai"
+   ],
+   [
+    "claude-team-01",
+    "team-01"
+   ],
+   [
+    "claude-team-02",
+    "team-02"
+   ],
+   [
+    "claude-team-10",
+    "team-10"
+   ],
+   [
+    "claude-alpha",
+    "alpha"
+   ],
+   [
+    "claude-alps",
+    "alps"
+   ],
+   [
+    "claude-al",
+    "al"
+   ],
+   [
+    "claude-a",
+    "A1"
+   ],
+   [
+    "a",
+    "A2"
+   ],
+   [
+    "claude-",
+    "CLA"
+   ],
+   [
+    "claude--",
+    "CLA"
+   ],
+   [
+    "",
+    ""
+   ],
+   [
+    "-",
+    "-"
+   ],
+   [
+    "--x",
+    "--x"
+   ],
+   [
+    "claude-x-y",
+    "x-y"
+   ],
+   [
+    "claude-x-y-7",
+    "x-y-7"
+   ],
+   [
+    "x-1",
+    "x-1"
+   ],
+   [
+    "claude-Team-Beta-3",
+    "Team-Beta-3"
+   ],
+   [
+    "team",
+    "team"
+   ],
+   [
+    "claude-é",
+    "é"
+   ],
+   [
+    "éa",
+    "éa"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "claude-日本-02",
+    "日本-02"
+   ],
+   [
+    "claude-ab-cd",
+    "ab-cd"
+   ],
+   [
+    "  claude-sp ace",
+    "  sp ace"
+   ],
+   [
+    "claude claude-",
+    "claude "
+   ],
+   [
+    "myclaude-x",
+    "myx"
+   ],
+   [
+    "Claude-Upper",
+    "Claude-Upper"
+   ],
+   [
+    "claude-9",
+    "9"
+   ],
+   [
+    "9-9",
+    "9-9"
+   ],
+   [
+    "claude-a1-b2-c3",
+    "a1-b2-c3"
+   ],
+   [
+    "claude-hà-nội",
+    "hà-nội"
+   ],
+   [
+    "default-2",
+    "DE3"
+   ],
+   [
+    "Default",
+    "Default"
+   ],
+   [
+    "claude-claude-x",
+    "claude-x"
+   ],
+   [
+    "ß-1",
+    "ß-1"
+   ],
+   [
+    "claude-ngoai-vn-12",
+    "ngoai-vn-12"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "desk"
+   ],
+   [
+    "claude-da",
+    "da"
+   ],
+   [
+    "claude-hn",
+    "hn"
+   ],
+   [
+    "claude-ngoai",
+    "ngoa"
+   ],
+   [
+    "claude-team-01",
+    "team"
+   ],
+   [
+    "claude-team-02",
+    "team"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps",
+    "claude-al"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "alph"
+   ],
+   [
+    "claude-alps",
+    "alps"
+   ],
+   [
+    "claude-al",
+    "al"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "alph"
+   ],
+   [
+    "claude-alps",
+    "alps"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-ab",
+    "claude-a-b",
+    "claude-a.b"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-ab",
+    "ab"
+   ],
+   [
+    "claude-a-b",
+    "a-b"
+   ],
+   [
+    "claude-a.b",
+    "a.b"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-Da",
+    "claude-da",
+    "claude-dx"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-Da",
+    "DA1"
+   ],
+   [
+    "claude-da",
+    "DA2"
+   ],
+   [
+    "claude-dx",
+    "dx"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default (2)"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default (2)",
+    "DE2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-03",
+    "claude-tango-01",
+    "claude-tango-02"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-team-01",
+    "team"
+   ],
+   [
+    "claude-team-02",
+    "team"
+   ],
+   [
+    "claude-team-03",
+    "team"
+   ],
+   [
+    "claude-tango-01",
+    "tang"
+   ],
+   [
+    "claude-tango-02",
+    "tang"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-al",
+    "claude-alpha",
+    "claude-alps",
+    "claude-alpine",
+    "claude-alpha2"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-al",
+    "al"
+   ],
+   [
+    "claude-alpha",
+    "alph"
+   ],
+   [
+    "claude-alps",
+    "alps"
+   ],
+   [
+    "claude-alpine",
+    "alpi"
+   ],
+   [
+    "claude-alpha2",
+    "alph"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abc",
+    "claude-abd",
+    "claude-abe",
+    "claude-abf"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abc",
+    "abc"
+   ],
+   [
+    "claude-abd",
+    "abd"
+   ],
+   [
+    "claude-abe",
+    "abe"
+   ],
+   [
+    "claude-abf",
+    "abf"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "x",
+    "x",
+    "y"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "x",
+    "X2"
+   ],
+   [
+    "y",
+    "y"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-hn",
+    "claude-hn"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-hn",
+    "HN2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "日本",
+    "日本語",
+    "本日"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "日本",
+    "日本"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "本日",
+    "本日"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-é1",
+    "claude-é2",
+    "claude-e1"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-é1",
+    "é1"
+   ],
+   [
+    "claude-é2",
+    "é2"
+   ],
+   [
+    "claude-e1",
+    "e1"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-",
+    "claude--",
+    "claude"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-",
+    ""
+   ],
+   [
+    "claude--",
+    "-"
+   ],
+   [
+    "claude",
+    "clau"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-sam-1",
+    "claude-sam-2",
+    "claude-sue-1",
+    "claude-sue-2",
+    "claude-sue-3"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-sam-1",
+    "sam-"
+   ],
+   [
+    "claude-sam-2",
+    "sam-"
+   ],
+   [
+    "claude-sue-1",
+    "sue-"
+   ],
+   [
+    "claude-sue-2",
+    "sue-"
+   ],
+   [
+    "claude-sue-3",
+    "sue-"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "names": [
+    "claude-da"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-da",
+    "da"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgi"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "abcd"
+   ],
+   [
+    "claude-abcdefgi",
+    "abcd"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgh2",
+    "claude-abcdefgh3"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "abcd"
+   ],
+   [
+    "claude-abcdefgh2",
+    "abcd"
+   ],
+   [
+    "claude-abcdefgh3",
+    "abcd"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-10",
+    "claude-alpha",
+    "claude-alps",
+    "claude-al",
+    "claude-a",
+    "a",
+    "claude-",
+    "claude--",
+    "",
+    "-",
+    "--x",
+    "claude-x-y",
+    "claude-x-y-7",
+    "x-1",
+    "claude-Team-Beta-3",
+    "team",
+    "claude-é",
+    "éa",
+    "日本語",
+    "claude-日本-02",
+    "claude-ab-cd",
+    "  claude-sp ace",
+    "claude claude-",
+    "myclaude-x",
+    "Claude-Upper",
+    "claude-9",
+    "9-9",
+    "claude-a1-b2-c3",
+    "claude-hà-nội",
+    "default-2",
+    "Default",
+    "claude-claude-x",
+    "ß-1",
+    "claude-ngoai-vn-12"
+   ],
+   "cfg": {
+    "widget_label": "short"
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default",
+    "DE2"
+   ],
+   [
+    "claude-da",
+    "da"
+   ],
+   [
+    "claude-hn",
+    "hn"
+   ],
+   [
+    "claude-ngoai",
+    "ngoa"
+   ],
+   [
+    "claude-team-01",
+    "team"
+   ],
+   [
+    "claude-team-02",
+    "team"
+   ],
+   [
+    "claude-team-10",
+    "team"
+   ],
+   [
+    "claude-alpha",
+    "alph"
+   ],
+   [
+    "claude-alps",
+    "alps"
+   ],
+   [
+    "claude-al",
+    "al"
+   ],
+   [
+    "claude-a",
+    "A1"
+   ],
+   [
+    "a",
+    "A2"
+   ],
+   [
+    "claude-",
+    "CLA"
+   ],
+   [
+    "claude--",
+    "CLA"
+   ],
+   [
+    "",
+    ""
+   ],
+   [
+    "-",
+    "-"
+   ],
+   [
+    "--x",
+    "--x"
+   ],
+   [
+    "claude-x-y",
+    "x-y"
+   ],
+   [
+    "claude-x-y-7",
+    "x-y-"
+   ],
+   [
+    "x-1",
+    "x-1"
+   ],
+   [
+    "claude-Team-Beta-3",
+    "Team"
+   ],
+   [
+    "team",
+    "team"
+   ],
+   [
+    "claude-é",
+    "é"
+   ],
+   [
+    "éa",
+    "éa"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "claude-日本-02",
+    "日本-0"
+   ],
+   [
+    "claude-ab-cd",
+    "ab-c"
+   ],
+   [
+    "  claude-sp ace",
+    "  sp"
+   ],
+   [
+    "claude claude-",
+    "clau"
+   ],
+   [
+    "myclaude-x",
+    "myx"
+   ],
+   [
+    "Claude-Upper",
+    "Clau"
+   ],
+   [
+    "claude-9",
+    "9"
+   ],
+   [
+    "9-9",
+    "9-9"
+   ],
+   [
+    "claude-a1-b2-c3",
+    "a1-b"
+   ],
+   [
+    "claude-hà-nội",
+    "hà-n"
+   ],
+   [
+    "default-2",
+    "DE3"
+   ],
+   [
+    "Default",
+    "Defa"
+   ],
+   [
+    "claude-claude-x",
+    "clau"
+   ],
+   [
+    "ß-1",
+    "ß-1"
+   ],
+   [
+    "claude-ngoai-vn-12",
+    "ngoa"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DT"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps",
+    "claude-al"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "Alpha!"
+   ],
+   [
+    "claude-alps",
+    "ALP"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "Alpha!"
+   ],
+   [
+    "claude-alps",
+    "AL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-ab",
+    "claude-a-b",
+    "claude-a.b"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-ab",
+    "q"
+   ],
+   [
+    "claude-a-b",
+    "AB"
+   ],
+   [
+    "claude-a.b",
+    "A."
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-Da",
+    "claude-da",
+    "claude-dx"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-Da",
+    "DA"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-dx",
+    "DX"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default (2)"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default (2)",
+    "DE2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-03",
+    "claude-tango-01",
+    "claude-tango-02"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-team-01",
+    "TEA"
+   ],
+   [
+    "claude-team-02",
+    "TEA"
+   ],
+   [
+    "claude-team-03",
+    "T03"
+   ],
+   [
+    "claude-tango-01",
+    "TAN"
+   ],
+   [
+    "claude-tango-02",
+    "TAN"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-al",
+    "claude-alpha",
+    "claude-alps",
+    "claude-alpine",
+    "claude-alpha2"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-alpha",
+    "Alpha!"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-alpine",
+    "ALPI"
+   ],
+   [
+    "claude-alpha2",
+    "ALPH"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abc",
+    "claude-abd",
+    "claude-abe",
+    "claude-abf"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abc",
+    "ABC"
+   ],
+   [
+    "claude-abd",
+    "ABD"
+   ],
+   [
+    "claude-abe",
+    "ABE"
+   ],
+   [
+    "claude-abf",
+    "ABF"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "x",
+    "x",
+    "y"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "x",
+    "X2"
+   ],
+   [
+    "y",
+    "Y"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-hn",
+    "claude-hn"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-hn",
+    "HN2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "日本",
+    "日本語",
+    "本日"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "日本",
+    "日本"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "本日",
+    "本日"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-é1",
+    "claude-é2",
+    "claude-e1"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-é1",
+    "É1"
+   ],
+   [
+    "claude-é2",
+    "É2"
+   ],
+   [
+    "claude-e1",
+    "E1"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-",
+    "claude--",
+    "claude"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "claude",
+    "CL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-sam-1",
+    "claude-sam-2",
+    "claude-sue-1",
+    "claude-sue-2",
+    "claude-sue-3"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-sam-1",
+    "SAM"
+   ],
+   [
+    "claude-sam-2",
+    "SAM"
+   ],
+   [
+    "claude-sue-1",
+    "SUE"
+   ],
+   [
+    "claude-sue-2",
+    "SUE"
+   ],
+   [
+    "claude-sue-3",
+    "S3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "names": [
+    "claude-da"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-da",
+    "DA"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgi"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgi",
+    "AB2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgh2",
+    "claude-abcdefgh3"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgh2",
+    "AB2"
+   ],
+   [
+    "claude-abcdefgh3",
+    "AB3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-10",
+    "claude-alpha",
+    "claude-alps",
+    "claude-al",
+    "claude-a",
+    "a",
+    "claude-",
+    "claude--",
+    "",
+    "-",
+    "--x",
+    "claude-x-y",
+    "claude-x-y-7",
+    "x-1",
+    "claude-Team-Beta-3",
+    "team",
+    "claude-é",
+    "éa",
+    "日本語",
+    "claude-日本-02",
+    "claude-ab-cd",
+    "  claude-sp ace",
+    "claude claude-",
+    "myclaude-x",
+    "Claude-Upper",
+    "claude-9",
+    "9-9",
+    "claude-a1-b2-c3",
+    "claude-hà-nội",
+    "default-2",
+    "Default",
+    "claude-claude-x",
+    "ß-1",
+    "claude-ngoai-vn-12"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default",
+    "DE2"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ],
+   [
+    "claude-team-10",
+    "T10"
+   ],
+   [
+    "claude-alpha",
+    "Alpha!"
+   ],
+   [
+    "claude-alps",
+    "ALP"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-a",
+    "A1"
+   ],
+   [
+    "a",
+    "A2"
+   ],
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "",
+    "3"
+   ],
+   [
+    "-",
+    "-4"
+   ],
+   [
+    "--x",
+    "X"
+   ],
+   [
+    "claude-x-y",
+    "XY"
+   ],
+   [
+    "claude-x-y-7",
+    "X7"
+   ],
+   [
+    "x-1",
+    "X1"
+   ],
+   [
+    "claude-Team-Beta-3",
+    "T3"
+   ],
+   [
+    "team",
+    "TE"
+   ],
+   [
+    "claude-é",
+    "É"
+   ],
+   [
+    "éa",
+    "ÉA"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "claude-日本-02",
+    "02"
+   ],
+   [
+    "claude-ab-cd",
+    "AB"
+   ],
+   [
+    "  claude-sp ace",
+    "  "
+   ],
+   [
+    "claude claude-",
+    "CLAUDE"
+   ],
+   [
+    "myclaude-x",
+    "MY"
+   ],
+   [
+    "Claude-Upper",
+    "CLAUDEU"
+   ],
+   [
+    "claude-9",
+    "9"
+   ],
+   [
+    "9-9",
+    "99"
+   ],
+   [
+    "claude-a1-b2-c3",
+    "A1"
+   ],
+   [
+    "claude-hà-nội",
+    "HÀ"
+   ],
+   [
+    "default-2",
+    "DE3"
+   ],
+   [
+    "Default",
+    "DE"
+   ],
+   [
+    "claude-claude-x",
+    "CLAUDEX"
+   ],
+   [
+    "ß-1",
+    "SS1"
+   ],
+   [
+    "claude-ngoai-vn-12",
+    "N12"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DT"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps",
+    "claude-al"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "Alph"
+   ],
+   [
+    "claude-alps",
+    "ALP"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "Alph"
+   ],
+   [
+    "claude-alps",
+    "AL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-ab",
+    "claude-a-b",
+    "claude-a.b"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-ab",
+    "q"
+   ],
+   [
+    "claude-a-b",
+    "AB"
+   ],
+   [
+    "claude-a.b",
+    "A."
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-Da",
+    "claude-da",
+    "claude-dx"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-Da",
+    "DA"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-dx",
+    "DX"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default (2)"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default (2)",
+    "DE2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-03",
+    "claude-tango-01",
+    "claude-tango-02"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-team-01",
+    "TEA"
+   ],
+   [
+    "claude-team-02",
+    "TEA"
+   ],
+   [
+    "claude-team-03",
+    "T03"
+   ],
+   [
+    "claude-tango-01",
+    "TAN"
+   ],
+   [
+    "claude-tango-02",
+    "TAN"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-al",
+    "claude-alpha",
+    "claude-alps",
+    "claude-alpine",
+    "claude-alpha2"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-alpha",
+    "Alph"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-alpine",
+    "ALPI"
+   ],
+   [
+    "claude-alpha2",
+    "ALPH"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abc",
+    "claude-abd",
+    "claude-abe",
+    "claude-abf"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abc",
+    "ABC"
+   ],
+   [
+    "claude-abd",
+    "ABD"
+   ],
+   [
+    "claude-abe",
+    "ABE"
+   ],
+   [
+    "claude-abf",
+    "ABF"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "x",
+    "x",
+    "y"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "x",
+    "X2"
+   ],
+   [
+    "y",
+    "Y"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-hn",
+    "claude-hn"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-hn",
+    "HN2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "日本",
+    "日本語",
+    "本日"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "日本",
+    "日本"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "本日",
+    "本日"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-é1",
+    "claude-é2",
+    "claude-e1"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-é1",
+    "É1"
+   ],
+   [
+    "claude-é2",
+    "É2"
+   ],
+   [
+    "claude-e1",
+    "E1"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-",
+    "claude--",
+    "claude"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "claude",
+    "CL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-sam-1",
+    "claude-sam-2",
+    "claude-sue-1",
+    "claude-sue-2",
+    "claude-sue-3"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-sam-1",
+    "SAM"
+   ],
+   [
+    "claude-sam-2",
+    "SAM"
+   ],
+   [
+    "claude-sue-1",
+    "SUE"
+   ],
+   [
+    "claude-sue-2",
+    "SUE"
+   ],
+   [
+    "claude-sue-3",
+    "S3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "names": [
+    "claude-da"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-da",
+    "DA"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgi"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgi",
+    "AB2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgh2",
+    "claude-abcdefgh3"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgh2",
+    "AB2"
+   ],
+   [
+    "claude-abcdefgh3",
+    "AB3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-10",
+    "claude-alpha",
+    "claude-alps",
+    "claude-al",
+    "claude-a",
+    "a",
+    "claude-",
+    "claude--",
+    "",
+    "-",
+    "--x",
+    "claude-x-y",
+    "claude-x-y-7",
+    "x-1",
+    "claude-Team-Beta-3",
+    "team",
+    "claude-é",
+    "éa",
+    "日本語",
+    "claude-日本-02",
+    "claude-ab-cd",
+    "  claude-sp ace",
+    "claude claude-",
+    "myclaude-x",
+    "Claude-Upper",
+    "claude-9",
+    "9-9",
+    "claude-a1-b2-c3",
+    "claude-hà-nội",
+    "default-2",
+    "Default",
+    "claude-claude-x",
+    "ß-1",
+    "claude-ngoai-vn-12"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-da": "DA",
+     "claude-alpha": "Alpha!",
+     "claude-ab": "q"
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default",
+    "DE2"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ],
+   [
+    "claude-team-10",
+    "T10"
+   ],
+   [
+    "claude-alpha",
+    "Alph"
+   ],
+   [
+    "claude-alps",
+    "ALP"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-a",
+    "A1"
+   ],
+   [
+    "a",
+    "A2"
+   ],
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "",
+    "3"
+   ],
+   [
+    "-",
+    "-4"
+   ],
+   [
+    "--x",
+    "X"
+   ],
+   [
+    "claude-x-y",
+    "XY"
+   ],
+   [
+    "claude-x-y-7",
+    "X7"
+   ],
+   [
+    "x-1",
+    "X1"
+   ],
+   [
+    "claude-Team-Beta-3",
+    "T3"
+   ],
+   [
+    "team",
+    "TE"
+   ],
+   [
+    "claude-é",
+    "É"
+   ],
+   [
+    "éa",
+    "ÉA"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "claude-日本-02",
+    "02"
+   ],
+   [
+    "claude-ab-cd",
+    "AB"
+   ],
+   [
+    "  claude-sp ace",
+    "  "
+   ],
+   [
+    "claude claude-",
+    "CLAU"
+   ],
+   [
+    "myclaude-x",
+    "MY"
+   ],
+   [
+    "Claude-Upper",
+    "CLAU"
+   ],
+   [
+    "claude-9",
+    "9"
+   ],
+   [
+    "9-9",
+    "99"
+   ],
+   [
+    "claude-a1-b2-c3",
+    "A1"
+   ],
+   [
+    "claude-hà-nội",
+    "HÀ"
+   ],
+   [
+    "default-2",
+    "DE3"
+   ],
+   [
+    "Default",
+    "DE"
+   ],
+   [
+    "claude-claude-x",
+    "CLAU"
+   ],
+   [
+    "ß-1",
+    "SS1"
+   ],
+   [
+    "claude-ngoai-vn-12",
+    "N12"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DT"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps",
+    "claude-al"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-ab",
+    "claude-a-b",
+    "claude-a.b"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-ab",
+    "AB1"
+   ],
+   [
+    "claude-a-b",
+    "AB2"
+   ],
+   [
+    "claude-a.b",
+    "A."
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-Da",
+    "claude-da",
+    "claude-dx"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-Da",
+    "DA1"
+   ],
+   [
+    "claude-da",
+    "DA2"
+   ],
+   [
+    "claude-dx",
+    "DX"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default (2)"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default (2)",
+    "DE2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-03",
+    "claude-tango-01",
+    "claude-tango-02"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-team-01",
+    "TEA"
+   ],
+   [
+    "claude-team-02",
+    "TEA"
+   ],
+   [
+    "claude-team-03",
+    "T03"
+   ],
+   [
+    "claude-tango-01",
+    "TAN"
+   ],
+   [
+    "claude-tango-02",
+    "TAN"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-al",
+    "claude-alpha",
+    "claude-alps",
+    "claude-alpine",
+    "claude-alpha2"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-alpha",
+    "ALPHA"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-alpine",
+    "ALPINE"
+   ],
+   [
+    "claude-alpha2",
+    "ALPHA2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abc",
+    "claude-abd",
+    "claude-abe",
+    "claude-abf"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abc",
+    "ABC"
+   ],
+   [
+    "claude-abd",
+    "ABD"
+   ],
+   [
+    "claude-abe",
+    "ABE"
+   ],
+   [
+    "claude-abf",
+    "ABF"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "x",
+    "x",
+    "y"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "x",
+    "X2"
+   ],
+   [
+    "y",
+    "Y"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-hn",
+    "claude-hn"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-hn",
+    "HN2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "日本",
+    "日本語",
+    "本日"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "日本",
+    "日本"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "本日",
+    "本日"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-é1",
+    "claude-é2",
+    "claude-e1"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-é1",
+    "É1"
+   ],
+   [
+    "claude-é2",
+    "É2"
+   ],
+   [
+    "claude-e1",
+    "E1"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-",
+    "claude--",
+    "claude"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "claude",
+    "CL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-sam-1",
+    "claude-sam-2",
+    "claude-sue-1",
+    "claude-sue-2",
+    "claude-sue-3"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-sam-1",
+    "SAM"
+   ],
+   [
+    "claude-sam-2",
+    "SAM"
+   ],
+   [
+    "claude-sue-1",
+    "SUE"
+   ],
+   [
+    "claude-sue-2",
+    "SUE"
+   ],
+   [
+    "claude-sue-3",
+    "S3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "names": [
+    "claude-da"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-da",
+    "DA"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgi"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgi",
+    "AB2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgh2",
+    "claude-abcdefgh3"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgh2",
+    "AB2"
+   ],
+   [
+    "claude-abcdefgh3",
+    "AB3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-10",
+    "claude-alpha",
+    "claude-alps",
+    "claude-al",
+    "claude-a",
+    "a",
+    "claude-",
+    "claude--",
+    "",
+    "-",
+    "--x",
+    "claude-x-y",
+    "claude-x-y-7",
+    "x-1",
+    "claude-Team-Beta-3",
+    "team",
+    "claude-é",
+    "éa",
+    "日本語",
+    "claude-日本-02",
+    "claude-ab-cd",
+    "  claude-sp ace",
+    "claude claude-",
+    "myclaude-x",
+    "Claude-Upper",
+    "claude-9",
+    "9-9",
+    "claude-a1-b2-c3",
+    "claude-hà-nội",
+    "default-2",
+    "Default",
+    "claude-claude-x",
+    "ß-1",
+    "claude-ngoai-vn-12"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": null
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default",
+    "DE2"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ],
+   [
+    "claude-team-10",
+    "T10"
+   ],
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-a",
+    "A1"
+   ],
+   [
+    "a",
+    "A2"
+   ],
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "",
+    "3"
+   ],
+   [
+    "-",
+    "-4"
+   ],
+   [
+    "--x",
+    "X"
+   ],
+   [
+    "claude-x-y",
+    "XY"
+   ],
+   [
+    "claude-x-y-7",
+    "X7"
+   ],
+   [
+    "x-1",
+    "X1"
+   ],
+   [
+    "claude-Team-Beta-3",
+    "T3"
+   ],
+   [
+    "team",
+    "TE"
+   ],
+   [
+    "claude-é",
+    "É"
+   ],
+   [
+    "éa",
+    "ÉA"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "claude-日本-02",
+    "02"
+   ],
+   [
+    "claude-ab-cd",
+    "AB"
+   ],
+   [
+    "  claude-sp ace",
+    "  "
+   ],
+   [
+    "claude claude-",
+    "CLAUDE"
+   ],
+   [
+    "myclaude-x",
+    "MY"
+   ],
+   [
+    "Claude-Upper",
+    "CLAUDEU"
+   ],
+   [
+    "claude-9",
+    "9"
+   ],
+   [
+    "9-9",
+    "99"
+   ],
+   [
+    "claude-a1-b2-c3",
+    "A1"
+   ],
+   [
+    "claude-hà-nội",
+    "HÀ"
+   ],
+   [
+    "default-2",
+    "DE3"
+   ],
+   [
+    "Default",
+    "DE"
+   ],
+   [
+    "claude-claude-x",
+    "CLAUDEX"
+   ],
+   [
+    "ß-1",
+    "SS1"
+   ],
+   [
+    "claude-ngoai-vn-12",
+    "N12"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DT"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps",
+    "claude-al"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-alpha",
+    "claude-alps"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-ab",
+    "claude-a-b",
+    "claude-a.b"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-ab",
+    "AB1"
+   ],
+   [
+    "claude-a-b",
+    "AB2"
+   ],
+   [
+    "claude-a.b",
+    "A."
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-Da",
+    "claude-da",
+    "claude-dx"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-Da",
+    "DA1"
+   ],
+   [
+    "claude-da",
+    "DA2"
+   ],
+   [
+    "claude-dx",
+    "DX"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default (2)"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default (2)",
+    "DE2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-03",
+    "claude-tango-01",
+    "claude-tango-02"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-team-01",
+    "TEA"
+   ],
+   [
+    "claude-team-02",
+    "TEA"
+   ],
+   [
+    "claude-team-03",
+    "T03"
+   ],
+   [
+    "claude-tango-01",
+    "TAN"
+   ],
+   [
+    "claude-tango-02",
+    "TAN"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-al",
+    "claude-alpha",
+    "claude-alps",
+    "claude-alpine",
+    "claude-alpha2"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-alpine",
+    "ALPI"
+   ],
+   [
+    "claude-alpha2",
+    "ALPH"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abc",
+    "claude-abd",
+    "claude-abe",
+    "claude-abf"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abc",
+    "ABC"
+   ],
+   [
+    "claude-abd",
+    "ABD"
+   ],
+   [
+    "claude-abe",
+    "ABE"
+   ],
+   [
+    "claude-abf",
+    "ABF"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "x",
+    "x",
+    "y"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "x",
+    "X2"
+   ],
+   [
+    "y",
+    "Y"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-hn",
+    "claude-hn"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-hn",
+    "HN2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "日本",
+    "日本語",
+    "本日"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "日本",
+    "日本"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "本日",
+    "本日"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-é1",
+    "claude-é2",
+    "claude-e1"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-é1",
+    "É1"
+   ],
+   [
+    "claude-é2",
+    "É2"
+   ],
+   [
+    "claude-e1",
+    "E1"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-",
+    "claude--",
+    "claude"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "claude",
+    "CL"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-sam-1",
+    "claude-sam-2",
+    "claude-sue-1",
+    "claude-sue-2",
+    "claude-sue-3"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-sam-1",
+    "SAM"
+   ],
+   [
+    "claude-sam-2",
+    "SAM"
+   ],
+   [
+    "claude-sue-1",
+    "SUE"
+   ],
+   [
+    "claude-sue-2",
+    "SUE"
+   ],
+   [
+    "claude-sue-3",
+    "S3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": []
+ },
+ {
+  "input": {
+   "names": [
+    "claude-da"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-da",
+    "DA"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgi"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgi",
+    "AB2"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "claude-abcdefgh",
+    "claude-abcdefgh2",
+    "claude-abcdefgh3"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "claude-abcdefgh",
+    "AB1"
+   ],
+   [
+    "claude-abcdefgh2",
+    "AB2"
+   ],
+   [
+    "claude-abcdefgh3",
+    "AB3"
+   ]
+  ]
+ },
+ {
+  "input": {
+   "names": [
+    "default (desktop)",
+    "default",
+    "claude-da",
+    "claude-hn",
+    "claude-ngoai",
+    "claude-team-01",
+    "claude-team-02",
+    "claude-team-10",
+    "claude-alpha",
+    "claude-alps",
+    "claude-al",
+    "claude-a",
+    "a",
+    "claude-",
+    "claude--",
+    "",
+    "-",
+    "--x",
+    "claude-x-y",
+    "claude-x-y-7",
+    "x-1",
+    "claude-Team-Beta-3",
+    "team",
+    "claude-é",
+    "éa",
+    "日本語",
+    "claude-日本-02",
+    "claude-ab-cd",
+    "  claude-sp ace",
+    "claude claude-",
+    "myclaude-x",
+    "Claude-Upper",
+    "claude-9",
+    "9-9",
+    "claude-a1-b2-c3",
+    "claude-hà-nội",
+    "default-2",
+    "Default",
+    "claude-claude-x",
+    "ß-1",
+    "claude-ngoai-vn-12"
+   ],
+   "cfg": {
+    "aliases": {
+     "claude-al": "AL",
+     "claude-dx": " "
+    }
+   },
+   "maxlen": 4
+  },
+  "expected": [
+   [
+    "default (desktop)",
+    "DE1"
+   ],
+   [
+    "default",
+    "DE2"
+   ],
+   [
+    "claude-da",
+    "DA"
+   ],
+   [
+    "claude-hn",
+    "HN"
+   ],
+   [
+    "claude-ngoai",
+    "NG"
+   ],
+   [
+    "claude-team-01",
+    "T01"
+   ],
+   [
+    "claude-team-02",
+    "T02"
+   ],
+   [
+    "claude-team-10",
+    "T10"
+   ],
+   [
+    "claude-alpha",
+    "ALPH"
+   ],
+   [
+    "claude-alps",
+    "ALPS"
+   ],
+   [
+    "claude-al",
+    "AL"
+   ],
+   [
+    "claude-a",
+    "A1"
+   ],
+   [
+    "a",
+    "A2"
+   ],
+   [
+    "claude-",
+    "CL1"
+   ],
+   [
+    "claude--",
+    "CL2"
+   ],
+   [
+    "",
+    "3"
+   ],
+   [
+    "-",
+    "-4"
+   ],
+   [
+    "--x",
+    "X"
+   ],
+   [
+    "claude-x-y",
+    "XY"
+   ],
+   [
+    "claude-x-y-7",
+    "X7"
+   ],
+   [
+    "x-1",
+    "X1"
+   ],
+   [
+    "claude-Team-Beta-3",
+    "T3"
+   ],
+   [
+    "team",
+    "TE"
+   ],
+   [
+    "claude-é",
+    "É"
+   ],
+   [
+    "éa",
+    "ÉA"
+   ],
+   [
+    "日本語",
+    "日本語"
+   ],
+   [
+    "claude-日本-02",
+    "02"
+   ],
+   [
+    "claude-ab-cd",
+    "AB"
+   ],
+   [
+    "  claude-sp ace",
+    "  "
+   ],
+   [
+    "claude claude-",
+    "CLAU"
+   ],
+   [
+    "myclaude-x",
+    "MY"
+   ],
+   [
+    "Claude-Upper",
+    "CLAU"
+   ],
+   [
+    "claude-9",
+    "9"
+   ],
+   [
+    "9-9",
+    "99"
+   ],
+   [
+    "claude-a1-b2-c3",
+    "A1"
+   ],
+   [
+    "claude-hà-nội",
+    "HÀ"
+   ],
+   [
+    "default-2",
+    "DE3"
+   ],
+   [
+    "Default",
+    "DE"
+   ],
+   [
+    "claude-claude-x",
+    "CLAU"
+   ],
+   [
+    "ß-1",
+    "SS1"
+   ],
+   [
+    "claude-ngoai-vn-12",
+    "N12"
+   ]
+  ]
+ }
+]
