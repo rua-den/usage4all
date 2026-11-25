@@ -232,7 +232,7 @@ fn auto_proxy(url: &str) -> Option<Option<String>> {
     let _ = unsafe { take_wide(ie.lpszProxy) };
     let _ = unsafe { take_wide(ie.lpszProxyBypass) };
 
-    if !auto_detect && pac.as_deref().is_none_or(str::is_empty) {
+    if !auto_detect && pac.as_deref().map_or(true, str::is_empty) {
         return None;
     }
 
