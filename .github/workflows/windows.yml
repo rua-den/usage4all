@@ -3,7 +3,8 @@ name: Windows Rust validation
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [main, dot/windows-ci-cutover]
+  create:
   workflow_dispatch:
 
 permissions:
@@ -11,6 +12,7 @@ permissions:
 
 jobs:
   windows:
+    if: github.event_name != 'create' || (github.event.ref_type == 'branch' && github.ref == 'refs/heads/dot/windows-ci-cutover')
     runs-on: windows-2025
     timeout-minutes: 40
     env:
