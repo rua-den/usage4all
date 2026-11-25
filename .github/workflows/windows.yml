@@ -1,0 +1,38 @@
+name: Windows Rust validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-2025
+    timeout-minutes: 40
+    env:
+      CARGO_TARGET_DIR: ../.ci-target
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Check app and dashboard build
+        working-directory: rust
+        run: cargo check --locked --workspace --all-targets --release --features "claude-usage/e2e,claude-usage-dashboard/e2e"
+      - name: Native WinHTTP PAC fixture
+        working-directory: rust
+        run: cargo test --locked -p claude-usage --release --bin claude-usage transport::tests -- --test-threads=1
+      - name: Workspace tests without physical mouse input
+        working-directory: rust
+        run: cargo test --locked --workspace --release --features "claude-usage/e2e,claude-usage-dashboard/e2e" -- --test-threads=1 --skip widget_real_pointer_hover_and_leave --skip dashboard_titlebar_drag_with_real_mouse
+      - name: Build release package and smoke test
+        run: |
+          & .\build-rust.ps1 -SkipTests
+          python tests/smoke_release_rust.py
