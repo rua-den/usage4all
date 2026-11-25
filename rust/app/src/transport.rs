@@ -3,8 +3,8 @@
 //! Non-2xx statuses are returned as responses (the logic in cu-core maps them); only transport failures are
 //! errors, reduced to a short class name so no URL/header/body can reach a log.
 //! Proxy: ureq reads the standard `HTTPS_PROXY`/`ALL_PROXY` variables; when none is set the per-user Windows
-//! proxy (`HKCU\...\Internet Settings`: ProxyEnable/ProxyServer, like Python's urllib) is used. ProxyOverride
-//! and PAC scripts are not interpreted.
+//! internet settings are resolved per URL. PAC/AutoConfigURL and WPAD use WinHTTP's native resolver; static
+//! ProxyEnable/ProxyServer + ProxyOverride remains the fallback (matching Python urllib behavior).
 
 use cu_core::net::{Http, HttpResponse};
 use std::time::Duration;
@@ -168,12 +168,136 @@ fn env_proxy_set() -> bool {
         .any(|k| std::env::var_os(k).is_some())
 }
 
+/// First usable proxy in a WinHTTP proxy list. WinHTTP may return multiple servers; ureq accepts one.
+fn first_proxy(v: &str) -> Option<String> {
+    let v = v.trim();
+    if v.is_empty() {
+        return None;
+    }
+    if v.contains('=') {
+        return parse_proxy(v);
+    }
+    let p = v
+        .split(';')
+        .map(str::trim)
+        .find(|p| !p.is_empty() && !p.eq_ignore_ascii_case("DIRECT"))?;
+    let p = p
+        .strip_prefix("PROXY ")
+        .or_else(|| p.strip_prefix("proxy "))
+        .or_else(|| p.strip_prefix("HTTPS "))
+        .or_else(|| p.strip_prefix("https "))
+        .unwrap_or(p)
+        .trim();
+    if p.is_empty() {
+        None
+    } else if p.contains("://") {
+        Some(p.to_string())
+    } else {
+        Some(format!("http://{p}"))
+    }
+}
+
+/// Resolve PAC/AutoConfigURL or WPAD with Windows' native WinHTTP resolver.
+///
+/// Return values:
+/// - `None`: no auto-proxy settings, or WinHTTP could not resolve them (caller may use static proxy);
+/// - `Some(None)`: auto-proxy explicitly chose DIRECT for this URL;
+/// - `Some(Some(url))`: use this proxy URL.
+fn auto_proxy(url: &str) -> Option<Option<String>> {
+    use windows_sys::Win32::Networking::WinHttp::*;
+    use windows_sys::Win32::System::Memory::GlobalFree;
+
+    unsafe fn take_wide(p: *mut u16) -> Option<String> {
+        if p.is_null() {
+            return None;
+        }
+        let mut n = 0usize;
+        while unsafe { *p.add(n) } != 0 {
+            n += 1;
+        }
+        let s = String::from_utf16_lossy(unsafe { std::slice::from_raw_parts(p, n) });
+        let _ = unsafe { GlobalFree(p as _) };
+        Some(s)
+    }
+
+    let mut ie: WINHTTP_CURRENT_USER_IE_PROXY_CONFIG = unsafe { std::mem::zeroed() };
+    if unsafe { WinHttpGetIEProxyConfigForCurrentUser(&mut ie) } == 0 {
+        return None;
+    }
+
+    let auto_detect = ie.fAutoDetect != 0;
+    // We only need the PAC URL here; static proxy strings are still handled by registry_proxy()
+    // so ProxyOverride retains the existing, well-tested semantics.
+    let pac = unsafe { take_wide(ie.lpszAutoConfigUrl) };
+    let _ = unsafe { take_wide(ie.lpszProxy) };
+    let _ = unsafe { take_wide(ie.lpszProxyBypass) };
+
+    if !auto_detect && pac.as_deref().is_none_or(str::is_empty) {
+        return None;
+    }
+
+    let agent = "claude-usage/2"
+        .encode_utf16()
+        .chain(Some(0))
+        .collect::<Vec<u16>>();
+    let session = unsafe {
+        WinHttpOpen(
+            agent.as_ptr(),
+            WINHTTP_ACCESS_TYPE_NO_PROXY,
+            std::ptr::null(),
+            std::ptr::null(),
+            0,
+        )
+    };
+    if session.is_null() {
+        return None;
+    }
+
+    let url_w = url.encode_utf16().chain(Some(0)).collect::<Vec<u16>>();
+    let pac_w = pac
+        .as_deref()
+        .filter(|s| !s.is_empty())
+        .map(|s| s.encode_utf16().chain(Some(0)).collect::<Vec<u16>>());
+    let mut options: WINHTTP_AUTOPROXY_OPTIONS = unsafe { std::mem::zeroed() };
+    if auto_detect {
+        options.dwFlags |= WINHTTP_AUTOPROXY_AUTO_DETECT;
+        options.dwAutoDetectFlags = WINHTTP_AUTO_DETECT_TYPE_DHCP | WINHTTP_AUTO_DETECT_TYPE_DNS_A;
+    }
+    if let Some(w) = pac_w.as_ref() {
+        options.dwFlags |= WINHTTP_AUTOPROXY_CONFIG_URL;
+        options.lpszAutoConfigUrl = w.as_ptr();
+    }
+    options.fAutoLogonIfChallenged = 1;
+
+    let mut info: WINHTTP_PROXY_INFO = unsafe { std::mem::zeroed() };
+    let ok = unsafe { WinHttpGetProxyForUrl(session, url_w.as_ptr(), &mut options, &mut info) };
+    unsafe { WinHttpCloseHandle(session) };
+    if ok == 0 {
+        return None;
+    }
+
+    let proxy = unsafe { take_wide(info.lpszProxy) };
+    let _ = unsafe { take_wide(info.lpszProxyBypass) };
+    if info.dwAccessType == WINHTTP_ACCESS_TYPE_NO_PROXY {
+        Some(None)
+    } else {
+        Some(first_proxy(proxy.as_deref().unwrap_or("")))
+    }
+}
+
+fn system_proxy(url: &str) -> Option<String> {
+    match auto_proxy(url) {
+        Some(proxy) => proxy,
+        None => registry_proxy(url_host(url)),
+    }
+}
+
 fn agent(timeout: Duration, url: &str) -> ureq::Agent {
     let mut b = ureq::Agent::config_builder()
         .timeout_global(Some(timeout))
         .http_status_as_error(false);
     if !env_proxy_set() && !override_active() {
-        if let Some(p) = registry_proxy(url_host(url)).and_then(|u| ureq::Proxy::new(&u).ok()) {
+        if let Some(p) = system_proxy(url).and_then(|u| ureq::Proxy::new(&u).ok()) {
             b = b.proxy(Some(p));
         }
     }
@@ -305,6 +429,14 @@ mod tests {
         assert_eq!(
             parse_proxy("p.local:8080").as_deref(),
             Some("http://p.local:8080")
+        );
+        assert_eq!(
+            first_proxy("p1.local:8080;p2.local:8080").as_deref(),
+            Some("http://p1.local:8080")
+        );
+        assert_eq!(
+            first_proxy("PROXY p.local:3128; DIRECT").as_deref(),
+            Some("http://p.local:3128")
         );
         assert_eq!(
             parse_proxy("http=a:1;https=b:2;ftp=c:3").as_deref(),
