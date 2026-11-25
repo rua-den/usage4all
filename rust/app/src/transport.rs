@@ -331,7 +331,7 @@ fn auto_proxy(url: &str) -> AutoProxy {
     let _ = unsafe { take_wide(ie.lpszProxy) };
     let _ = unsafe { take_wide(ie.lpszProxyBypass) };
 
-    if !auto_detect && pac.as_deref().map_or(true, str::is_empty) {
+    if !auto_detect && pac.as_deref().is_none_or(str::is_empty) {
         return AutoProxy::Unavailable;
     }
     AUTO_PROXY_SESSION.with_borrow_mut(|cached| {
