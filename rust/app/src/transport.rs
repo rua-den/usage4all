@@ -2,12 +2,15 @@
 //!
 //! Non-2xx statuses are returned as responses (the logic in cu-core maps them); only transport failures are
 //! errors, reduced to a short class name so no URL/header/body can reach a log.
-//! Proxy: ureq reads the standard `HTTPS_PROXY`/`ALL_PROXY` variables; when none is set the per-user Windows
-//! proxy (`HKCU\...\Internet Settings`: ProxyEnable/ProxyServer, like Python's urllib) is used. ProxyOverride
-//! and PAC scripts are not interpreted.
+//! Proxy: ureq reads the standard proxy environment variables; when no valid override is set the per-user Windows
+//! internet settings are resolved per URL. PAC/AutoConfigURL and WPAD use WinHTTP's native resolver; static
+//! ProxyEnable/ProxyServer + ProxyOverride remains the fallback (matching Python urllib behavior).
 
 use cu_core::net::{Http, HttpResponse};
+use std::cell::RefCell;
 use std::time::Duration;
+use windows_sys::Win32::Foundation::GlobalFree;
+use windows_sys::Win32::Networking::WinHttp::*;
 
 pub struct Ureq;
 
@@ -162,22 +165,222 @@ fn registry_proxy(host: &str) -> Option<String> {
     Some(proxy)
 }
 
-fn env_proxy_set() -> bool {
-    ["HTTPS_PROXY", "https_proxy", "ALL_PROXY", "all_proxy"]
-        .iter()
-        .any(|k| std::env::var_os(k).is_some())
+/// WinHTTP's legacy API exposes a first-choice proxy, but does not fail over connections.
+fn first_proxy(value: &str) -> Result<Option<String>, ()> {
+    let mut routes = value
+        .split(|c: char| c == ';' || c.is_ascii_whitespace())
+        .filter(|s| !s.is_empty());
+    let first = routes.next().ok_or(())?;
+    if first.eq_ignore_ascii_case("DIRECT") {
+        return Ok(None);
+    }
+    let url = if first.contains('=') {
+        let mapped = std::iter::once(first)
+            .chain(routes.take_while(|s| s.contains('=')))
+            .collect::<Vec<_>>()
+            .join(";");
+        parse_proxy(&mapped).ok_or(())?
+    } else {
+        let (proxy, scheme) = if first.eq_ignore_ascii_case("PROXY") {
+            (routes.next().ok_or(())?, "http")
+        } else if first.eq_ignore_ascii_case("HTTPS") {
+            (routes.next().ok_or(())?, "https")
+        } else {
+            if ["HTTP", "SOCKS", "SOCKS4", "SOCKS5"]
+                .iter()
+                .any(|s| first.eq_ignore_ascii_case(s))
+            {
+                return Err(());
+            }
+            (first, "http")
+        };
+        if proxy.eq_ignore_ascii_case("DIRECT") {
+            return Err(());
+        }
+        if proxy.contains("://") {
+            proxy.to_string()
+        } else {
+            format!("{scheme}://{proxy}")
+        }
+    };
+    // Automatic system proxy resolution supports only HTTP(S) proxies, not SOCKS.
+    let uri = url.parse::<ureq::http::Uri>().map_err(|_| ())?;
+    if !matches!(uri.scheme_str(), Some("http" | "https"))
+        || uri.host().is_none()
+        || uri.path_and_query().is_some_and(|pq| pq.as_str() != "/")
+        || uri.authority().is_some_and(|a| a.as_str().contains('@'))
+    {
+        return Err(());
+    }
+    Ok(Some(url))
 }
 
-fn agent(timeout: Duration, url: &str) -> ureq::Agent {
-    let mut b = ureq::Agent::config_builder()
-        .timeout_global(Some(timeout))
-        .http_status_as_error(false);
-    if !env_proxy_set() && !override_active() {
-        if let Some(p) = registry_proxy(url_host(url)).and_then(|u| ureq::Proxy::new(&u).ok()) {
-            b = b.proxy(Some(p));
+const PROXY_ERROR: &str = "ProxyError";
+
+enum AutoProxy {
+    Unavailable,
+    Direct,
+    Named(ureq::Proxy),
+    Invalid,
+}
+
+fn decode_auto_proxy(access: u32, proxy: Option<&str>) -> AutoProxy {
+    if access == WINHTTP_ACCESS_TYPE_NO_PROXY {
+        return AutoProxy::Direct;
+    }
+    if access != WINHTTP_ACCESS_TYPE_NAMED_PROXY {
+        return AutoProxy::Invalid;
+    }
+    match first_proxy(proxy.unwrap_or("")) {
+        // Only WinHTTP's NO_PROXY access type is authoritative for DIRECT. If
+        // it marked the result as named but did not give a valid host, fail closed.
+        Ok(Some(proxy)) => ureq::Proxy::new(&proxy).map_or(AutoProxy::Invalid, AutoProxy::Named),
+        _ => AutoProxy::Invalid,
+    }
+}
+
+fn wide(s: &str) -> Vec<u16> {
+    s.encode_utf16().chain(Some(0)).collect()
+}
+
+/// The strings returned by these WinHTTP calls belong to the caller.
+unsafe fn take_wide(p: *mut u16) -> Option<String> {
+    if p.is_null() {
+        return None;
+    }
+    let mut n = 0usize;
+    while unsafe { *p.add(n) } != 0 {
+        n += 1;
+    }
+    let s = String::from_utf16_lossy(unsafe { std::slice::from_raw_parts(p, n) });
+    let _ = unsafe { GlobalFree(p.cast()) };
+    Some(s)
+}
+
+struct WinHttpSession(*mut core::ffi::c_void);
+impl WinHttpSession {
+    fn open() -> Option<Self> {
+        let user_agent = wide("claude-usage/2");
+        // The PAC downloader may make network requests, but never gets an API
+        // access/refresh token or permission to use the default Windows logon.
+        let handle = unsafe {
+            WinHttpOpen(
+                user_agent.as_ptr(),
+                WINHTTP_ACCESS_TYPE_NO_PROXY,
+                std::ptr::null(),
+                std::ptr::null(),
+                0,
+            )
+        };
+        if handle.is_null() {
+            return None;
+        }
+        let session = Self(handle);
+        let ok = unsafe { WinHttpSetTimeouts(handle, 5_000, 5_000, 5_000, 5_000) };
+        (ok != 0).then_some(session)
+    }
+
+    fn resolve(&self, url: &str, auto_detect: bool, pac: Option<&str>) -> AutoProxy {
+        let url = wide(url);
+        let pac = pac.filter(|s| !s.is_empty()).map(wide);
+        let mut options: WINHTTP_AUTOPROXY_OPTIONS = unsafe { std::mem::zeroed() };
+        if auto_detect {
+            options.dwFlags |= WINHTTP_AUTOPROXY_AUTO_DETECT;
+            options.dwAutoDetectFlags =
+                WINHTTP_AUTO_DETECT_TYPE_DHCP | WINHTTP_AUTO_DETECT_TYPE_DNS_A;
+        }
+        if let Some(w) = pac.as_ref() {
+            options.dwFlags |= WINHTTP_AUTOPROXY_CONFIG_URL;
+            options.lpszAutoConfigUrl = w.as_ptr();
+        }
+        if options.dwFlags == 0 {
+            return AutoProxy::Unavailable;
+        }
+
+        let mut info: WINHTTP_PROXY_INFO = unsafe { std::mem::zeroed() };
+        let ok = unsafe { WinHttpGetProxyForUrl(self.0, url.as_ptr(), &mut options, &mut info) };
+        let proxy = unsafe { take_wide(info.lpszProxy) };
+        let _ = unsafe { take_wide(info.lpszProxyBypass) };
+        if ok == 0 {
+            AutoProxy::Unavailable
+        } else {
+            decode_auto_proxy(info.dwAccessType, proxy.as_deref())
         }
     }
-    b.build().into()
+}
+
+impl Drop for WinHttpSession {
+    fn drop(&mut self) {
+        unsafe { WinHttpCloseHandle(self.0) };
+    }
+}
+
+thread_local! {
+    // WinHTTP caches discovery and the script per session. Poll/refresh paths
+    // can reuse that cache while still asking WinHTTP for a decision per URL.
+    static AUTO_PROXY_SESSION: RefCell<Option<WinHttpSession>> = const { RefCell::new(None) };
+}
+
+fn auto_proxy(url: &str) -> AutoProxy {
+    let mut ie: WINHTTP_CURRENT_USER_IE_PROXY_CONFIG = unsafe { std::mem::zeroed() };
+    if unsafe { WinHttpGetIEProxyConfigForCurrentUser(&mut ie) } == 0 {
+        return AutoProxy::Unavailable;
+    }
+    let auto_detect = ie.fAutoDetect != 0;
+    let pac = unsafe { take_wide(ie.lpszAutoConfigUrl) };
+    let _ = unsafe { take_wide(ie.lpszProxy) };
+    let _ = unsafe { take_wide(ie.lpszProxyBypass) };
+
+    if !auto_detect && pac.as_deref().is_none_or(str::is_empty) {
+        return AutoProxy::Unavailable;
+    }
+    AUTO_PROXY_SESSION.with_borrow_mut(|cached| {
+        if cached.is_none() {
+            *cached = WinHttpSession::open();
+        }
+        cached.as_ref().map_or(AutoProxy::Unavailable, |session| {
+            session.resolve(url, auto_detect, pac.as_deref())
+        })
+    })
+}
+
+fn choose_proxy(
+    env: Option<ureq::Proxy>,
+    automatic: impl FnOnce() -> AutoProxy,
+    manual: impl FnOnce() -> Option<String>,
+) -> Result<Option<ureq::Proxy>, &'static str> {
+    if env.is_some() {
+        return Ok(env);
+    }
+    match automatic() {
+        AutoProxy::Direct => Ok(None),
+        AutoProxy::Named(proxy) => Ok(Some(proxy)),
+        AutoProxy::Unavailable => Ok(manual().and_then(|u| ureq::Proxy::new(&u).ok())),
+        AutoProxy::Invalid => Err(PROXY_ERROR),
+    }
+}
+
+fn agent(timeout: Duration, url: &str) -> Result<ureq::Agent, String> {
+    let proxy = if override_active() || matches!(url_host(url), "127.0.0.1" | "localhost") {
+        None
+    } else {
+        choose_proxy(
+            ureq::Proxy::try_from_env(),
+            || auto_proxy(url),
+            || registry_proxy(url_host(url)),
+        )?
+    };
+    Ok(ureq::Agent::config_builder()
+        .timeout_global(Some(timeout))
+        .http_status_as_error(false)
+        .proxy(proxy)
+        .tls_config(
+            ureq::tls::TlsConfig::builder()
+                .root_certs(ureq::tls::RootCerts::PlatformVerifier)
+                .build(),
+        )
+        .build()
+        .into())
 }
 
 fn class(e: &ureq::Error) -> String {
@@ -219,7 +422,7 @@ impl Http for Ureq {
     ) -> Result<HttpResponse, String> {
         let url = rewrite(url);
         let url = url.as_str();
-        let mut req = agent(timeout, url).get(url);
+        let mut req = agent(timeout, url)?.get(url);
         for (k, v) in headers {
             req = req.header(*k, *v);
         }
@@ -235,7 +438,7 @@ impl Http for Ureq {
     ) -> Result<HttpResponse, String> {
         let url = rewrite(url);
         let url = url.as_str();
-        let mut req = agent(timeout, url).post(url);
+        let mut req = agent(timeout, url)?.post(url);
         for (k, v) in headers {
             req = req.header(*k, *v);
         }
@@ -250,15 +453,31 @@ mod tests {
     use std::net::TcpListener;
 
     /// One-shot local server: answers with `reply`, returns the raw request it received.
-    fn serve(reply: &'static str) -> (String, std::thread::JoinHandle<String>) {
+    fn serve(reply: impl AsRef<str> + Send + 'static) -> (String, std::thread::JoinHandle<String>) {
         let l = TcpListener::bind("127.0.0.1:0").unwrap();
         let url = format!("http://{}/x", l.local_addr().unwrap());
+        l.set_nonblocking(true).unwrap();
         let h = std::thread::spawn(move || {
-            let (mut s, _) = l.accept().unwrap();
+            let started = std::time::Instant::now();
+            let mut s = loop {
+                match l.accept() {
+                    Ok((s, _)) => break s,
+                    Err(e)
+                        if e.kind() == std::io::ErrorKind::WouldBlock
+                            && started.elapsed() < Duration::from_secs(10) =>
+                    {
+                        std::thread::sleep(Duration::from_millis(10));
+                    }
+                    Err(e) => panic!("local fixture did not get a connection: {e}"),
+                }
+            };
+            s.set_nonblocking(false).unwrap();
+            s.set_read_timeout(Some(Duration::from_secs(5))).unwrap();
             let mut buf = vec![0u8; 8192];
             let mut got = Vec::new();
             loop {
                 let n = s.read(&mut buf).unwrap();
+                assert_ne!(n, 0, "incomplete fixture request");
                 got.extend_from_slice(&buf[..n]);
                 let t = String::from_utf8_lossy(&got).to_string();
                 if let Some(i) = t.find("\r\n\r\n") {
@@ -273,7 +492,7 @@ mod tests {
                     }
                 }
             }
-            s.write_all(reply.as_bytes()).unwrap();
+            s.write_all(reply.as_ref().as_bytes()).unwrap();
             String::from_utf8_lossy(&got).to_string()
         });
         (url, h)
@@ -283,7 +502,6 @@ mod tests {
     fn registry_proxy_reads_without_panicking() {
         // read-only; result depends on the machine, only the call path (NUL-terminated key) is checked
         let _ = registry_proxy("api.anthropic.com");
-        let _ = agent(Duration::from_secs(1), "https://api.anthropic.com/x");
     }
 
     #[test]
@@ -307,11 +525,114 @@ mod tests {
             Some("http://p.local:8080")
         );
         assert_eq!(
+            first_proxy("p1.local:8080;p2.local:8080")
+                .unwrap()
+                .as_deref(),
+            Some("http://p1.local:8080")
+        );
+        assert_eq!(
+            first_proxy("PROXY p.local:3128; DIRECT")
+                .unwrap()
+                .as_deref(),
+            Some("http://p.local:3128")
+        );
+        assert_eq!(
             parse_proxy("http=a:1;https=b:2;ftp=c:3").as_deref(),
             Some("http://b:2")
         );
         assert_eq!(parse_proxy("ftp=c:3"), None);
         assert_eq!(parse_proxy(""), None);
+    }
+
+    #[test]
+    fn automatic_proxy_decision_precedence() {
+        let env = ureq::Proxy::new("http://env.invalid:3128").unwrap();
+        let chosen = choose_proxy(
+            Some(env.clone()),
+            || panic!("PAC must not run"),
+            || panic!("registry must not run"),
+        );
+        assert_eq!(chosen.unwrap().unwrap().uri(), env.uri());
+        assert!(
+            choose_proxy(None, || AutoProxy::Direct, || panic!("DIRECT is final"))
+                .unwrap()
+                .is_none()
+        );
+        let manual = "http://fallback.invalid:3128";
+        let fallback = choose_proxy(None, || AutoProxy::Unavailable, || Some(manual.to_string()));
+        assert_eq!(
+            fallback.unwrap().unwrap().uri().host(),
+            Some("fallback.invalid")
+        );
+        for malformed in [
+            None,
+            Some(""),
+            Some("PROXY"),
+            Some("SOCKS proxy.invalid:1080"),
+            Some("https=proxy.invalid:80/path"),
+            Some("https=user@proxy.invalid:80"),
+            Some("DIRECT"),
+        ] {
+            let chosen = choose_proxy(
+                None,
+                || decode_auto_proxy(WINHTTP_ACCESS_TYPE_NAMED_PROXY, malformed),
+                || panic!("an invalid named proxy must not permit a direct connection"),
+            );
+            assert!(matches!(chosen, Err(PROXY_ERROR)));
+        }
+        assert!(matches!(
+            decode_auto_proxy(WINHTTP_ACCESS_TYPE_NO_PROXY, None),
+            AutoProxy::Direct
+        ));
+        assert_eq!(
+            first_proxy("p1.invalid:8080 p2.invalid:8080")
+                .unwrap()
+                .as_deref(),
+            Some("http://p1.invalid:8080")
+        );
+        assert_eq!(
+            first_proxy("Https proxy.invalid:443").unwrap().as_deref(),
+            Some("https://proxy.invalid:443")
+        );
+        assert_eq!(
+            first_proxy("http=plain.invalid:80 https=tls.invalid:443")
+                .unwrap()
+                .as_deref(),
+            Some("http://tls.invalid:443")
+        );
+    }
+
+    #[test]
+    fn native_pac_direct_and_named_without_credentials() {
+        // Use WinHTTP's real PAC engine without changing Internet Settings,
+        // running WPAD, or sending requests to either test destination.
+        for (target, script) in [
+            (
+                "https://direct.invalid/",
+                "function FindProxyForURL(url, host) { return 'DIRECT'; }",
+            ),
+            (
+                "https://proxied.invalid/",
+                "function FindProxyForURL(url, host) { return 'PROXY proxy.invalid:8080'; }",
+            ),
+        ] {
+            let response = format!(
+                "HTTP/1.1 200 OK\r\nContent-Type: application/x-ns-proxy-autoconfig\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{script}",
+                script.len()
+            );
+            let (pac, server) = serve(response);
+            let session = WinHttpSession::open().expect("open WinHTTP");
+            match (target, session.resolve(target, false, Some(&pac))) {
+                ("https://direct.invalid/", AutoProxy::Direct) => {}
+                ("https://proxied.invalid/", AutoProxy::Named(proxy)) => {
+                    assert_eq!(proxy.uri().host(), Some("proxy.invalid"));
+                }
+                _ => panic!("unexpected WinHTTP decision for {target}"),
+            }
+            let request = server.join().expect("PAC fixture HTTP exchange");
+            assert!(request.starts_with("GET /x "));
+            assert!(!request.to_ascii_lowercase().contains("authorization:"));
+        }
     }
 
     #[test]

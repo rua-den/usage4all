@@ -186,7 +186,7 @@ dependencies = [
 
 [[package]]
 name = "claude-usage"
-version = "2.0.0-dev"
+version = "2.0.0"
 dependencies = [
  "cu-core",
  "serde_json",
@@ -199,7 +199,7 @@ dependencies = [
 
 [[package]]
 name = "claude-usage-dashboard"
-version = "2.0.0-dev"
+version = "2.0.0"
 dependencies = [
  "cu-core",
  "serde_json",
@@ -329,7 +329,7 @@ dependencies = [
 
 [[package]]
 name = "cu-core"
-version = "2.0.0-dev"
+version = "2.0.0"
 dependencies = [
  "chrono",
  "serde_json",

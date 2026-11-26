@@ -1,5 +1,13 @@
 # HANDOFF: claude-usage
 
+## Bản chính Rust 2.0.0
+
+- Build và chạy test theo `BUILD.md`; Windows CI dùng target dir mới, không lấy exe cũ trong Git.
+- Proxy Windows: môi trường hợp lệ → WinHTTP PAC/WPAD theo URL → proxy tĩnh và ProxyOverride nếu WinHTTP không phân giải được. TLS dùng kho chứng chỉ Windows. PAC không dùng thông tin đăng nhập Windows mặc định.
+- Bản Python 1.1.0 và dữ liệu người dùng không bị di chuyển. Giữ Python làm rollback cho tới khi xác nhận vận hành bản Rust. Các mục Python bên dưới là lịch sử/tham chiếu hành vi, không phải hướng dẫn build chính.
+- Test chuột thật, WPAD và TLS trên mạng doanh nghiệp, chữ ký exe vẫn chưa được xác nhận qua workflow.
+
+
 Tài liệu bàn giao cho AI / người tiếp theo. Đọc hết mục 1-4 trước khi sửa code. Cập nhật file này mỗi khi thay đổi kiến trúc,
 thêm config key, hoặc phát hiện thêm "bẫy" (mục 9). Ngày cập nhật gần nhất: 2026-11-12, phiên bản `1.1.0` (tự làm mới token).
 

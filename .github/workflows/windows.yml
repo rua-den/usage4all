@@ -1,0 +1,50 @@
+name: Windows Rust validation
+
+on:
+  pull_request:
+  push:
+    branches: [main, dot/windows-ci-cutover]
+  create:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    if: github.event_name != 'create' || (github.event.ref_type == 'branch' && github.ref == 'refs/heads/dot/windows-ci-cutover')
+    runs-on: windows-2025
+    timeout-minutes: 40
+    env:
+      CARGO_TARGET_DIR: ../.ci-target
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Check app and dashboard build
+        working-directory: rust
+        run: cargo check --locked --workspace --all-targets --release --features "claude-usage/e2e,claude-usage-dashboard/e2e"
+      - name: Check Windows release lints
+        working-directory: rust
+        run: cargo clippy --locked --workspace --all-targets --release -- -D warnings
+      - name: Native WinHTTP PAC fixture
+        working-directory: rust
+        run: cargo test --locked -p claude-usage --release --bin claude-usage transport::tests -- --test-threads=1
+      - name: Match the Python parity fixture timezone on the hosted runner
+        run: |
+          $zone = 'SE Asia Standard Time'
+          tzutil /s $zone
+          if ($LASTEXITCODE -ne 0 -or (tzutil /g).Trim() -ne $zone) {
+            throw 'Could not set the parity fixture timezone on the CI runner'
+          }
+      - name: Workspace tests without physical mouse input
+        working-directory: rust
+        run: cargo test --locked --workspace --release --features "claude-usage/e2e,claude-usage-dashboard/e2e" -- --test-threads=1 --skip widget_real_pointer_hover_and_leave --skip dashboard_titlebar_drag_with_real_mouse
+      - name: Build release package and smoke test
+        run: |
+          & .\build-rust.ps1 -SkipTests
+          python tests/smoke_release_rust.py

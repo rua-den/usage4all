@@ -1,5 +1,7 @@
 # PORT_PLAN: claude-usage Python → Rust (kèm refactor dashboard)
 
+> **Cập nhật cutover 2.0.0:** bản Rust là luồng build chính, có WinHTTP PAC/WPAD và CI Windows. Giữ nguyên Python và dữ liệu chạy thật để rollback; không phát hành/tag hoặc bỏ bản cũ trước khi hoàn tất xác nhận. Tham chiếu `BUILD.md` và `HANDOFF.md`. Phần bên dưới giữ mốc lịch sử của lần port.
+
 Ngày lập: 2026-11-19. Code Python gốc: commit `dd84ff1`, tag `python-1.1.0`.
 Đọc `HANDOFF.md` (nhất là mục 6 "bất biến" và mục 9 "bẫy") trước khi làm bất cứ phase nào. Plan này **không** thay thế các bất biến đó.
 

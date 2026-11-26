@@ -1,6 +1,6 @@
-# Build bản Rust
+# Build Rust 2.0.0
 
-Bản Python (cũ) vẫn build bằng `build.ps1`. Bản Rust nằm ở `rust/`, build bằng `build-rust.ps1`.
+Bản Python (cũ) vẫn build bằng `build.ps1`. Bản Rust nằm ở `rust/`, build bằng `build-rust.ps1`. Giữ bản Python để rollback; không cần dời hoặc xoá bản đang cài.
 
 ## Cần có (một lần)
 - Rust toolchain qua `rustup` (phiên bản ghim trong `rust/rust-toolchain.toml`, tự tải).
@@ -20,9 +20,9 @@ Script chỉ tắt `claude-usage*.exe` đang chạy từ `rust\target` hoặc `r
 
 ## Chạy từng phần (trong `rust/`)
 ```powershell
-cargo build --release          # target\release\claude-usage.exe + claude-usage-dashboard.exe
-cargo clippy --workspace --all-targets --release -- -D warnings
-cargo test --workspace --release --features claude-usage-dashboard/e2e -- --test-threads=1
+cargo build --locked --release # target\release\claude-usage.exe + claude-usage-dashboard.exe
+cargo clippy --locked --workspace --all-targets --release -- -D warnings
+cargo test --locked --workspace --release --features "claude-usage-dashboard/e2e,claude-usage/e2e" -- --test-threads=1
 cargo test -p cu-core          # chỉ logic thuần + parity với Python (nhanh, không GUI)
 ```
 Quy tắc test:
@@ -66,5 +66,11 @@ Rollback: thoát app Rust, mở lại bản Python.
 
 Chi tiết kiến trúc và bẫy: `HANDOFF.md`. Kế hoạch và trạng thái: `PORT_PLAN.md`.
 
+## Xác nhận trước khi phát hành
+
+- Workflow Windows chạy kiểm tra biên dịch, fixture PAC loopback qua WinHTTP thật (DIRECT và proxy, không token, không sửa registry), các test tự động và smoke test gói. Hai test cần chuột thật vẫn phải chạy riêng trên desktop không khoá.
+- Fixture đối chiếu bản Python dùng giờ địa phương UTC+7 (xem `rust/crates/core/tests/fixtures/_meta.json`). Windows CI chỉ đặt múi giờ khớp trên máy ảo tạm; không đổi thiết lập máy người dùng.
+- Test PAC không thay thế kiểm tra WPAD hoặc kho chứng chỉ trên mạng doanh nghiệp thật. Kiểm tra các trường hợp đó trước khi mở rộng rollout. Đóng gói không tự tạo tag hay GitHub Release.
+
 ## Chưa có
-PAC proxy, ký số exe, icon cho toast (cần `icon.png` cạnh exe). Toast WinRT (AUMID `ClaudeUsage.App`, ghi HKCU, chỉ bản release) chưa được xem hiện trên màn hình thật; lỗi thì tự rơi về balloon và ghi `winrt toast failed` vào events.log.
+Ký số exe, icon cho toast (cần `icon.png` cạnh exe). Toast WinRT (AUMID `ClaudeUsage.App`, ghi HKCU, chỉ bản release) chưa được xem hiện trên màn hình thật; lỗi thì tự rơi về balloon và ghi `winrt toast failed` vào events.log.

@@ -1,16 +1,12 @@
 # Changelog
 
-## Chưa phát hành
+## 2.0.0 (chờ xác nhận phát hành)
 
-### Bản port Rust (nhánh `rust-port`, 2.0.0-dev, chưa thay bản Python)
-- Viết lại bằng Rust (`rust/`): `claude-usage.exe` (tray + daemon + widget + hook, ~3.2MB) và `claude-usage-dashboard.exe` (wry/WebView2, dùng nguyên `ui.html`, ~1.2MB). Config/cache/alerts/hook/autostart dùng chung định dạng với bản Python.
-- Làm mới token như CLI (khoá mkdir, .bak, invalid_grant, invalid_scope), proxy hệ thống (ProxyEnable/ProxyServer, bỏ qua PAC/ProxyOverride), toast WinRT với AUMID riêng `ClaudeUsage.App` (lỗi thì rơi về balloon), dashboard nằm trong Job Object (tray chết thì dashboard chết), ProxyOverride cơ bản.
-- Test: parity với Python qua fixture (config/fmt/daemon/hook/widget layout), UI test tiến trình thật cho tray, widget, dashboard, tray→dashboard.
-
-- Nhanh hơn: exe không còn là một file tự giải nén mỗi lần chạy. Gói giờ là thư mục `claude-usage.exe` + `_internal`.
-  Hook chặn prompt từ khoảng 0.84s còn khoảng 0.23s mỗi prompt; mở dashboard nhanh hơn một chút.
-  Đường dẫn `claude-usage.exe` giữ nguyên nên autostart và hook đã cài vẫn chạy.
-- Đang chuẩn bị chuyển sang Rust (xem `PORT_PLAN.md`).
+- Rust là bản build chính: `claude-usage.exe` (tray, daemon, widget và hook) và `claude-usage-dashboard.exe` (WebView2). Gói gồm hai exe đặt cạnh nhau, không có `_internal`, có SHA-256.
+- Config, cache, thông báo và hook tương thích với bản Python 1.1.0. Bản Python vẫn có thể build bằng `build.ps1` để quay lại; không chạy đồng thời hai bản.
+- Proxy: biến môi trường hợp lệ ưu tiên; PAC/WPAD theo từng URL qua WinHTTP, sau đó đến proxy tĩnh và ProxyOverride nếu không phân giải được. Không tự đăng nhập với máy chủ PAC. TLS sử dụng kho chứng chỉ Windows.
+- Toast WinRT với AUMID riêng, fallback balloon; dashboard chạy trong Job Object của tray. Có test parity Python, test tiến trình tray/widget/dashboard và fixture PAC Windows không chứa thông tin đăng nhập.
+- Windows CI kiểm tra build/test/gói; chưa coi CI là kiểm chứng WPAD doanh nghiệp, chuột thật hay chữ ký số.
 
 ## 1.1.0
 

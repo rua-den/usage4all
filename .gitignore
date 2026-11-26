@@ -7,3 +7,5 @@ release/
 *.tmp
 rust/target/
 .claude/worktrees/
+
+.ci-target/

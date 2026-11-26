@@ -3,9 +3,18 @@
 Theo dõi **hạn mức Claude (5h / 7d) của nhiều account cùng lúc** trên Windows: icon ở tray, widget nhỏ trên taskbar,
 dashboard, thông báo khi gần hết và (tuỳ chọn) chặn prompt của Claude Code CLI khi account đã quá ngưỡng.
 
-Giải nén cả thư mục rồi chạy `claude-usage.exe` (cần thư mục `_internal` nằm cạnh exe). Không cần cài đặt, không cần Python.
+Bản chính là Rust 2.0.0 cho Windows x64. Giải nén cả gói, giữ `claude-usage.exe` và
+`claude-usage-dashboard.exe` cạnh nhau, rồi chạy `claude-usage.exe`. Không cần cài Python.
+Dashboard cần WebView2 Runtime. Xem [BUILD.md](BUILD.md) để build từ source và kiểm tra gói.
+Bản Python 1.1.0 giữ nguyên để quay lại nếu cần; xem mục chuyển bản bên dưới.
 
-> Có bản Rust thử nghiệm (nhánh `rust-port`, thư mục `release/rust-2.0.0-dev`: hai file .exe đặt cạnh nhau). Chưa thay bản Python mặc định.
+## Chuyển từ Python 1.1.0
+
+1. Thoát bản Python trước khi chạy bản Rust; không chạy hai bản cùng lúc. Cấu hình và cache ở `%LOCALAPPDATA%\claude-usage` dùng chung, không cần xoá hay chép đè.
+2. Chạy bản Rust một lần. Nếu đã dùng autostart hoặc hook CLI, kiểm tra đường dẫn mới trong Dashboard. Chỉ bật các tính năng này nếu muốn dùng chúng.
+3. Nếu cần quay lại: thoát Rust, mở lại bản Python cũ (exe và `_internal`). Kiểm tra autostart và hook trỏ lại đường dẫn Python.
+
+Proxy: biến môi trường hợp lệ ưu tiên. Nếu không có, app dùng PAC/WPAD theo từng URL qua WinHTTP, rồi proxy tĩnh của Windows nếu không phân giải được. App không tự đăng nhập khi máy chủ PAC yêu cầu xác thực và không tự gửi lại yêu cầu qua proxy kế tiếp.
 
 ## Cách dùng nhanh
 
@@ -35,7 +44,7 @@ Giải nén cả thư mục rồi chạy `claude-usage.exe` (cần thư mục `_
 
 Dashboard → **cài hook vào các profile**. Nó thêm một mục `UserPromptSubmit` vào `settings.json` của từng profile
 (giữ nguyên mọi thứ khác, tạo bản sao lưu `settings.json.claude-usage.bak` lần đầu). **gỡ hook** để xoá đúng mục đó.
-Nếu bạn dời thư mục app sang chỗ khác (exe cùng `_internal`), mở app một lần là hook tự được sửa đường dẫn.
+Nếu dời thư mục app, giữ hai file .exe cạnh nhau rồi mở app một lần để cập nhật đường dẫn hook.
 Mỗi lần hook chạy mất khoảng 0.25 giây.
 
 ## Chạy cùng Windows
@@ -67,7 +76,7 @@ Nếu dời exe: mở ở chỗ mới một lần, đường dẫn tự cập nh
 
 ## Gỡ cài đặt
 
-Quit app → xoá thư mục chứa `claude-usage.exe` và `_internal` → xoá thư mục `%LOCALAPPDATA%\claude-usage\` → (nếu đã cài hook) dùng *gỡ hook* trước khi xoá app,
+Quit app → xoá thư mục chứa hai file .exe → xoá thư mục `%LOCALAPPDATA%\claude-usage\` → (nếu đã cài hook) dùng *gỡ hook* trước khi xoá app,
 và bỏ tick *Chạy cùng Windows*.
 
 ## Giới hạn đã biết
