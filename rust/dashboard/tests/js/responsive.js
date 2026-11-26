@@ -27,7 +27,12 @@ if (PHASE === '1') {
   check('the 8 resize handles exist', ['l', 'r', 't', 'b', 'tl', 'tr', 'bl', 'br'].every(e => document.querySelector('.rz.' + e)));
   const want = Math.min(1480, screen.width - 80);
   check(`default window width = initial_width (${N} profiles -> ${want})`, Math.abs(i.iw - want) <= 2, i.iw);
-  check('default window is wide for many accounts and shows several columns', i.iw >= 1100 && i.cols >= 3, `width=${i.iw} columns=${i.cols}`);
+  // The real window is capped by the current monitor. Ensure the account grid
+  // packs each 380px column plus its 26px gap into the available content width.
+  const gridWidth = $('accs').clientWidth;
+  const wantColumns = i.iw <= 560 ? 1 : Math.max(1, Math.floor((gridWidth + 26) / (380 + 26)));
+  check('default account columns fit the available screen width',
+    i.cols === wantColumns, `width=${i.iw} grid=${gridWidth} columns=${i.cols} expected=${wantColumns}`);
   check('auto-fit: nothing to scroll, window fits the screen', i.ms <= i.mc + 1 && !i.hs && (await api.rect())[3] <= sh, JSON.stringify(i) + ' rect=' + (await api.rect()));
   const r0 = await api.rect();
   await drag('br', -(r0[2] - 760 * dpr), -(r0[3] - 520 * dpr));

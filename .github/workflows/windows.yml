@@ -34,6 +34,13 @@ jobs:
       - name: Native WinHTTP PAC fixture
         working-directory: rust
         run: cargo test --locked -p claude-usage --release --bin claude-usage transport::tests -- --test-threads=1
+      - name: Match the Python parity fixture timezone on the hosted runner
+        run: |
+          $zone = 'SE Asia Standard Time'
+          tzutil /s $zone
+          if ($LASTEXITCODE -ne 0 -or (tzutil /g).Trim() -ne $zone) {
+            throw 'Could not set the parity fixture timezone on the CI runner'
+          }
       - name: Workspace tests without physical mouse input
         working-directory: rust
         run: cargo test --locked --workspace --release --features "claude-usage/e2e,claude-usage-dashboard/e2e" -- --test-threads=1 --skip widget_real_pointer_hover_and_leave --skip dashboard_titlebar_drag_with_real_mouse
