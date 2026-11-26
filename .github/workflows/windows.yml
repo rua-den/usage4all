@@ -28,6 +28,9 @@ jobs:
       - name: Check app and dashboard build
         working-directory: rust
         run: cargo check --locked --workspace --all-targets --release --features "claude-usage/e2e,claude-usage-dashboard/e2e"
+      - name: Check Windows release lints
+        working-directory: rust
+        run: cargo clippy --locked --workspace --all-targets --release -- -D warnings
       - name: Native WinHTTP PAC fixture
         working-directory: rust
         run: cargo test --locked -p claude-usage --release --bin claude-usage transport::tests -- --test-threads=1
