@@ -64,8 +64,19 @@ fn dashboard_legacy_suite() {
     let tflag = sb.data.join("notify_test.flag");
 
     run.stage("ready");
-    let t = run.elapsed();
-    run.rust_check("page ready quickly", t.as_secs_f64() < 6.0, format!("{:.1}s", t.as_secs_f64()));
+    let t = run.elapsed().as_secs_f64();
+    // Keep the real-desktop startup budget. Hosted Actions VMs pay cold WebView2
+    // initialization overhead; still require a populated page within a firm budget.
+    let ready_budget = if std::env::var("GITHUB_ACTIONS").as_deref() == Ok("true") {
+        20.0
+    } else {
+        6.0
+    };
+    run.rust_check(
+        "page ready within startup budget",
+        t < ready_budget,
+        format!("{t:.1}s (limit {ready_budget:.0}s)"),
+    );
     run.go("ready");
 
     run.stage("idle1");

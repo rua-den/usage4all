@@ -4,8 +4,9 @@ const accs = () => [...document.querySelectorAll('.acc')];
 const geo = () => { const m = document.querySelector('main'), d = document.documentElement; return { a: m.scrollHeight, b: m.clientHeight, c: d.scrollHeight, d: innerHeight, hs: d.scrollWidth > innerWidth }; };
 const noScroll = g => g.a <= g.b + 1 && g.c <= g.d + 1 && !g.hs;
 
-await waitFor(() => accs().length === 4, 8000);
-await stage('ready');                                   // the test measures spawn -> here ("page ready quickly")
+const readyAccounts = await waitFor(() => accs().length === 4, 8000);
+check('startup populated all four accounts', readyAccounts, accs().length);
+await stage('ready');                                   // the test measures spawn -> populated page
 await sleep(1800);
 
 check('4 accounts rendered', accs().length === 4, accs().length);
@@ -23,8 +24,10 @@ window.__AVAIL = 740; lastFit = 0; fit(); await sleep(1200);          // simulat
 g = geo(); const need = natural();
 check('small screen: compact mode keeps everything visible without scrolling',
   document.body.classList.contains('compact') && need <= 740 - 24 + 4 && g.c <= g.d + 1, JSON.stringify({ need, g }));
-window.__AVAIL = 0; lastFit = 0; fit(); await sleep(1000);
+// Exercise a specific taller work area, not the hosted runner's physical desktop.
+window.__AVAIL = 1080; lastFit = 0; fit(); await sleep(1000);
 check('normal screen: compact mode is off again', !document.body.classList.contains('compact'));
+window.__AVAIL = 0; lastFit = 0; fit();
 
 await stage('idle1');                                   // fetch finished (test rewrites the cache without busy)
 await sleep(2600);
